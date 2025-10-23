@@ -117,16 +117,46 @@ function initVoiceSwiper() {
 
 // DOM読み込み後にSwiper初期化
 document.addEventListener('DOMContentLoaded', function() {
-    const voiceInner = document.querySelector('.voice__inner'); // スライダー要素を取得
+    const voiceInner = document.querySelector('.voice__inner');
 
-    if (typeof Swiper !== "undefined" && voiceInner) { // Swiperが定義されていて要素がある場合のみ
-        let voiceSwiper = initVoiceSwiper();
+    if (voiceInner) {
+        let voiceSwiper = new Swiper('.voice__inner', {
+            loop: true,
+            navigation: {
+                nextEl: '.voice__next',
+                prevEl: '.voice__prev',
+            },
+            slidesPerView: 3,
+            spaceBetween: 35,
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 3 },
+            },
+            observer: true,
+            observeParents: true,
+            preventClicks: false,
+            touchStartPreventDefault: false,
+        });
 
         window.addEventListener('resize', function() {
-            if (voiceSwiper) voiceSwiper.destroy(true, true); // 前のSwiperを破棄
-            voiceSwiper = initVoiceSwiper(); // 再初期化
+            if (voiceSwiper) voiceSwiper.destroy(true, true);
+            voiceSwiper = new Swiper('.voice__inner', {
+                loop: true,
+                navigation: {
+                    nextEl: '.voice__next',
+                    prevEl: '.voice__prev',
+                },
+                slidesPerView: 3,
+                spaceBetween: 35,
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    768: { slidesPerView: 3 },
+                },
+                observer: true,
+                observeParents: true,
+                preventClicks: false,
+                touchStartPreventDefault: false,
+            });
         });
-    } else {
-        console.warn("Swiperが未定義か、スライダー要素が見つかりません");
     }
 });

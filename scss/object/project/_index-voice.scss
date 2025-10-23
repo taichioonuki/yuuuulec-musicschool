@@ -6,6 +6,8 @@
     color: $white;
     text-align: center;
     background-color: $red;
+    position: relative;
+    z-index: 100;
 
     @include sp {
         padding: 4.6rem 0 1.5rem;
@@ -20,7 +22,7 @@
 .voice__inner {
     position: relative;
     margin-top: 3.6rem;
-    overflow: visible;
+    pointer-events: auto;
 
     @include sp {
         margin-top: 3.9rem;
@@ -38,6 +40,7 @@
 .voice__link {
     display: block;
     overflow: hidden;
+    pointer-events: auto;
 
     &:hover {
         .voice__img img {
@@ -54,13 +57,12 @@
 }
 
 .voice__img img{
-    transition: all 0.8s ease;
+    transition: all 0.5s ease;
 }
 
 .voice__text-block {
     opacity: 1;
-    pointer-events: none;
-    transition: all 0.8s ease;
+    transition: all 0.5s ease;
 }
 
 .voice__title {
@@ -124,5 +126,6 @@
     width: auto;    
     max-width: 100%; 
     box-sizing: border-box;
+    pointer-events: auto;
   }
   

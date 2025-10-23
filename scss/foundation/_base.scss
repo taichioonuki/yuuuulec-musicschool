@@ -29,6 +29,11 @@ html {
         font-weight: 500;
     }
 
+    html, body {
+        overflow-x: hidden;
+      }
+      
+
     img {
         width: 100%;
         height: auto;
