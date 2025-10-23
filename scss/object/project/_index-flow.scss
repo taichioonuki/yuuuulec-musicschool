@@ -2,10 +2,12 @@
 @use "../component/component" as *;
 
 .flow {
-    padding: 3.4rem 0 5rem;
+    padding-top: 3.4rem;
+    padding-bottom: 3rem;
 
     @include sp {
-        padding: 4.6rem 0 5.3rem;
+        padding-top: 4.6rem;
+        padding-bottom: 0;
     }
 }
 
@@ -15,6 +17,7 @@
     @include sp {
         margin-top: 3.5rem;
         margin-left: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -35,6 +38,10 @@
         margin-left: 0.8rem;
         display: flex;
         margin-bottom: 4rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -88,7 +95,7 @@
     position: absolute;
     top: 5.3rem;
     left: 50%;
-    width: 3.5rem;
+    width: 35px;
     height: 5rem;
     background-image: url("../img/arrow-down.svg");
     background-repeat: no-repeat;

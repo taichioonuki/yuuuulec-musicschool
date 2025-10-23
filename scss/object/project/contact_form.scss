@@ -2,7 +2,8 @@
 @use "../component/component" as *;
 
 .contact-form {
-    padding-top: 6.5rem;
+    padding-top: 7rem;
+    // padding-bottom: 2rem;
 
     @include sp {
         padding: 4.9rem 0 1.5rem;
@@ -23,7 +24,7 @@
 }
 
 .contact-form__form-wrapper {
-    margin-top: 7rem;
+    margin-top: 6.5rem;
 
     @include sp {
         margin-top: 2.9rem;
@@ -31,25 +32,14 @@
 }
 
 .form-item {
-    display: grid;
-    grid-template-columns: 14rem 1fr;
-    gap: 3rem;
-    margin-bottom: 2.7rem;
-    align-items: center;
+    margin-bottom: 2.9rem;
 
     @include sp {
-        grid-template-columns: 1fr;
-        gap: 0.2rem;
         margin-bottom: 1.4rem;
     }
 
     &:last-of-type {
         margin-bottom: 0;
-    }
-
-    &:nth-child(5),
-    &:nth-child(6) {
-        align-items: flex-start;
     }
 }
 
@@ -66,8 +56,8 @@
 .form-item input[type="tel"],
 .form-item textarea {
     width: 100%;
-    padding: 0.7rem 2rem 1rem;
-    font-size: 2rem;
+    padding: 0.9rem 2rem;
+    font-size: 1.8rem;
     border: 0.5px solid $black;
 
     @include sp {
@@ -91,6 +81,18 @@ label {
     text-align: left;
 }
 
+.form-group {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    align-items: center;
+    gap: 3rem;
+
+    @include sp {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
+}
+
 .contact-form__form-item--label {
 
     span {
@@ -109,9 +111,26 @@ textarea {
     outline: none;
 }
 
+.form-group-heading {
+    width: 14rem;
+
+    @include sp {
+        width: auto;
+    }
+}
+
 .form-item--checkbox {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+    gap: 3rem;
     font-size: 2rem;
+    align-items: flex-start;
     line-height: calc(30 / 20);
+
+    @include sp {
+        grid-template-columns: 1fr;
+        gap: 0.2rem;
+    }
 }
 
 .contact-form__form-item--label {
@@ -188,6 +207,7 @@ textarea {
     word-wrap: break-word;
     overflow-wrap: break-word;
     padding: 2rem;
+    line-height: 1.5;
 
     @include sp {
         height: 19rem;
@@ -244,9 +264,22 @@ textarea {
 }
 
 .contact-form__form-item--label-message {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 
     @include sp {
         margin-top: 0;
+    }
+}
+
+.form-item:last-of-type {
+    margin-top: 3rem;
+
+    @include sp {
+        margin-top: 0;
+        gap: 0;
+    }
+
+    .form-group {
+        align-items: flex-start;
     }
 }

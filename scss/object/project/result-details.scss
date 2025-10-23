@@ -50,12 +50,11 @@
 
     td {
         border: 0.05rem solid #707070;
-        padding: 1.3rem 2rem 0.4rem;
+        padding: 1rem 2rem;
 
         @include sp {
-            padding: 1.3rem 1rem 0.4rem;
+            padding: 1rem;
         }
-
         &:first-child {
             font-weight: 700;
             background-color: #E5E5E5;

@@ -15,14 +15,14 @@
 <body class="has-fv">
     <header id="header" class="header">
         <div class="header__inner inner">
-            <h1 class="header__logo">
+            <div class="header__logo">
                 <a href="./index.html">
                     <picture>
                         <source media="(max-width: 767px)" srcset="./img/logo-sp.svg">
                         <img src="./img/logo.svg" alt="きたむらミュージックスクール">
                     </picture>
                 </a>
-            </h1>
+            </div>
             <div class="header__nav-inner">
                 <nav class="header__nav">
                     <ul class="header__nav-list">
@@ -52,7 +52,7 @@
             <div class="c-fv__overlay--sub"></div>
         </div>
         <div class="c-fv__title-wrapper">
-            <h2 class="c-fv__title">お問い合わせ</h2>
+            <h1 class="c-fv__title">お問い合わせ</h1>
         </div>
     </section>
     <nav class="c-breadcrumb">
@@ -76,38 +76,59 @@
             <div class="contact-form__form-wrapper">
                 <form action="./contact_send.html" method="get">
                     <div class="form-item">
-                        <label class="contact-form__form-item--label" for="company">会社名</label>
-                        <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
-                    </div>
-
-                    <div class="form-item">
-                        <label class="contact-form__form-item--label" for="name">お名前</label>
-                        <input type="text" id="name" name="name" placeholder="北村　翔平">
-                    </div>
-
-                    <div class="form-item">
-                        <label class="contact-form__form-item--label" for="email">メールアドレス</label>
-                        <input type="email" id="email" name="email" placeholder="info@kitamura.musicschool.jp">
-                    </div>
-
-                    <div class="form-item form-item--tel">
-                        <label class="contact-form__form-item--label" for="tel">電話番号</label>
-                        <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
-                    </div>
-
-                    <div class="form-item form-item--checkbox">
-                        <p class="contact-form__form-item--label">目　的 <span>(複数選択可)</span></p>
-                        <div class="checkbox-group">
-                            <label><input type="checkbox" name="purpose[]" value="plan">プランについてのお問い合わせ</label>
-                            <label><input type="checkbox" name="purpose[]" value="hearing">ヒアリングのご予約</label>
-                            <label><input type="checkbox" name="purpose[]" value="material">資料請求</label>
-                            <label><input type="checkbox" name="purpose[]" value="other">その他</label>
+                        <div class="form-group">
+                            <label class="contact-form__form-item--label" for="company">会社名</label>
+                            <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
                         </div>
                     </div>
 
                     <div class="form-item">
-                        <label class="contact-form__form-item--label contact-form__form-item--label-message">内　容</label>
-                        <textarea id="message" name="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+                        <div class="form-group">
+                            <label class="contact-form__form-item--label" for="name">お名前</label>
+                            <input type="text" id="name" name="name" placeholder="北村　翔平">
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-group">
+                            <label class="contact-form__form-item--label" for="email">メールアドレス</label>
+                            <input type="email" id="email" name="email" placeholder="info@kitamura.musicschool.jp">
+                        </div>
+                    </div>
+
+                    <div class="form-item form-item--tel">
+                        <div class="form-group">
+                            <label class="contact-form__form-item--label" for="tel">電話番号</label>
+                            <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
+                        </div>
+                    </div>
+
+                    <div class="form-item form-item--checkbox">
+                        <div class="form-group-heading">
+                            <p class="contact-form__form-item--label">目　的 <span>(複数選択可)</span></p>
+                        </div>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <label><input type="checkbox" name="purpose[]" value="plan">プランについてのお問い合わせ</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label><input type="checkbox" name="purpose[]" value="hearing">ヒアリングのご予約</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label><input type="checkbox" name="purpose[]" value="material">資料請求</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <label><input type="checkbox" name="purpose[]" value="other">その他</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="form-group">
+                            <label class="contact-form__form-item--label contact-form__form-item--label-message"
+                                for="message">内　容</label>
+                            <textarea id="message" name="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+                        </div>
                     </div>
 
                     <button type="submit" class="contact-form__form-item--submit">送信</button>

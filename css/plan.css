@@ -342,10 +342,6 @@ body {
   font-weight: 500;
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
 img {
   width: 100%;
   height: auto;
@@ -404,10 +400,17 @@ a:hover {
   position: sticky;
   bottom: 0;
   z-index: 10001;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 100%;
 }
 
 .c-btn-red {
@@ -427,8 +430,6 @@ a:hover {
   line-height: 1.65;
   color: #FFFFFF;
   display: block;
-  text-align: right;
-  margin-left: auto;
   letter-spacing: 0.4rem;
   width: 30rem;
   -webkit-transition: all 0.5s ease;
@@ -464,14 +465,16 @@ a:hover {
 
 .c-to-top {
   margin-bottom: 2.1rem;
-  padding-right: 11.6rem;
-  text-align: right;
   z-index: 10001;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 11.5rem;
 }
 @media (max-width: 767px) {
   .c-to-top {
-    padding-right: 2rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-right: 2rem;
   }
 }
 .c-to-top img {
@@ -504,7 +507,6 @@ a:hover {
   line-height: 1.32;
   display: inline-block;
   text-align: center;
-  padding: 1rem 0 0.7rem;
   display: block;
   width: 25rem;
   max-width: 25rem;
@@ -518,6 +520,8 @@ a:hover {
   display: block;
   color: inherit;
   opacity: 1;
+  padding: 1rem 0 0.7rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .c-to-home {
@@ -584,7 +588,7 @@ a:hover {
   text-align: center;
   color: #FFFFFF;
   position: absolute;
-  top: 14.2592592593vw;
+  top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -624,7 +628,6 @@ a:hover {
           column-gap: 0.6rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0.8rem 0;
 }
 @media (max-width: 767px) {
   .c-breadcrumb__list {
@@ -639,6 +642,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 5rem;
 }
 .c-breadcrumb__item::after {
   content: ">";
@@ -647,6 +651,15 @@ a:hover {
 }
 .c-breadcrumb__item:last-child::after {
   content: none;
+}
+.c-breadcrumb__item a {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .c-section-title--sub {
@@ -658,16 +671,15 @@ a:hover {
 .c-blog__label {
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 1.6666666667;
   background-color: #CB0000;
   color: #FFFFFF;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -676,6 +688,8 @@ a:hover {
           justify-content: center;
   height: 3rem;
   width: 8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (max-width: 767px) {
   .c-blog__label {
@@ -700,22 +714,31 @@ a:hover {
 }
 @media (max-width: 767px) {
   .c-prev-next {
+    gap: 5%;
+    padding-bottom: 7.5rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .c-prev-next {
     gap: 2.2rem;
     padding-bottom: 6.5rem;
   }
 }
 
+.c-prev,
+.c-next {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+}
+
 .c-prev-text {
   font-size: 1.7rem;
   line-height: 1.7647058824;
-  padding: 0.4rem 15rem 0.3rem 2rem;
-  display: inline-block;
-}
-@media (max-width: 767px) {
-  .c-prev-text {
-    padding: 0.4rem 0 0.3rem 2rem;
-    width: 15.6rem;
-  }
+  display: block;
+  padding: 0.4rem 0 0.3rem 2rem;
+  width: 100%;
 }
 
 .c-prev--img,
@@ -734,12 +757,11 @@ a:hover {
 
 .c-prev--right {
   text-align: right;
-  padding: 0.4rem 2rem 0.3rem 15rem;
+  padding: 0.4rem 2rem 0.3rem 0;
 }
 @media (max-width: 767px) {
   .c-prev--right {
     padding: 0.4rem 2rem 0.3rem 0;
-    width: 15.6rem;
   }
 }
 
@@ -757,6 +779,10 @@ a:hover {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-prev--inner p {
@@ -882,7 +908,6 @@ a:hover {
 
 .c-blog__img-wrapper {
   position: relative;
-  width: 26rem;
 }
 @media (max-width: 767px) {
   .c-blog__img-wrapper {
@@ -917,6 +942,10 @@ a:hover {
   line-height: 1.25;
   font-weight: 700;
   margin-top: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-blog__title {
@@ -940,6 +969,10 @@ data {
 .c-blog__text {
   margin-top: 1rem;
   line-height: 1.6666666667;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-blog__text {
@@ -1080,6 +1113,10 @@ data {
   font-size: 2rem;
   line-height: 1.25;
   font-weight: 700;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-related-title {
@@ -1148,7 +1185,7 @@ data {
 }
 @media (max-width: 767px) {
   .price__title--enrollment {
-    padding: 1.8rem 3rem;
+    padding: 1.8rem 0;
     width: 21rem;
   }
 }
@@ -1323,12 +1360,12 @@ data {
 .plan-table__price-row th,
 .plan-table__price-row td {
   background: #FFFFFF;
-  border-top: 1px solid rgba(80, 80, 80, 0.149);
+  border-top: 0.5px solid #000000;
 }
 
 .plan-table__label {
   text-align: left;
-  padding: 3.2rem 2rem 2.3rem;
+  padding-left: 2rem;
 }
 @media (max-width: 767px) {
   .plan-table__label {
@@ -1340,7 +1377,6 @@ data {
 .plan-table__price {
   text-align: center;
   padding: 3rem 2rem 2.2rem;
-  border-bottom: 1px solid rgba(80, 80, 80, 0.149);
 }
 @media (max-width: 767px) {
   .plan-table__price {
@@ -1361,7 +1397,6 @@ data {
 
 .plan-table__price--featured {
   color: #CB0000;
-  padding: 2.2rem 1rem;
 }
 
 .plan-table__heading--tall {
@@ -1373,13 +1408,14 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:not(:last-child) {
-  border-bottom: 1px solid rgba(80, 80, 80, 0.149);
+  border-bottom: 0.5px solid #000000;
+  height: 8.5rem;
 }
 
 tbody tr__cell {
   text-align: center;
   padding: 1.1rem 1rem;
-  border-bottom: 1px solid rgba(80, 80, 80, 0.149);
+  border-bottom: 0.5px solid #000000;
 }
 
 tbody tr__note {
@@ -1421,15 +1457,11 @@ tbody tr__note {
   }
 }
 
-/* 左上の空セルに線をつける */
-.plan-table__heading--blank {
-  border-bottom: 0.5px solid #000000;
-}
-
 /* 一番下の行に線をつける */
 .plan-table tbody tr:last-child th,
 .plan-table tbody tr:last-child td {
   border-bottom: 0.5px solid #000000;
+  height: 8.5rem;
 }
 
 /* 罫線 */

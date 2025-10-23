@@ -98,6 +98,9 @@ function getSpaceBetween() {
 }
 
 function initVoiceSwiper() {
+    const voiceInner = document.querySelector('.voice__inner');
+    if (!voiceInner) return; // 要素がなければ何もしない
+    
     return new Swiper('.voice__inner', {
         loop: true,
         navigation: {
@@ -105,13 +108,15 @@ function initVoiceSwiper() {
             prevEl: '.voice__prev',
         },
         slidesPerView: 3,
-        spaceBetween: getSpaceBetween(),
+        spaceBetween: 35,
         breakpoints: {
-            0: { slidesPerView: 1 },
+            0: { slidesPerView: 1,spaceBetween: 0 },
             768: { slidesPerView: 3 },
         },
         observer: true,
         observeParents: true,
+        preventClicks: false,
+        touchStartPreventDefault: false,
     });
 }
 
@@ -136,27 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
             observeParents: true,
             preventClicks: false,
             touchStartPreventDefault: false,
-        });
-
-        window.addEventListener('resize', function() {
-            if (voiceSwiper) voiceSwiper.destroy(true, true);
-            voiceSwiper = new Swiper('.voice__inner', {
-                loop: true,
-                navigation: {
-                    nextEl: '.voice__next',
-                    prevEl: '.voice__prev',
-                },
-                slidesPerView: 3,
-                spaceBetween: 35,
-                breakpoints: {
-                    0: { slidesPerView: 1 },
-                    768: { slidesPerView: 3 },
-                },
-                observer: true,
-                observeParents: true,
-                preventClicks: false,
-                touchStartPreventDefault: false,
-            });
         });
     }
 });
