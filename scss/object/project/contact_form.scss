@@ -77,8 +77,8 @@
 label {
     display: inline-block;
     font-size: 2rem;
-    // line-height: calc(30 / 20);
     text-align: left;
+    width: fit-content;
 }
 
 .form-group {
@@ -94,13 +94,17 @@ label {
 }
 
 .contact-form__form-item--label {
-
+display: block;
     span {
         display: block;
 
         @include sp {
             display: inline;
         }
+    }
+    @include sp {
+        font-size: 1.6rem;
+        line-height: calc(33 / 16);
     }
 }
 
@@ -133,13 +137,6 @@ textarea {
     }
 }
 
-.contact-form__form-item--label {
-
-    @include sp {
-        font-size: 1.6rem;
-        line-height: calc(33 / 16);
-    }
-}
 
 .checkbox-group {
     display: flex;

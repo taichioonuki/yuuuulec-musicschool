@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
+    pointer-events: none;
 }
 
 // 背景が赤いボタン
@@ -283,7 +284,7 @@
     justify-content: center;
     height: 3rem;
     width: 8rem;
-    overflow: hidden; 
+    overflow: hidden;
     text-overflow: ellipsis;
 
     @include sp {
@@ -334,12 +335,18 @@
 .c-next--img {
     width: 9.8rem;
     max-width: 9.8rem;
-    object-fit: cover;
 
     @include sp {
         display: none;
     }
+
+    img {
+        aspect-ratio: 98 / 68;
+        object-fit: cover;
+    }
 }
+
+
 
 .c-prev--right {
     text-align: right;
@@ -414,6 +421,7 @@
 
     @include sp {
         margin-bottom: 1.8rem;
+        display: block;
     }
 
     a {
@@ -476,18 +484,25 @@
 
 .c-blog__img-wrapper {
     position: relative;
-    // overflow: hidden;
-    // width: 100%;
-    // aspect-ratio: 65 /46;
+    width: 26rem;
 
     @include sp {
-        width: 100%;
+        width: 33.5rem;
     }
+
+    img {
+        aspect-ratio: 260 / 200;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        @include sp {
+            aspect-ratio: 335 / 200;
+        }
+    }
+
 }
 
-// .c-blog__img-wrapper img{
-// object-fit: cover;
-// }
 
 .c-blog__text-wrapper {
     flex: 1;

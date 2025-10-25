@@ -411,6 +411,7 @@ a:hover {
       -ms-flex-align: end;
           align-items: flex-end;
   width: 100%;
+  pointer-events: none;
 }
 
 .c-btn-red {
@@ -745,14 +746,18 @@ a:hover {
 .c-next--img {
   width: 9.8rem;
   max-width: 9.8rem;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media (max-width: 767px) {
   .c-prev--img,
   .c-next--img {
     display: none;
   }
+}
+.c-prev--img img,
+.c-next--img img {
+  aspect-ratio: 98/68;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-prev--right {
@@ -834,6 +839,7 @@ a:hover {
 @media (max-width: 767px) {
   .c-blog__item--related {
     margin-bottom: 1.8rem;
+    display: block;
   }
 }
 .c-blog__item--related a {
@@ -908,10 +914,23 @@ a:hover {
 
 .c-blog__img-wrapper {
   position: relative;
+  width: 26rem;
 }
 @media (max-width: 767px) {
   .c-blog__img-wrapper {
-    width: 100%;
+    width: 33.5rem;
+  }
+}
+.c-blog__img-wrapper img {
+  aspect-ratio: 260/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .c-blog__img-wrapper img {
+    aspect-ratio: 335/200;
   }
 }
 

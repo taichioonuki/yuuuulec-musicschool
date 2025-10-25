@@ -56,18 +56,25 @@
 }
 
 .voice__img {
-    aspect-ratio: 27 / 19;
     overflow: hidden;
-    width: 100%;
+    width: 27rem;
 
     @include sp {
-        aspect-ratio: 335 / 200;
+    width: 33.5rem;
     }
 }
 
 .voice__img img{
     object-fit: cover;
     transition: all 0.5s ease;
+    aspect-ratio: 27 / 19;
+    height: 100%;
+    width: 100%;
+
+    @include sp {
+        aspect-ratio: 335 / 200;
+    }
+
 
 }
 

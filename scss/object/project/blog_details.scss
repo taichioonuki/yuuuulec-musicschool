@@ -30,10 +30,20 @@
 .blog-details__img {
     width: 60rem;
     max-width: 60rem;
-    aspect-ratio: 600 / 350;
 
     @include sp {
-        width: 100%;
+        width: 33.5rem;
+    }
+}
+
+.blog-details__img img {
+    aspect-ratio: 600 / 350;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include sp {
+        aspect-ratio: 335 / 200;
     }
 }
 
@@ -217,11 +227,11 @@ hr {
 
         @include sp {
             left: 2rem;
-    }
+        }
 
-    @media screen and (max-width: 374px) {
-        left: 0.2rem; 
-    }
+        @media screen and (max-width: 374px) {
+            left: 0.2rem;
+        }
     }
 }
 
@@ -249,11 +259,18 @@ hr {
     position: relative;
     width: 20rem;
     max-width: 20rem;
-    aspect-ratio: 200 / 140;
 
     @include sp {
         width: 16rem;
-        aspect-ratio: 160 / 110;
+    }
+
+    img {
+        object-fit: cover;
+        aspect-ratio: 200 / 140;
+
+        @include sp {
+            aspect-ratio: 160 / 110;
+        }
     }
 }
 
@@ -324,7 +341,7 @@ hr {
 
     @include sp {
         height: 5.4rem;
-        width: 24.1rem;
+        flex: 1;
     }
 }
 

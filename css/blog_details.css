@@ -411,6 +411,7 @@ a:hover {
       -ms-flex-align: end;
           align-items: flex-end;
   width: 100%;
+  pointer-events: none;
 }
 
 .c-btn-red {
@@ -745,14 +746,18 @@ a:hover {
 .c-next--img {
   width: 9.8rem;
   max-width: 9.8rem;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 @media (max-width: 767px) {
   .c-prev--img,
   .c-next--img {
     display: none;
   }
+}
+.c-prev--img img,
+.c-next--img img {
+  aspect-ratio: 98/68;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-prev--right {
@@ -834,6 +839,7 @@ a:hover {
 @media (max-width: 767px) {
   .c-blog__item--related {
     margin-bottom: 1.8rem;
+    display: block;
   }
 }
 .c-blog__item--related a {
@@ -908,10 +914,23 @@ a:hover {
 
 .c-blog__img-wrapper {
   position: relative;
+  width: 26rem;
 }
 @media (max-width: 767px) {
   .c-blog__img-wrapper {
-    width: 100%;
+    width: 33.5rem;
+  }
+}
+.c-blog__img-wrapper img {
+  aspect-ratio: 260/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .c-blog__img-wrapper img {
+    aspect-ratio: 335/200;
   }
 }
 
@@ -1155,11 +1174,23 @@ data {
 .blog-details__img {
   width: 60rem;
   max-width: 60rem;
-  aspect-ratio: 600/350;
 }
 @media (max-width: 767px) {
   .blog-details__img {
-    width: 100%;
+    width: 33.5rem;
+  }
+}
+
+.blog-details__img img {
+  aspect-ratio: 600/350;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .blog-details__img img {
+    aspect-ratio: 335/200;
   }
 }
 
@@ -1374,11 +1405,19 @@ hr {
   position: relative;
   width: 20rem;
   max-width: 20rem;
-  aspect-ratio: 200/140;
 }
 @media (max-width: 767px) {
   .blog__img {
     width: 16rem;
+  }
+}
+.blog__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 200/140;
+}
+@media (max-width: 767px) {
+  .blog__img img {
     aspect-ratio: 160/110;
   }
 }
@@ -1455,7 +1494,9 @@ hr {
 @media (max-width: 767px) {
   .sidebar__search-form input {
     height: 5.4rem;
-    width: 24.1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
