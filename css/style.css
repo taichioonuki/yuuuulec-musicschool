@@ -573,6 +573,9 @@ a:hover {
   height: 100%;
   opacity: 1;
 }
+.header__nav-item a:hover {
+  opacity: 1;
+}
 @media (max-width: 767px) {
   .header__nav-item a {
     font-size: 1.8rem;
@@ -2768,6 +2771,12 @@ data {
 .result-details__prev-next {
   gap: 19.8rem;
   margin-bottom: 10rem;
+}
+@media (max-width: 767px) {
+  .result-details__prev-next {
+    gap: 2.2rem;
+    margin-bottom: 6.5rem;
+  }
 }
 
 .result {

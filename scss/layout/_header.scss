@@ -135,6 +135,10 @@
    height: 100%;
    opacity: 1;
 
+   &:hover {
+      opacity: 1;
+   }
+
    @include sp {
       font-size: 1.8rem;
       height: 5.8rem;
