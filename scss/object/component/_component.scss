@@ -247,12 +247,15 @@ body:not(:has(.c-floating-btns)) main {
     align-items: center;
     row-gap: 0;
     column-gap: 0.6rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;    
+    -webkit-overflow-scrolling: touch;
 }
 
 .c-breadcrumb__item {
     display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
 
     &::after {
         content: ">";
@@ -437,7 +440,7 @@ body:not(:has(.c-floating-btns)) main {
     margin-bottom: 3rem;
 
     @include sp {
-        margin-bottom: 1.8rem;
+        margin-bottom: 2rem;
         display: block;
     }
 
@@ -533,14 +536,13 @@ body:not(:has(.c-floating-btns)) main {
         display: block;
         font-size: 1.7rem;
         line-height: calc(30 / 17);
-        margin-top: 1.2rem;
+        margin-top: 0.2rem;
 
         @include sp {
             margin-top: 0.8rem;
-            text-align: left;
+            text-align: right;
         }
     }
-
 }
 
 .c-blog__title {

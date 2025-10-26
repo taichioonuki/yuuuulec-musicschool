@@ -18,7 +18,11 @@
 }
 
 .c-blog--sub--search {
-    padding: 3.8rem 0 5rem;
+    padding: 4.2rem 0 5rem;
+
+    @include sp {
+        padding: 4rem 0 5rem;
+    }
 }
 
 .blog__list--sub {
@@ -34,8 +38,8 @@ text-align: left;
     }
 
     @include sp {
-        text-align: center;
-        flex-basis: 100%;
+        text-align: left;
+        // flex-basis: 100%;
     }
 }
 
@@ -48,5 +52,6 @@ text-align: left;
 }
 
 .pagination__search {
-margin-top: 6rem;
+margin-top: 5.3rem;
 }
+
