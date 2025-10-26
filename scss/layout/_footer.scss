@@ -69,15 +69,13 @@
         margin-top: 2.9rem;
         font-size: 1.5rem;
         line-height: calc(20 / 15);
-        margin: 0 -2rem;//実機での改行防止//
     }
 }
 
-.copyright__inner {
-
-    @include sp {
-        padding: 0;
-    }
+.num {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-variant-numeric: proportional-nums;
+    letter-spacing: 0.03em;
 }
 
 .sns-icons {
