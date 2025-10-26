@@ -30,9 +30,11 @@
 .blog-details__img {
     width: 60rem;
     max-width: 60rem;
+    height: 35rem;
 
     @include sp {
         width: 100%;
+        height: 20rem;
     }
 }
 
@@ -68,8 +70,9 @@
 .blog-details__title {
     font-size: 2.5rem;
     font-weight: 700;
-    line-height: calc(40 / 25);
-    margin-top: 4.6rem;
+    // line-height: calc(40 / 25);
+    margin-top: 5.6rem;
+    margin-bottom: 0;
 
     @include sp {
         font-size: 2rem;
@@ -85,7 +88,7 @@
     @include sp {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
-        margin: 2.6rem 0 3.8rem;
+        margin: 2.6rem 0 3.5rem;
     }
 }
 
@@ -156,7 +159,7 @@ hr {
 }
 
 .blog-details__link {
-    margin: 4.2rem 0 5.5rem;
+    margin: 5.5rem 0 5.5rem;
 
     @include sp {
         margin: 5rem 0 4.5rem;
@@ -170,7 +173,6 @@ hr {
 .blog-details__link--title {
     font-size: 2rem;
     font-weight: 700;
-    line-height: calc(40 / 20);
     position: relative;
     padding-left: 0.9rem;
 
@@ -199,7 +201,7 @@ hr {
     padding: 1.8rem 3rem 1rem 6.7rem;
     position: relative;
     line-height: calc(30 / 18);
-    margin-top: 1.7rem;
+    margin-top: 2.7rem;
     max-width: 60rem;
 
     @include sp {
@@ -207,6 +209,7 @@ hr {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
         padding: 1.8rem 2rem 1rem 7rem;
+        margin-top: 2rem;
     }
 
     @media screen and (max-width: 374px) {
@@ -225,7 +228,7 @@ hr {
         aspect-ratio: 1 /1;
 
         @include sp {
-            left: 2rem;
+            left: 2.5rem;
         }
 
         @media screen and (max-width: 374px) {
@@ -235,7 +238,7 @@ hr {
 }
 
 .blog-details__link-btn {
-    margin-top: 2.7rem;
+    margin-top: 2.5rem;
 
     a {
         font-size: 2rem;
@@ -428,7 +431,7 @@ hr {
 .blog-details__container {
     display: flex;
     gap: 3rem;
-    padding: 6.6rem 0 3rem;
+    padding: 7rem 0 3rem;
 
     @include sp {
         padding: 5rem 0;

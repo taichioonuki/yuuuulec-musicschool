@@ -708,6 +708,7 @@ a:hover {
   position: sticky;
   bottom: 0;
   z-index: 10001;
+  pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,11 +716,9 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  width: 100%;
-  pointer-events: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body:not(:has(.c-floating-btns)) main {
@@ -748,6 +747,7 @@ body:not(:has(.c-floating-btns)) main {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   pointer-events: auto;
+  margin-left: auto;
 }
 .c-contact__btn:hover {
   background-color: white;
@@ -786,13 +786,15 @@ body:not(:has(.c-floating-btns)) main {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-right: 11.5rem;
   pointer-events: auto;
+  margin-left: auto;
+  padding-right: 11.5rem;
 }
 @media (max-width: 767px) {
   .c-to-top {
-    padding-bottom: 1.5rem;
-    margin-right: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
   }
 }
 .c-to-top img {
@@ -922,7 +924,7 @@ body:not(:has(.c-floating-btns)) main {
 }
 @media (max-width: 767px) {
   .c-fv__title {
-    top: 46.6666666667vw;
+    top: 45%;
   }
 }
 
@@ -1036,19 +1038,18 @@ body:not(:has(.c-floating-btns)) main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 19.8rem;
-  margin-bottom: 10rem;
+  gap: 7.8rem;
+  margin-bottom: 9rem;
 }
 @media (max-width: 767px) {
   .c-prev-next {
     gap: 5%;
-    margin-bottom: 7.5rem;
+    margin-bottom: 6.5rem;
   }
 }
 @media screen and (max-width: 375px) {
   .c-prev-next {
     gap: 2.2rem;
-    padding-bottom: 6.5rem;
   }
 }
 
@@ -1241,7 +1242,7 @@ body:not(:has(.c-floating-btns)) main {
 .c-blog__img-wrapper {
   position: relative;
   width: 26rem;
-  height: 19rem;
+  height: 18.4rem;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -1277,11 +1278,12 @@ body:not(:has(.c-floating-btns)) main {
   display: block;
   font-size: 1.7rem;
   line-height: 1.7647058824;
+  margin-top: 1.2rem;
 }
 @media (max-width: 767px) {
   .c-blog__text-wrapper time {
     margin-top: 0.8rem;
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -1292,7 +1294,7 @@ body:not(:has(.c-floating-btns)) main {
   margin-top: 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -1319,7 +1321,7 @@ data {
   line-height: 1.6666666667;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 5;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -1332,7 +1334,7 @@ data {
 
 .c-pagination {
   line-height: 1;
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 @media (max-width: 767px) {
   .c-pagination {
@@ -1354,7 +1356,7 @@ data {
 }
 @media (max-width: 767px) {
   .c-pagination__list {
-    margin-top: 6rem;
+    margin-top: 5.5rem;
     font-size: 1.6rem;
   }
 }
@@ -2172,7 +2174,7 @@ promotion
 @media (max-width: 767px) {
   .flow {
     padding-top: 4.6rem;
-    padding-bottom: 5rem;
+    padding-bottom: 0;
   }
 }
 
@@ -2326,7 +2328,7 @@ promotion
 }
 @media (max-width: 767px) {
   .blog {
-    padding-top: 6rem;
+    padding: 5rem 0 4.5rem;
   }
 }
 
