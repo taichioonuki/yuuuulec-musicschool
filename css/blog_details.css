@@ -1528,6 +1528,7 @@ hr {
   background-color: rgb(232, 232, 232);
   border: none;
   width: 18rem;
+  padding: 1rem 1.5rem;
 }
 @media (max-width: 767px) {
   .sidebar__search-form input {
