@@ -338,6 +338,7 @@ hr {
     background-color: rgba(232, 232, 232, 1);
     border: none;
     width: 18rem;
+    padding: 1rem;
 
     @include sp {
         height: 5.4rem;
