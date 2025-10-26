@@ -189,23 +189,18 @@
    a {
       color: inherit;
       padding: 0.7rem 3rem 0.5rem;
+      transition: all 0.5s ease;
    }
 
    &:hover {
       background-color: white;
       color: $red;
+      opacity: 1;
 
       a {
          color: inherit;
+         opacity: 1;
       }
-   }
-}
-
-.header__nav-item--contact a {
-   transition: none;
-
-   &:hover {
-      opacity: 1;
    }
 }
 

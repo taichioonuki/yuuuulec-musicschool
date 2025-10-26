@@ -5,8 +5,9 @@
         padding-bottom: 4.5rem;
     }
 }
+
 .result-details {
-    padding: 6.7rem 0 5.7rem;
+    padding: 7rem 0 4rem;
 
     data {
         font-size: 1.7rem;
@@ -15,7 +16,7 @@
     }
 
     @include sp {
-        padding: 4.5rem 0 4rem;
+        padding: 5rem 0 4rem;
     }
 }
 
@@ -53,7 +54,7 @@
         padding: 1rem 2rem;
 
         @include sp {
-            padding: 1rem;
+            padding: 0.8rem;
         }
         &:first-child {
             font-weight: 700;

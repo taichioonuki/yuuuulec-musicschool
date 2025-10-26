@@ -32,7 +32,7 @@
     max-width: 60rem;
 
     @include sp {
-        width: 33.5rem;
+        width: 100%;
     }
 }
 
@@ -80,31 +80,29 @@
 
 .blog-details__text {
     line-height: calc(30 / 18);
-    padding: 5rem 0 4rem;
+    margin: 5rem 0 4rem;
 
     @include sp {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
-        padding: 2.6rem 0 3.8rem;
-    }
-}
-
-.blog-details__text--text {
-    // margin-bottom: 3.3rem;
-
-    &:last-of-type {
-        // margin-bottom: 1.7rem;
+        margin: 2.6rem 0 3.8rem;
     }
 }
 
 .blog-details__text--img {
     width: 33.5rem;
-    max-width: 33.5rem;
-    aspect-ratio: 335 / 200;
     margin-top: 1.5rem;
 
     @include sp {
         margin-top: 6.8rem;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 335 / 200;
     }
 }
 
@@ -158,10 +156,10 @@ hr {
 }
 
 .blog-details__link {
-    padding: 4.2rem 0 5.5rem;
+    margin: 4.2rem 0 5.5rem;
 
     @include sp {
-        padding: 5rem 0 4.5rem;
+        margin: 5rem 0 4.5rem;
     }
 }
 
@@ -219,6 +217,7 @@ hr {
         content: "";
         background-image: url(../../../img/blog_details/blog_deco.svg);
         background-repeat: no-repeat;
+        background-size: 2.7rem;
         position: absolute;
         top: 2rem;
         left: 3rem;
@@ -293,10 +292,10 @@ hr {
 }
 
 .sidebar__recommend-list {
-    padding: 1.5rem 0 2.8rem;
+    margin: 1.5rem 0 2.8rem;
 
     @include sp {
-        padding: 1.5rem 0 3rem;
+        margin: 1.5rem 0 3rem;
     }
 }
 
@@ -335,8 +334,6 @@ hr {
 .sidebar__search-form input {
     background-color: rgba(232, 232, 232, 1);
     border: none;
-    height: 4rem;
-    padding: 1rem;
     width: 18rem;
 
     @include sp {
@@ -354,6 +351,10 @@ hr {
 
     @include sp {
         width: 5.4rem;
+    }
+
+    &:hover {
+        opacity: 0.5;
     }
 }
 

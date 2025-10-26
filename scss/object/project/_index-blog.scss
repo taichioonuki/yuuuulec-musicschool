@@ -25,10 +25,11 @@
 }
 
 .blog__item {
-
+    width: 29.5%;
     @include sp {
         max-width: none;
         margin-top: 4.7rem;
+        width: 100%;
     }
 
     &:first-of-type {
@@ -44,6 +45,10 @@
         @include sp {
             margin-top: 1rem;
         }
+    }
+
+    a {
+        width: 100%;
     }
 }
 

@@ -631,20 +631,16 @@ a:hover {
 .header__nav-item--contact a {
   color: inherit;
   padding: 0.7rem 3rem 0.5rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .header__nav-item--contact:hover {
   background-color: white;
   color: #CB0000;
+  opacity: 1;
 }
 .header__nav-item--contact:hover a {
   color: inherit;
-}
-
-.header__nav-item--contact a {
-  -webkit-transition: none;
-  transition: none;
-}
-.header__nav-item--contact a:hover {
   opacity: 1;
 }
 
@@ -726,6 +722,10 @@ a:hover {
   pointer-events: none;
 }
 
+body:not(:has(.c-floating-btns)) main {
+  padding-bottom: 8rem;
+}
+
 .c-btn-red {
   background-color: #CB0000;
   color: #FFFFFF;
@@ -739,7 +739,7 @@ a:hover {
 .c-contact__btn {
   cursor: pointer;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 1.65;
   color: #FFFFFF;
   display: block;
@@ -747,6 +747,7 @@ a:hover {
   width: 30rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  pointer-events: auto;
 }
 .c-contact__btn:hover {
   background-color: white;
@@ -760,6 +761,9 @@ a:hover {
   padding: 1.7rem 0 1rem 0;
   text-align: center;
   white-space: nowrap;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  opacity: 1;
 }
 .c-contact__btn a:hover {
   opacity: 1;
@@ -783,6 +787,7 @@ a:hover {
   width: -moz-fit-content;
   width: fit-content;
   margin-right: 11.5rem;
+  pointer-events: auto;
 }
 @media (max-width: 767px) {
   .c-to-top {
@@ -812,6 +817,11 @@ a:hover {
 }
 .c-contact__btn a {
   color: inherit;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.c-contact__btn a:hover {
+  opacity: 1;
 }
 
 .c-to-home {
@@ -830,11 +840,16 @@ a:hover {
   margin-top: 4rem;
 }
 .c-to-home a {
-  display: block;
+  display: inline-block;
   color: inherit;
   opacity: 1;
   padding: 1rem 0 0.7rem;
   width: 100%;
+}
+@media (max-width: 767px) {
+  .c-to-home a {
+    padding: 1rem 0;
+  }
 }
 @media (max-width: 767px) {
   .c-to-home {
@@ -842,7 +857,6 @@ a:hover {
     margin-top: 1rem;
     width: 33.5rem;
     max-width: 33.5rem;
-    padding: 1rem 0;
   }
 }
 .c-to-home:hover {
@@ -942,11 +956,6 @@ a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media (max-width: 767px) {
-  .c-breadcrumb__list {
-    padding: 0.5rem 0;
-  }
-}
 
 .c-breadcrumb__item {
   display: -webkit-inline-box;
@@ -955,7 +964,6 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5rem;
 }
 .c-breadcrumb__item::after {
   content: ">";
@@ -973,6 +981,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.8rem 0;
+}
+@media (max-width: 767px) {
+  .c-breadcrumb__item a {
+    padding: 0.6rem 0;
+  }
 }
 
 .c-section-title--sub {
@@ -1022,13 +1036,13 @@ a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 7.8rem;
-  padding-bottom: 9.3rem;
+  gap: 19.8rem;
+  margin-bottom: 10rem;
 }
 @media (max-width: 767px) {
   .c-prev-next {
     gap: 5%;
-    padding-bottom: 7.5rem;
+    margin-bottom: 7.5rem;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1227,10 +1241,13 @@ a:hover {
 .c-blog__img-wrapper {
   position: relative;
   width: 26rem;
+  height: 19rem;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-blog__img-wrapper {
-    width: 33.5rem;
+    width: 100%;
+    height: 20rem;
   }
 }
 .c-blog__img-wrapper img {
@@ -1360,8 +1377,8 @@ data {
   cursor: pointer;
   margin-right: 1rem;
   font-weight: 700;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, font-size 0.5s ease, line-height 0.5s ease, padding-bottom 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, font-size 0.5s ease, line-height 0.5s ease, padding-bottom 0.5s ease;
 }
 .c-pagination__item:last-of-type {
   margin-right: 0;
@@ -1370,7 +1387,6 @@ data {
   .c-pagination__item {
     width: 4.2rem;
     height: 4.2rem;
-    padding-bottom: 0.6rem;
     font-size: 1.6rem;
     margin-right: 0.4rem;
   }
@@ -1400,6 +1416,11 @@ data {
   color: #FFFFFF;
   font-size: 1.8rem;
   line-height: 1;
+}
+@media (max-width: 767px) {
+  .c-pagination__item.active {
+    font-size: 1.6rem;
+  }
 }
 .c-pagination__item.active a {
   display: -webkit-box;
@@ -1528,7 +1549,6 @@ data {
   font-size: 1.5rem;
   line-height: 2.2;
   text-align: center;
-  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .footer__copyright {
@@ -1874,7 +1894,7 @@ data {
 }
 
 .message__item:first-child .dot-message::after {
-  height: 5.7rem;
+  height: 5.8rem;
 }
 
 .dot-top {
@@ -2152,7 +2172,7 @@ promotion
 @media (max-width: 767px) {
   .flow {
     padding-top: 4.6rem;
-    padding-bottom: 0;
+    padding-bottom: 5rem;
   }
 }
 
@@ -2332,10 +2352,14 @@ promotion
   }
 }
 
+.blog__item {
+  width: 29.5%;
+}
 @media (max-width: 767px) {
   .blog__item {
     max-width: none;
     margin-top: 4.7rem;
+    width: 100%;
   }
 }
 .blog__item:first-of-type {
@@ -2351,6 +2375,9 @@ promotion
   .blog__item time {
     margin-top: 1rem;
   }
+}
+.blog__item a {
+  width: 100%;
 }
 
 .blog__title {
@@ -2481,7 +2508,7 @@ data {
 }
 @media (max-width: 767px) {
   .voice__img {
-    width: 33.5rem;
+    width: 100%;
   }
 }
 
@@ -2505,6 +2532,11 @@ data {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   margin-top: 1.7rem;
+}
+@media (max-width: 767px) {
+  .voice__text-block {
+    margin-top: 2.7rem;
+  }
 }
 
 .voice__title {
@@ -2577,7 +2609,7 @@ data {
 }
 
 .result-details {
-  padding: 6.7rem 0 5.7rem;
+  padding: 7rem 0 4rem;
 }
 .result-details data {
   font-size: 1.7rem;
@@ -2586,7 +2618,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details {
-    padding: 4.5rem 0 4rem;
+    padding: 5rem 0 4rem;
   }
 }
 
@@ -2625,7 +2657,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details__table td {
-    padding: 1rem;
+    padding: 0.8rem;
   }
 }
 .result-details__table td:first-child {

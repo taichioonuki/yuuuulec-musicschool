@@ -60,7 +60,7 @@
     width: 27rem;
 
     @include sp {
-    width: 33.5rem;
+    width: 100%;
     }
 }
 
@@ -82,6 +82,10 @@
     opacity: 1;
     transition: all 0.5s ease;
     margin-top: 1.7rem;
+
+    @include sp {
+        margin-top: 2.7rem;
+    }
 }
 
 .voice__title {

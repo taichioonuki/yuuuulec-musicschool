@@ -12,6 +12,10 @@
     pointer-events: none;
 }
 
+body:not(:has(.c-floating-btns)) main {
+    padding-bottom: 8rem; 
+}
+
 // 背景が赤いボタン
 .c-btn-red {
     background-color: $red;
@@ -28,13 +32,14 @@
 .c-contact__btn {
     cursor: pointer;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 700;
     line-height: calc(33 / 20);
     color: $white;
     display: block;
     letter-spacing: 0.4rem;
     width: 30rem;
     transition: all 0.5s ease;
+    pointer-events: auto;
 
     &:hover {
         background-color: white;
@@ -49,6 +54,8 @@
         padding: 1.7rem 0 1rem 0;
         text-align: center;
         white-space: nowrap;
+        transition: opacity 0.5s ease;
+        opacity: 1;
 
         &:hover {
             opacity: 1;
@@ -67,13 +74,13 @@
     }
 }
 
-
 // トップに戻るボタン
 .c-to-top {
     margin-bottom: 2.1rem;
     z-index: 10001;
     width: fit-content;
     margin-right: 11.5rem;
+    pointer-events: auto;
 
     @include sp {
         padding-bottom: 1.5rem;
@@ -104,6 +111,11 @@
 
     a {
         color: inherit;
+        transition: all 0.5s ease;
+
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
@@ -123,11 +135,15 @@
     margin-top: 4rem;
 
     a {
-        display: block;
+        display: inline-block;
         color: inherit;
         opacity: 1;
         padding: 1rem 0 0.7rem;
         width: 100%;
+
+        @include sp {
+            padding: 1rem 0;
+        }
     }
 
     @include sp {
@@ -135,8 +151,6 @@
         margin-top: 1rem;
         width: 33.5rem;
         max-width: 33.5rem;
-        padding: 1rem 0;
-
     }
 
     &:hover {
@@ -230,16 +244,11 @@
     row-gap: 0;
     column-gap: 0.6rem;
     flex-wrap: wrap;
-
-    @include sp {
-        padding: 0.5rem 0;
-    }
 }
 
 .c-breadcrumb__item {
     display: inline-flex;
     align-items: center;
-    height: 5rem;
 
     &::after {
         content: ">";
@@ -255,6 +264,11 @@
         height: 100%;
         display: flex;
         align-items: center;
+        padding: 0.8rem 0;
+
+        @include sp {
+            padding: 0.6rem 0;
+        }
     }
 }
 
@@ -303,12 +317,12 @@
 .c-prev-next {
     display: flex;
     justify-content: space-between;
-    gap: 7.8rem;
-    padding-bottom: 9.3rem;
+    gap: 19.8rem;
+    margin-bottom: 10rem;
 
     @include sp {
         gap: 5%;
-        padding-bottom: 7.5rem;
+        margin-bottom: 7.5rem;
     }
 
     @media screen and (max-width: 375px) {
@@ -485,9 +499,12 @@
 .c-blog__img-wrapper {
     position: relative;
     width: 26rem;
+    height: 19rem;
+    overflow: hidden;
 
     @include sp {
-        width: 33.5rem;
+        width: 100%;
+        height: 20rem;
     }
 
     img {
@@ -602,17 +619,17 @@ data {
     cursor: pointer;
     margin-right: 1rem;
     font-weight: 700;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease,font-size 0.5s ease,
+    line-height 0.5s ease,
+    padding-bottom 0.5s ease;
 
     &:last-of-type {
         margin-right: 0;
     }
 
-
     @include sp {
         width: 4.2rem;
         height: 4.2rem;
-        padding-bottom: 0.6rem;
         font-size: 1.6rem;
         margin-right: 0.4rem;
     }
@@ -637,6 +654,10 @@ data {
         color: $white;
         font-size: 1.8rem;
         line-height: 1;
+
+        @include sp {
+            font-size: 1.6rem;
+        }
 
         a {
             display: flex;
