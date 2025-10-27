@@ -396,6 +396,10 @@ a:hover {
   }
 }
 
+* {
+  outline: 1px solid red; /* 全要素の枠線を表示 */
+}
+
 .header {
   height: 8rem;
   position: fixed;
