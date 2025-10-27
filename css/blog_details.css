@@ -1402,7 +1402,7 @@ hr {
 }
 .blog-details__link--text::before {
   content: "";
-  background-image: url(../../../img/blog_details/blog_deco.svg);
+  background-image: url(../img/blog_details/blog_deco.svg);
   background-repeat: no-repeat;
   background-size: 2.7rem;
   position: absolute;
