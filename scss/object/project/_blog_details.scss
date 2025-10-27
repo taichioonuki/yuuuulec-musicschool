@@ -338,6 +338,7 @@ hr {
     border: none;
     width: 18rem;
     padding: 1rem 1.5rem;
+    height: 4rem;
 
     @include sp {
         height: 5.4rem;
@@ -351,9 +352,14 @@ hr {
     padding: 0;
     cursor: pointer;
     width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include sp {
         width: 5.4rem;
+        height: 5.4rem;
     }
 
     &:hover {
@@ -370,6 +376,18 @@ hr {
     }
 }
 
+.sidebar__search-icon {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include sp {
+        width: 5.4rem;
+        height: 5.4rem;
+    }
+}
 
 .sidebar__recommend-item {
     margin-bottom: 1.5rem;

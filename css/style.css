@@ -396,10 +396,6 @@ a:hover {
   }
 }
 
-* {
-  outline: 1px solid red; /* 全要素の枠線を表示 */
-}
-
 .header {
   height: 8rem;
   position: fixed;
@@ -1179,9 +1175,7 @@ body:not(:has(.c-floating-btns)) main {
   }
 }
 .c-blog__item--related a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   gap: 3rem;
 }
 @media (max-width: 767px) {
@@ -3200,6 +3194,7 @@ hr {
   border: none;
   width: 18rem;
   padding: 1rem 1.5rem;
+  height: 4rem;
 }
 @media (max-width: 767px) {
   .sidebar__search-form input {
@@ -3216,10 +3211,21 @@ hr {
   padding: 0;
   cursor: pointer;
   width: 4rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 767px) {
   .sidebar__search-form button {
     width: 5.4rem;
+    height: 5.4rem;
   }
 }
 .sidebar__search-form button:hover {
@@ -3233,6 +3239,26 @@ hr {
 @media (max-width: 767px) {
   .sidebar__search-icon {
     width: 5.4rem;
+  }
+}
+
+.sidebar__search-icon {
+  width: 4rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 767px) {
+  .sidebar__search-icon {
+    width: 5.4rem;
+    height: 5.4rem;
   }
 }
 
