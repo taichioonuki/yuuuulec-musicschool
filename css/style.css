@@ -1175,14 +1175,13 @@ body:not(:has(.c-floating-btns)) main {
   }
 }
 .c-blog__item--related a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 3rem;
 }
 @media (max-width: 767px) {
   .c-blog__item--related a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     gap: 2rem;
   }
 }

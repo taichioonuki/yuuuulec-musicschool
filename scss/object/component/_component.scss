@@ -443,11 +443,10 @@ body:not(:has(.c-floating-btns)) main {
     }
 
     a {
-        display: block;
+        display: flex;
         gap: 3rem;
 
         @include sp {
-            display: flex;
             gap: 2rem;
         }
     }
