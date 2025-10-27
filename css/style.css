@@ -3642,7 +3642,6 @@ tbody tr:nth-child(odd) {
 
 tbody tr:not(:last-child) {
   border-bottom: 0.5px solid #000000;
-  height: 8.5rem;
 }
 
 tbody tr__cell {
