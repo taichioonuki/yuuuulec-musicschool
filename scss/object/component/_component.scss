@@ -447,6 +447,7 @@ body:not(:has(.c-floating-btns)) main {
         gap: 3rem;
 
         @include sp {
+            display: flex;
             gap: 2rem;
         }
     }

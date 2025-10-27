@@ -1180,6 +1180,9 @@ body:not(:has(.c-floating-btns)) main {
 }
 @media (max-width: 767px) {
   .c-blog__item--related a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     gap: 2rem;
   }
 }
