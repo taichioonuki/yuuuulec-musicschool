@@ -318,6 +318,13 @@ tbody tr__note {
     }
 }
 
+.plan-table tbody tr {
+    th,
+    td {
+        height: 8.5rem;
+    }
+}
+
 
 /* 一番下の行に線をつける */
 .plan-table tbody tr:last-child th,
