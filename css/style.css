@@ -634,8 +634,6 @@ a:hover {
 .header__nav-item--contact a {
   color: inherit;
   padding: 0.7rem 3rem 0.5rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 .header__nav-item--contact:hover {
   background-color: white;
@@ -743,14 +741,13 @@ body:not(:has(.c-floating-btns)) main {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.65;
-  color: #FFFFFF;
   display: block;
   letter-spacing: 0.4rem;
   width: 30rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   pointer-events: auto;
   margin-left: auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .c-contact__btn:hover {
   background-color: white;
