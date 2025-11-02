@@ -31,6 +31,7 @@
     height: 6rem;
     width: 21rem;
     text-align: center;
+    font-weight: 700;
 
     @include sp {
         padding: 1.8rem 6.5rem;
@@ -202,6 +203,7 @@
     transform: translateX(-50%);
     display: inline-block;
     font-size: 1.7rem;
+    font-weight: 700;
     line-height: 1;
     padding: 1.8rem 0 0.5rem;
     background-color: $red;
@@ -214,6 +216,7 @@
     line-height: calc(33 / 20);
     text-align: center;
     margin-inline: auto;
+    font-weight: 700;
 
     @include sp {
         display: block;

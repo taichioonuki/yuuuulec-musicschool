@@ -469,7 +469,8 @@ a:hover {
           align-items: center;
   height: 100%;
 }
-.header__logo a img, .header__logo a picture {
+.header__logo a img,
+.header__logo a picture {
   width: 100%;
   height: 100%;
   display: block;
@@ -624,24 +625,15 @@ a:hover {
 
 .header__nav-item--contact {
   cursor: pointer;
-  color: #FFFFFF;
   font-size: 1.5rem;
   line-height: 2.2;
   font-weight: 700;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-}
-.header__nav-item--contact a {
-  color: inherit;
   padding: 0.7rem 3rem 0.5rem;
+  display: inline-block;
 }
 .header__nav-item--contact:hover {
-  background-color: white;
-  color: #CB0000;
-  opacity: 1;
-}
-.header__nav-item--contact:hover a {
-  color: inherit;
   opacity: 1;
 }
 
@@ -730,13 +722,18 @@ body:not(:has(.c-floating-btns)) main {
   background-color: #CB0000;
   color: #FFFFFF;
   border: 1px solid #CB0000;
-}
-.c-btn-red a {
-  color: #FFFFFF;
   display: inline-block;
+  text-align: center;
+}
+.c-btn-red:hover {
+  background-color: #FFFFFF;
+  color: #CB0000;
+  border: 1px solid #CB0000;
 }
 
 .c-contact__btn {
+  color: #FFFFFF;
+  background-color: #CB0000;
   cursor: pointer;
   font-size: 2rem;
   font-weight: 700;
@@ -746,24 +743,20 @@ body:not(:has(.c-floating-btns)) main {
   width: 30rem;
   pointer-events: auto;
   margin-left: auto;
+  cursor: pointer;
+  display: block;
+  padding: 1.7rem 0 1rem 0;
+  border: 1px solid #CB0000;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 1;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .c-contact__btn:hover {
-  background-color: white;
+  background-color: #FFFFFF;
   color: #CB0000;
   border: 1px solid #CB0000;
-  opacity: 1;
-}
-.c-contact__btn a {
-  color: inherit;
-  display: block;
-  padding: 1.7rem 0 1rem 0;
-  text-align: center;
-  white-space: nowrap;
-  opacity: 1;
-}
-.c-contact__btn a:hover {
   opacity: 1;
 }
 @media (max-width: 767px) {
@@ -771,9 +764,6 @@ body:not(:has(.c-floating-btns)) main {
     text-align: center;
     margin-inline: auto;
     width: 33.5rem;
-  }
-  .c-contact__btn a {
-    color: inherit;
     padding: 1.3rem 0 1rem;
   }
 }
@@ -838,16 +828,11 @@ body:not(:has(.c-floating-btns)) main {
   transition: background-color 0.5s ease, color 0.5s ease;
   list-style: dots;
   margin-top: 4rem;
-}
-.c-to-home a {
-  display: inline-block;
-  color: inherit;
-  opacity: 1;
   padding: 1rem 0 0.7rem;
-  width: 100%;
+  opacity: 1;
 }
 @media (max-width: 767px) {
-  .c-to-home a {
+  .c-to-home {
     padding: 1rem 0;
   }
 }
@@ -862,9 +847,7 @@ body:not(:has(.c-floating-btns)) main {
 .c-to-home:hover {
   background-color: white;
   color: #CB0000;
-}
-.c-to-home:hover a {
-  color: #CB0000;
+  opacity: 1;
 }
 
 .c-top-section-title {
@@ -1131,6 +1114,7 @@ body:not(:has(.c-floating-btns)) main {
 
 .c-title {
   padding: 1.5rem 0 1.5rem 3rem;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .c-title {
@@ -1375,14 +1359,10 @@ data {
           justify-content: center;
   width: 5rem;
   height: 5rem;
-  background-color: #FFFFFF;
-  border: 1px solid #000000;
   line-height: 1;
   cursor: pointer;
   margin-right: 1rem;
   font-weight: 700;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease, font-size 0.5s ease, line-height 0.5s ease, padding-bottom 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease, font-size 0.5s ease, line-height 0.5s ease, padding-bottom 0.5s ease;
 }
 .c-pagination__item:last-of-type {
   margin-right: 0;
@@ -1405,19 +1385,22 @@ data {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: inherit;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   width: 100%;
   height: 100%;
   padding: 0;
 }
 .c-pagination__item a:hover {
+  color: #FFFFFF;
+  background-color: #000000;
   opacity: 1;
 }
 .c-pagination__item.active {
-  background-color: #000000;
-  color: #FFFFFF;
+  cursor: default;
   font-size: 1.8rem;
   line-height: 1;
 }
@@ -1427,6 +1410,7 @@ data {
   }
 }
 .c-pagination__item.active a {
+  cursor: default;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1439,30 +1423,14 @@ data {
   color: inherit;
   width: 100%;
   height: 100%;
+  background-color: #000000;
+  color: #FFFFFF;
 }
 .c-pagination__item.border-none {
   border: none;
   width: 4rem;
   cursor: default;
   padding: 0;
-}
-.c-pagination__item:hover:not(.border-none) {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-.c-pagination__item:hover:not(.border-none) a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: inherit;
-  width: 100%;
-  height: 100%;
 }
 
 .c-related-title {
@@ -3395,6 +3363,7 @@ hr {
   height: 6rem;
   width: 21rem;
   text-align: center;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .price__title {
@@ -3565,6 +3534,7 @@ hr {
           transform: translateX(-50%);
   display: inline-block;
   font-size: 1.7rem;
+  font-weight: 700;
   line-height: 1;
   padding: 1.8rem 0 0.5rem;
   background-color: #CB0000;
@@ -3577,6 +3547,7 @@ hr {
   line-height: 1.65;
   text-align: center;
   margin-inline: auto;
+  font-weight: 700;
 }
 @media (max-width: 767px) {
   .plan-table__plan-name {
