@@ -83,11 +83,23 @@
     }
 
 .flow__step .dot-flow.last-dot::after {
-    height: 7rem;
+    height: 7.1rem;
 
     @include sp {
-        height: 14rem;
+        height: 13.8rem;
     }
+
+    @media screen and (max-width: 450px) {
+        height: 14rem; 
+    };
+
+    @media screen and (max-width: 376px) {
+        height: 14.2rem; 
+}
+
+@media screen and (max-width: 330px) {
+height: 14.4rem;
+}
 }
 
 .flow__step .dot-flow.last-dot::before {

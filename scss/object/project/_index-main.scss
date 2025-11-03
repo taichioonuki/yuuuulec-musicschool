@@ -15,7 +15,6 @@
     pointer-events: none;
 }
 
-
 .catchphrase {
     position: absolute;
     top: calc(185 / 1080 * 100vw);
@@ -26,7 +25,7 @@
     line-height: calc(60 / 40);
     color: $white;
     z-index: 10;
-    white-space: nowrap;
+    text-align: center;
 
     @include sp {
         top: calc(260 / 375 * 100vw);
@@ -44,15 +43,6 @@
         padding: 5rem 0 5rem;
     }
 }
-
-.pc-space {
-    display: inline-block;
-    
-    @include sp {
-        display: none;
-    }
-}
-
 /* ===========================
    fv-message
    =========================== */

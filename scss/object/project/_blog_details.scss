@@ -61,8 +61,6 @@
 
 .blog-details__sns-icon {
     @include sp {
-        // width: 6.5rem;
-        // max-width: 6.5rem;
         aspect-ratio: 65 / 40;
     }
 }
@@ -83,7 +81,7 @@
 
 .blog-details__text {
     line-height: calc(30 / 18);
-    margin: 5rem 0 4rem;
+    margin: 5rem 0 5.5rem;
 
     @include sp {
         font-size: 1.6rem;
@@ -111,7 +109,6 @@
 
 .blog-details__text--subtitle {
     margin-top: 3.3rem;
-    // margin-bottom: 1.5rem;
     font-size: 2rem;
     font-weight: 700;
     line-height: calc(40 / 20);
@@ -156,6 +153,7 @@ hr {
     border: none;
     height: 0.5px;
     background-color: $black;
+    margin-top: 4rem;
 }
 
 .blog-details__link {
@@ -175,9 +173,12 @@ hr {
     font-weight: 700;
     position: relative;
     padding-left: 0.9rem;
+    line-height: 1.5;
+    margin-top: 5rem;
 
     @include sp {
         line-height: calc(30 / 20);
+        margin-top: 4rem;
     }
 
     &::before {
@@ -201,7 +202,7 @@ hr {
     padding: 1.8rem 3rem 1rem 6.7rem;
     position: relative;
     line-height: calc(30 / 18);
-    margin-top: 2.7rem;
+    margin-top: 2.2rem;
     max-width: 60rem;
 
     @include sp {
@@ -238,15 +239,14 @@ hr {
 }
 
 .blog-details__link-btn {
-    margin-top: 2.5rem;
-
-    a {
-        font-size: 2rem;
-        line-height: calc(33 /20);
-        color: $red;
-        font-weight: bold;
-        border-bottom: 1px solid $red;
-    }
+    display: inline-block;
+    margin-top: 3.2rem;
+    font-size: 2rem;
+    line-height: 1;
+    color: $red;
+    font-weight: bold;
+    border-bottom: 1px solid $red;
+    padding-bottom: 0.2rem;
 }
 
 .blog-details__related {
@@ -275,6 +275,7 @@ hr {
         }
     }
 }
+
 /* ===========================
    sidebar
    =========================== */

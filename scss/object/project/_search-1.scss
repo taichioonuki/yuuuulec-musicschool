@@ -3,11 +3,12 @@
 
 .search-message {
     text-align: center;
+    align-items: flex-start;
     margin-top: 6.6rem;
     display: flex;
     justify-content: space-between;
     line-height: calc(30 / 18);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 1rem;
 
     @include sp {
@@ -30,9 +31,10 @@
 }
 
 .search-message__title {
-flex-grow: 1;
+flex: 1 1 auto;
 min-width: 0;
 text-align: left;
+word-break: break-word;
     span {
         font-weight: 700;
     }
@@ -45,6 +47,7 @@ text-align: left;
 
 .search-message__num {
     flex-shrink: 0;
+    margin-left: auto;
 }
 
 .search {

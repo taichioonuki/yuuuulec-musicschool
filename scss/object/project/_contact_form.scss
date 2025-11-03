@@ -51,10 +51,10 @@
     }
 }
 
-.form-item input[type="text"],
-.form-item input[type="email"],
-.form-item input[type="tel"],
-.form-item textarea {
+.form-group-body input[type="text"],
+.form-group-body input[type="email"],
+.form-group-body input[type="tel"],
+.form-group-body textarea {
     width: 100%;
     padding: 0.9rem 2rem;
     font-size: 1.8rem;
@@ -74,7 +74,7 @@
     color: #B2B2B2;
 }
 
-label {
+.form-group-heading {
     display: inline-block;
     font-size: 2rem;
     text-align: left;
