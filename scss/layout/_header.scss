@@ -94,6 +94,7 @@
 
       &.active {
          right: -2rem;
+         width: 32rem;
       }
    }
 }
@@ -132,7 +133,7 @@
    position: relative;
    display: flex;
    align-items: center;
-   padding: 0 1rem;
+   padding: 0 2.2rem;
    height: 100%;
    opacity: 1;
 

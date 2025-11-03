@@ -5,11 +5,6 @@
    =========================== */
 .fv {
     position: relative;
-    padding-top: 8rem;
-
-    @include sp {
-        padding-top: 5rem;
-    }
 }
 
 .fv__overlay {

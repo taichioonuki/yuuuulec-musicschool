@@ -396,6 +396,15 @@ a:hover {
   }
 }
 
+main {
+  padding-top: 8rem;
+}
+@media (max-width: 767px) {
+  main {
+    padding-top: 5rem;
+  }
+}
+
 .header {
   height: 8rem;
   position: fixed;
@@ -518,6 +527,7 @@ a:hover {
   }
   .header__nav.active {
     right: -2rem;
+    width: 32rem;
   }
 }
 
@@ -570,7 +580,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
+  padding: 0 2.2rem;
   height: 100%;
   opacity: 1;
 }
@@ -913,11 +923,9 @@ body:not(:has(.c-floating-btns)) main {
   font-size: 1.6rem;
   line-height: 2.0625;
   background-color: rgb(232, 232, 232);
-  padding-top: 8rem;
 }
 @media (max-width: 767px) {
   .c-breadcrumb {
-    padding-top: 5rem;
     line-height: 1.5;
   }
 }
@@ -1307,7 +1315,7 @@ data {
   line-height: 1.6666666667;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   overflow: hidden;
 }
 @media (max-width: 767px) {
@@ -1521,7 +1529,6 @@ data {
   font-size: 1.5rem;
   line-height: 2.2;
   text-align: center;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 @media (max-width: 767px) {
   .footer__copyright {
@@ -1672,12 +1679,6 @@ data {
    =========================== */
 .fv {
   position: relative;
-  padding-top: 8rem;
-}
-@media (max-width: 767px) {
-  .fv {
-    padding-top: 5rem;
-  }
 }
 
 .fv__overlay {
@@ -2621,11 +2622,22 @@ data {
   }
 }
 
+.result-details__img {
+  width: 88rem;
+}
+.result-details__img img {
+  aspect-ratio: 880/400;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .result-details__table {
   border-collapse: collapse;
 }
 .result-details__table td {
-  border: 0.05rem solid #707070;
+  border: 0.5px solid #707070;
   padding: 1rem 2rem;
 }
 @media (max-width: 767px) {
@@ -2773,6 +2785,14 @@ data {
 
 .result__img {
   position: relative;
+  width: 38.7rem;
+}
+.result__img img {
+  aspect-ratio: 387/283;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .result__item {
@@ -3127,7 +3147,7 @@ hr {
 .sidebar__newsletter--inner,
 .sidebar__search--inner {
   padding: 1.5rem;
-  border: 0.05rem solid #000000;
+  border: 0.5px solid #000000;
 }
 @media (max-width: 767px) {
   .sidebar__newsletter--inner,
@@ -3275,10 +3295,6 @@ hr {
 .sidebar__category-item {
   font-size: 1.7rem;
   border-bottom: 0.5px solid #000000;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
 }
 .sidebar__category-item a {
   display: block;

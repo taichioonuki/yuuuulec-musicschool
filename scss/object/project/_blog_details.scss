@@ -308,7 +308,7 @@ hr {
 .sidebar__newsletter--inner,
 .sidebar__search--inner {
     padding: 1.5rem;
-    border: 0.05rem solid $black;
+    border: 0.5px solid $black;
 
     @include sp {
         padding: 1.9rem;
@@ -431,10 +431,6 @@ hr {
 .sidebar__category-item {
     font-size: 1.7rem;
     border-bottom: 0.5px solid $black;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
 
     a {
         display: block;

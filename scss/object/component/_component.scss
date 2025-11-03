@@ -67,7 +67,6 @@ body:not(:has(.c-floating-btns)) main {
     }
 }
 
-
 // トップに戻るボタン
 .c-to-top {
     margin-bottom: 2.1rem;
@@ -217,10 +216,8 @@ body:not(:has(.c-floating-btns)) main {
     font-size: 1.6rem;
     line-height: calc(33 / 16);
     background-color: rgba(232, 232, 232, 1);
-    padding-top: 8rem;
 
     @include sp {
-        padding-top: 5rem;
         line-height: 1.5;
     }
 }
@@ -564,7 +561,7 @@ data {
     line-height: calc(30 / 18);
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     overflow: hidden;
 
     @include sp {
