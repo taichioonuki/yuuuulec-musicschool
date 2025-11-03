@@ -18,7 +18,7 @@
 
 .catchphrase {
     position: absolute;
-    top: calc(265 / 1080 * 100vw);
+    top: calc(185 / 1080 * 100vw);
     left: 50%;
     transform: translateX(-50%);
     font-size: 4rem;
@@ -33,6 +33,15 @@
         font-size: 3rem;
         line-height: calc(50 / 30);
         text-align: center;
+    }
+}
+
+.main-message {
+    padding: 6.5rem 0 5.5rem;
+    text-align: center;
+
+    @include sp {
+        padding: 5rem 0 5rem;
     }
 }
 
