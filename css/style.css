@@ -580,7 +580,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
   height: 100%;
   opacity: 1;
 }
@@ -2861,6 +2861,10 @@ data {
   display: block;
   text-align: right;
   margin-top: 1.5rem;
+}
+
+.result__pagination {
+  margin-top: 8rem;
 }
 
 .message {
