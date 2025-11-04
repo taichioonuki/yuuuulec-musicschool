@@ -1324,7 +1324,7 @@ data {
 
 .c-pagination {
   line-height: 1;
-  margin-top: 8rem;
+  margin-top: 7rem;
 }
 @media (max-width: 767px) {
   .c-pagination {
