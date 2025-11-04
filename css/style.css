@@ -1039,7 +1039,7 @@ main {
 @media screen and (max-width: 375px) {
   .c-prev-next {
     gap: 2.2rem;
-    margin-top: 4.8rem;
+    margin-bottom: 6.5rem;
   }
 }
 
