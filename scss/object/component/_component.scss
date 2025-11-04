@@ -11,10 +11,6 @@
     justify-content: flex-end;
 }
 
-body:not(:has(.c-floating-btns)) main {
-    padding-bottom: 8rem;
-}
-
 // 背景が赤いボタン
 .c-btn-red {
     background-color: $red;

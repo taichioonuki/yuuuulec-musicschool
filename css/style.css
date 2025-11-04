@@ -724,10 +724,6 @@ main {
           justify-content: flex-end;
 }
 
-body:not(:has(.c-floating-btns)) main {
-  padding-bottom: 8rem;
-}
-
 .c-btn-red {
   background-color: #CB0000;
   color: #FFFFFF;
