@@ -3041,6 +3041,11 @@ hr {
   background-color: #000000;
   margin-top: 4rem;
 }
+@media (max-width: 767px) {
+  hr {
+    margin-top: 3.5rem;
+  }
+}
 
 .blog-details__link {
   margin: 5.5rem 0 5.5rem;

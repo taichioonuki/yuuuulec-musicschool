@@ -147,6 +147,10 @@ hr {
     height: 0.5px;
     background-color: $black;
     margin-top: 4rem;
+
+    @include sp {
+        margin-top: 3.5rem;
+    }
 }
 
 .blog-details__link {
