@@ -47,9 +47,9 @@
 
 .result-details__img {
     width: 88rem;
+    position: relative;
 
     @include sp {
-        // width: 33.5rem;
         width: 100%;
     }
 

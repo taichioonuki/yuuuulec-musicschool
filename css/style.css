@@ -2660,6 +2660,7 @@ data {
 
 .result-details__img {
   width: 88rem;
+  position: relative;
 }
 @media (max-width: 767px) {
   .result-details__img {
