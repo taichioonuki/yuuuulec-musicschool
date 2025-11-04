@@ -70,6 +70,27 @@
     }
 }
 
+.top__img-wrapper {
+    width: 26rem;
+    overflow: hidden;
+    position: relative;
+
+    @include sp {
+        width: 100%;
+    }
+
+    img {
+        aspect-ratio: 260 / 200;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        @include sp {
+            aspect-ratio: 335 / 200;
+        }
+    }
+}
+
 data {
     font-size: 1.7rem;
     line-height: calc(30 / 17);

@@ -908,14 +908,15 @@ body:not(:has(.c-floating-btns)) main {
   text-align: center;
   color: #FFFFFF;
   position: absolute;
-  top: 50%;
+  margin: 0;
+  top: 37%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 @media (max-width: 767px) {
   .c-fv__title {
-    top: 45%;
+    top: 42%;
   }
 }
 
@@ -1009,13 +1010,12 @@ body:not(:has(.c-floating-btns)) main {
       -ms-flex-pack: center;
           justify-content: center;
   height: 3rem;
-  width: 8rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  min-width: 8rem;
+  padding: 0 1rem;
 }
 @media (max-width: 767px) {
   .c-blog__label {
-    width: 9rem;
+    min-width: 9rem;
   }
 }
 
@@ -1037,7 +1037,7 @@ body:not(:has(.c-floating-btns)) main {
 @media (max-width: 767px) {
   .c-prev-next {
     gap: 5%;
-    margin-bottom: 6.5rem;
+    margin-bottom: 6rem;
   }
 }
 @media screen and (max-width: 375px) {
@@ -1236,17 +1236,15 @@ body:not(:has(.c-floating-btns)) main {
 .c-blog__img-wrapper {
   position: relative;
   width: 26rem;
-  height: 20rem;
   overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-blog__img-wrapper {
     width: 100%;
-    height: 20rem;
   }
 }
 .c-blog__img-wrapper img {
-  aspect-ratio: 260/200;
+  aspect-ratio: 260/184;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -1323,12 +1321,13 @@ data {
     margin-top: 0.8rem;
     font-size: 1.6rem;
     line-height: 1.875;
+    -webkit-line-clamp: 5;
   }
 }
 
 .c-pagination {
   line-height: 1;
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 @media (max-width: 767px) {
   .c-pagination {
@@ -1704,10 +1703,11 @@ data {
 }
 @media (max-width: 767px) {
   .catchphrase {
-    top: 69.3333333333vw;
+    top: 56vw;
     font-size: 3rem;
     line-height: 1.6666666667;
     text-align: center;
+    white-space: nowrap;
   }
 }
 
@@ -1717,7 +1717,7 @@ data {
 }
 @media (max-width: 767px) {
   .main-message {
-    padding: 5rem 0 5rem;
+    padding: 5rem 0 3.5rem;
   }
 }
 
@@ -2389,6 +2389,29 @@ promotion
   }
 }
 
+.top__img-wrapper {
+  width: 26rem;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .top__img-wrapper {
+    width: 100%;
+  }
+}
+.top__img-wrapper img {
+  aspect-ratio: 260/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .top__img-wrapper img {
+    aspect-ratio: 335/200;
+  }
+}
+
 data {
   font-size: 1.7rem;
   line-height: 1.7647058824;
@@ -2820,8 +2843,13 @@ data {
   position: relative;
   width: 38.7rem;
 }
+@media (max-width: 767px) {
+  .result__img {
+    width: 100%;
+  }
+}
 .result__img img {
-  aspect-ratio: 387/283;
+  aspect-ratio: 387/273;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -2835,10 +2863,6 @@ data {
   display: block;
   text-align: right;
   margin-top: 1.5rem;
-}
-
-.has-fv .c-breadcrumb {
-  padding-top: 0;
 }
 
 .message {
@@ -2955,7 +2979,7 @@ data {
   .blog-details__text {
     font-size: 1.6rem;
     line-height: 1.875;
-    margin: 2.6rem 0 3.5rem;
+    margin: 2.6rem 0 4.5rem;
   }
 }
 
@@ -2968,13 +2992,6 @@ data {
     margin-top: 6.8rem;
     width: 100%;
   }
-}
-.blog-details__text--img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 335/200;
 }
 
 .blog-details__text--subtitle {
@@ -3049,7 +3066,6 @@ hr {
 @media (max-width: 767px) {
   .blog-details__link--title {
     line-height: 1.5;
-    margin-top: 4rem;
   }
 }
 .blog-details__link--title::before {
@@ -3245,6 +3261,8 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 @media (max-width: 767px) {
   .sidebar__search-form button {
@@ -4170,7 +4188,7 @@ textarea {
   letter-spacing: 0.6rem;
   text-align: center;
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 4.7rem;
   cursor: pointer;
   padding: 0.9rem 0 0.7rem 0;
   border: 1px solid #CB0000;
@@ -4185,7 +4203,7 @@ textarea {
     line-height: 1.3;
     padding: 1.1rem 0;
     max-width: 33.5rem;
-    margin-top: 5rem;
+    margin-top: 4.5rem;
   }
 }
 .contact-form__form-item--submit:hover {

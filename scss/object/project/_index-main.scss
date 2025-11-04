@@ -28,10 +28,11 @@
     text-align: center;
 
     @include sp {
-        top: calc(260 / 375 * 100vw);
+        top: calc(210 / 375 * 100vw);
         font-size: 3rem;
         line-height: calc(50 / 30);
         text-align: center;
+        white-space: nowrap;
     }
 }
 
@@ -40,7 +41,7 @@
     text-align: center;
 
     @include sp {
-        padding: 5rem 0 5rem;
+        padding: 5rem 0 3.5rem;
     }
 }
 /* ===========================
