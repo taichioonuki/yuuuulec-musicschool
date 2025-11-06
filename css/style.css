@@ -2622,7 +2622,7 @@ data {
 }
 
 .result-details {
-  padding: 7rem 0 4rem;
+  padding: 7rem 0 6rem;
 }
 .result-details data {
   font-size: 1.7rem;
@@ -2696,7 +2696,7 @@ data {
 }
 .result-details__table td {
   border: 0.5px solid #707070;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
 }
 @media (max-width: 767px) {
   .result-details__table td {
