@@ -644,6 +644,7 @@ data {
             height: 100%;
             background-color: $black;
             color: $white;
+            pointer-events: none;
         }
     }
 

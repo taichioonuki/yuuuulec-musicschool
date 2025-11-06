@@ -397,11 +397,13 @@ a:hover {
 }
 
 main {
-  padding-top: 8rem;
+  margin-top: 8rem;
+  display: block;
+  position: relative;
 }
 @media (max-width: 767px) {
   main {
-    padding-top: 5rem;
+    margin-top: 5rem;
   }
 }
 
@@ -552,12 +554,12 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%;
+    width: 32rem;
     background-color: #CB0000;
-    max-width: 30rem;
-    width: 30rem;
+    max-width: 32rem;
     height: 17.4rem;
     background-color: #CB0000;
+    margin-right: 0;
   }
 }
 
@@ -580,7 +582,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2rem;
+  padding: 0 1rem;
   height: 100%;
   opacity: 1;
 }
@@ -1429,6 +1431,7 @@ data {
   height: 100%;
   background-color: #000000;
   color: #FFFFFF;
+  pointer-events: none;
 }
 .c-pagination__item.border-none {
   border: none;
