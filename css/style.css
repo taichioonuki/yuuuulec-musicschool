@@ -410,6 +410,8 @@ main {
 .header {
   height: 8rem;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: #FFFFFF;
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
@@ -1269,7 +1271,7 @@ main {
   display: block;
   font-size: 1.7rem;
   line-height: 1.7647058824;
-  margin-top: 0.2rem;
+  margin-top: 1.2rem;
 }
 @media (max-width: 767px) {
   .c-blog__text-wrapper time {
@@ -1718,6 +1720,17 @@ data {
 @media (max-width: 767px) {
   .main-message {
     padding: 5rem 0 3.5rem;
+  }
+}
+
+.main-message__text {
+  margin-top: 1.6rem;
+  line-height: 1.6666666667;
+}
+@media (max-width: 767px) {
+  .main-message__text {
+    text-align: left;
+    margin-top: 0.4rem;
   }
 }
 
@@ -3695,7 +3708,7 @@ tbody tr:not(:last-child) {
 tbody tr__cell {
   text-align: center;
   padding: 1.1rem 1rem;
-  border-bottom: 0.5px solid #000000;
+  border-top: 0.5px solid #000000;
 }
 
 tbody tr__note {
@@ -3767,6 +3780,10 @@ tbody tr__note {
 .plan-table th:last-child,
 .plan-table td:last-child {
   border-right: 0;
+}
+
+.plan-table__cell.no-border-bottom {
+  border-bottom: none !important;
 }
 
 /* SP調整 */

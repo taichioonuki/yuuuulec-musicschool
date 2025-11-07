@@ -176,7 +176,6 @@
     }
 }
 
-
 .plan-table__heading {
     background: $black;
     color: $white;
@@ -231,6 +230,8 @@
     border-top: 0.5px solid $black;
 }
 
+
+
 .plan-table__label {
     text-align: left;
     padding-left: 2rem;
@@ -280,7 +281,8 @@ tbody tr:not(:last-child) {
 tbody tr__cell {
     text-align: center;
     padding: 1.1rem 1rem;
-    border-bottom: 0.5px solid $black;
+    border-top: 0.5px solid $black;
+
 }
 
 tbody tr__note {
@@ -352,6 +354,10 @@ tbody tr__note {
 .plan-table th:last-child,
 .plan-table td:last-child {
     border-right: 0;
+}
+
+.plan-table__cell.no-border-bottom {
+    border-bottom: none !important;
 }
 
 /* SP調整 */

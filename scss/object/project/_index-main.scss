@@ -44,6 +44,18 @@
         padding: 5rem 0 3.5rem;
     }
 }
+
+.main-message__text {
+    margin-top: 1.6rem;
+    line-height: calc(30 / 18);
+
+    @include sp {
+        text-align: left;
+        margin-top: 0.4rem;
+    }
+}
+
+
 /* ===========================
    fv-message
    =========================== */
