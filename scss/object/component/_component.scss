@@ -498,6 +498,19 @@
     }
 }
 
+.c-blog--sub {
+    .c-blog__text-wrapper time {
+        display: block;font-size: 1.7rem;
+        line-height: calc(30 / 17);
+        margin-top: 0.2rem;
+
+        @include sp {
+            margin-top: 0.8rem;
+            text-align: right;
+        }
+    }
+}
+
 .c-blog__text-wrapper {
     flex: 1;
 
@@ -509,26 +522,26 @@
         display: block;
         font-size: 1.7rem;
         line-height: calc(30 / 17);
-        margin-top: 0.2rem;
+        margin-top: 1.2rem;
 
         @include sp {
-            margin-top: 0.8rem;
-            text-align: right;
+            margin-top: 1.4rem;
+            text-align: left;
         }
     }
 }
 
-.c-related-date {
-    display: block;
-    font-size: 1.7rem;
-    line-height: calc(30 / 17);
-    margin-top: 1.2rem;
+// .c-related-date {
+//     display: block;
+//     font-size: 1.7rem;
+//     line-height: calc(30 / 17);
+//     margin-top: 1.2rem;
 
-    @include sp {
-        margin-top: 0.8rem;
-        text-align: left;
-    }
-}
+//     @include sp {
+//         margin-top: 0.8rem;
+//         text-align: left;
+//     }
+// }
 
 .c-blog__title {
     font-size: 2rem;
