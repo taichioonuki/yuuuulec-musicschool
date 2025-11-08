@@ -1289,7 +1289,7 @@ main {
 @media (max-width: 767px) {
   .c-related-date {
     margin-top: 0.8rem;
-    text-align: right;
+    text-align: left;
   }
 }
 
