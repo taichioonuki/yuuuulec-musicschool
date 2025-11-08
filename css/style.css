@@ -3657,6 +3657,10 @@ hr {
   border-top: 0.5px solid #000000;
 }
 
+.plan-table__price-row td.plan-table__price--featured {
+  border-top: 0.5px solid #CB0000;
+}
+
 .plan-table__label {
   text-align: left;
   padding-left: 2rem;

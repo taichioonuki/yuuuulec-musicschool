@@ -172,7 +172,7 @@
     width: 22rem;
 
     @include sp {
-       width: 16.65rem;
+        width: 16.65rem;
     }
 }
 
@@ -230,6 +230,9 @@
     border-top: 0.5px solid $black;
 }
 
+.plan-table__price-row td.plan-table__price--featured {
+    border-top: 0.5px solid $red;
+}
 
 
 .plan-table__label {
@@ -324,6 +327,7 @@ tbody tr__note {
 }
 
 .plan-table tbody tr {
+
     th,
     td {
         height: 8.5rem;
