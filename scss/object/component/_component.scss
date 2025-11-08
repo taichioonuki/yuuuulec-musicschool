@@ -307,7 +307,8 @@
 
     @media screen and (max-width: 375px) {
         gap: 2.2rem;
-        margin-bottom: 6.5rem;}
+        margin-bottom: 6.5rem;
+    }
 }
 
 .c-prev,
@@ -514,6 +515,18 @@
             margin-top: 0.8rem;
             text-align: right;
         }
+    }
+}
+
+.c-related-date {
+    display: block;
+    font-size: 1.7rem;
+    line-height: calc(30 / 17);
+    margin-top: 1.2rem;
+
+    @include sp {
+        margin-top: 0.8rem;
+        text-align: right;
     }
 }
 

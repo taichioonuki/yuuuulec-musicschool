@@ -1280,6 +1280,19 @@ main {
   }
 }
 
+.c-related-date {
+  display: block;
+  font-size: 1.7rem;
+  line-height: 1.7647058824;
+  margin-top: 1.2rem;
+}
+@media (max-width: 767px) {
+  .c-related-date {
+    margin-top: 0.8rem;
+    text-align: right;
+  }
+}
+
 .c-blog__title {
   font-size: 2rem;
   line-height: 1.25;
