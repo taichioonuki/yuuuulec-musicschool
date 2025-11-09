@@ -106,11 +106,21 @@
 // ==============================
 .plan {
     padding: 0 0 6.5rem;
+
+    .c-section-title {
+        margin-bottom: 4.8rem;
+
+        @include sp {
+            margin-bottom: 0.6rem;
+        }
+    }
 }
 
 .plan__scroll {
     overflow: visible;
     -webkit-overflow-scrolling: touch;
+    padding-top: 3rem;
+
 
     @include sp {
         overflow-x: auto;
@@ -136,11 +146,7 @@
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
-    margin-top: 7.5rem;
-
-    @include sp {
-        margin-top: 3.6rem;
-    }
+    // margin-top: 3rem;
 }
 
 .plan-table th {

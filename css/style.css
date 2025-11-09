@@ -3541,10 +3541,19 @@ hr {
 .plan {
   padding: 0 0 6.5rem;
 }
+.plan .c-section-title {
+  margin-bottom: 4.8rem;
+}
+@media (max-width: 767px) {
+  .plan .c-section-title {
+    margin-bottom: 0.6rem;
+  }
+}
 
 .plan__scroll {
   overflow: visible;
   -webkit-overflow-scrolling: touch;
+  padding-top: 3rem;
 }
 @media (max-width: 767px) {
   .plan__scroll {
@@ -3572,12 +3581,6 @@ hr {
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
-  margin-top: 7.5rem;
-}
-@media (max-width: 767px) {
-  .plan-table {
-    margin-top: 3.6rem;
-  }
 }
 
 .plan-table th {
