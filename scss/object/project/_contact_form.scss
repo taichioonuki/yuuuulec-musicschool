@@ -130,6 +130,7 @@ textarea {
     font-size: 2rem;
     align-items: flex-start;
     line-height: calc(30 / 20);
+    margin-bottom: 0;
 
     @include sp {
         grid-template-columns: 1fr;

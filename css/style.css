@@ -2678,6 +2678,7 @@ data {
   font-size: 2.5rem;
   line-height: 1.6;
   margin-top: 5rem;
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   .result-details__title {
@@ -4121,6 +4122,7 @@ textarea {
       -ms-flex-align: start;
           align-items: flex-start;
   line-height: 1.5;
+  margin-bottom: 0;
 }
 @media (max-width: 767px) {
   .form-item--checkbox {
