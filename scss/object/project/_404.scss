@@ -2,16 +2,16 @@
 @use "../component/component" as *;
 
 .message {
-    padding: 5rem 0 9rem;
+    padding: 7rem 0 8.5rem;
     text-align: center;
     line-height: calc(30 / 18);
 
     @include sp {
-        padding: 3.6rem 0 5rem;
+        padding: 4rem 0 5.5rem;
     }
 }
 
-.message__text {
+.message__404text {
 
     @include sp {
         text-align: left;
