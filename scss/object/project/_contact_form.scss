@@ -254,15 +254,6 @@ textarea {
     }
 }
 
-.form-item:last-of-type {
-    margin-top: 3.2rem;
-
-    @include sp {
-        margin-top: 0;
-        gap: 0;
-    }
-}
-
 .contact-form__form-item--label-message {
     margin-top: 1rem;
 
@@ -272,10 +263,8 @@ textarea {
 }
 
 .form-item:last-of-type {
-    margin-top: 3rem;
 
     @include sp {
-        margin-top: 1rem;
         gap: 0;
     }
 
