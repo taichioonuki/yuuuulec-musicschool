@@ -850,7 +850,7 @@ main {
 @media (max-width: 767px) {
   .c-to-home {
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 4rem;
     width: 33.5rem;
     max-width: 33.5rem;
   }
