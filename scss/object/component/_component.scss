@@ -295,16 +295,16 @@
     display: flex;
     justify-content: space-between;
     gap: 7.8rem;
-    margin-bottom: 9.5rem;
+    padding-bottom: 9.5rem;
 
     @include sp {
         gap: 5%;
-        margin-bottom: 6rem;
+        padding-bottom: 6rem;
     }
 
     @media screen and (max-width: 375px) {
         gap: 2.2rem;
-        margin-bottom: 6.5rem;
+        padding-bottom: 6.5rem;
     }
 }
 
