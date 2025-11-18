@@ -509,6 +509,7 @@
 
     @include sp {
         width: 100%;
+        margin-top: 3.1rem;
     }
 
     time {
@@ -524,18 +525,6 @@
     }
 }
 
-// .c-related-date {
-//     display: block;
-//     font-size: 1.7rem;
-//     line-height: calc(30 / 17);
-//     margin-top: 1.2rem;
-
-//     @include sp {
-//         margin-top: 0.8rem;
-//         text-align: left;
-//     }
-// }
-
 .c-blog__title {
     font-size: 2rem;
     line-height: calc(25 / 20);
@@ -547,7 +536,6 @@
     overflow: hidden;
 
     @include sp {
-        margin-top: 3.1rem;
         line-height: calc(30 / 20);
     }
 }

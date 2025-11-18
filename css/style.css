@@ -1294,6 +1294,7 @@ main {
 @media (max-width: 767px) {
   .c-blog__text-wrapper {
     width: 100%;
+    margin-top: 3.1rem;
   }
 }
 .c-blog__text-wrapper time {
@@ -1321,7 +1322,6 @@ main {
 }
 @media (max-width: 767px) {
   .c-blog__title {
-    margin-top: 3.1rem;
     line-height: 1.5;
   }
 }
