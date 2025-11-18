@@ -488,21 +488,26 @@ main {
     gap: 0.6rem;
   }
 }
-.header__logo a .header__logo-text {
-  font-size: 1.7rem;
+
+.header__logo-text {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
   white-space: nowrap;
+  line-height: 1.15;
 }
 @media (max-width: 767px) {
-  .header__logo a .header__logo-text {
+  .header__logo-text {
     font-size: 1.3rem;
   }
 }
-.header__logo a .header__logo-bottom {
+
+.header__logo-bottom {
   font-size: 1.5rem;
   white-space: nowrap;
 }
 @media (max-width: 767px) {
-  .header__logo a .header__logo-bottom {
+  .header__logo-bottom {
     font-size: 1.3rem;
   }
 }
@@ -2126,6 +2131,7 @@ promotion
   line-height: 1;
   text-align: center;
   margin-right: 0.8rem;
+  padding-bottom: 0.4rem;
 }
 @media (max-width: 767px) {
   .faq__icon {
@@ -2641,6 +2647,13 @@ data {
   }
 }
 
+.voice__prev img,
+.voice__next img {
+  display: block;
+  width: 3rem;
+  height: auto;
+}
+
 .voice__prev {
   left: -2rem;
 }
@@ -2961,10 +2974,6 @@ data {
   }
 }
 
-.blog-details__img {
-  width: 60rem;
-  height: 35rem;
-}
 @media (max-width: 767px) {
   .blog-details__img {
     width: 100%;

@@ -64,10 +64,15 @@
       @include sp {
          gap: 0.6rem;
       }
+   }
+}
 
       .header__logo-text {
-         font-size: 1.7rem;
+         display: inline-block;
+         font-size: 2rem;
+         font-weight: 700;
          white-space: nowrap;
+         line-height: calc(23 / 20);
 
          @include sp {
             font-size: 1.3rem;
@@ -80,8 +85,7 @@
             font-size: 1.3rem;
          }
       }
-   }
-}
+   
 
 .header__nav-inner {
    display: flex;

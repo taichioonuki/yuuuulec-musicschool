@@ -130,6 +130,13 @@
         }
 }
 
+.voice__prev img,
+.voice__next img {
+    display: block;
+    width: 3rem;  
+    height: auto; 
+}
+
 .voice__prev {
     left: -2rem;
 
