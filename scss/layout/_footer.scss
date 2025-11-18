@@ -46,12 +46,9 @@
     display: flex;
     justify-content: center;
 
-    img {
-        width: 3.2rem;
-    }
-
     a {
         transition: all 0.3s ease;
+        width: 3.2rem;
 
         &:hover {
             opacity: 0.5;
@@ -85,6 +82,7 @@
 
     a {
         transition: all 0.5s ease;
+        width: 2.2rem;
 
         &:hover {
             opacity: 0.5;

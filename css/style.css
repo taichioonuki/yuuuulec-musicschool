@@ -1543,12 +1543,10 @@ data {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.footer__logo img {
-  width: 3.2rem;
-}
 .footer__logo a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  width: 3.2rem;
 }
 .footer__logo a:hover {
   opacity: 0.5;
@@ -1589,6 +1587,7 @@ data {
 .sns-icons a {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  width: 2.2rem;
 }
 .sns-icons a:hover {
   opacity: 0.5;
