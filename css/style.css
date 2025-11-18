@@ -2131,6 +2131,7 @@ promotion
   line-height: 1;
   text-align: center;
   margin-right: 0.8rem;
+  padding-bottom: 0.2rem;
 }
 @media (max-width: 767px) {
   .faq__icon {
