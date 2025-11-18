@@ -82,6 +82,7 @@
         padding: 0.8rem 2rem;
 
         @include sp {
+            border: 0.7px solid #707070;
             padding: 0.8rem;
         }
         &:first-child {

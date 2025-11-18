@@ -2744,6 +2744,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details__table td {
+    border: 0.7px solid #707070;
     padding: 0.8rem;
   }
 }
@@ -4086,7 +4087,8 @@ tbody tr__note {
 }
 
 .contact-form__form-item--label {
-  display: block;
+  display: inline-block;
+  cursor: pointer;
 }
 .contact-form__form-item--label span {
   display: block;
@@ -4216,7 +4218,6 @@ textarea {
   min-height: 30rem;
   resize: vertical;
   white-space: pre-wrap;
-  word-wrap: break-word;
   overflow-wrap: break-word;
   padding: 2rem;
   line-height: 1.5;
@@ -4248,7 +4249,7 @@ textarea {
   margin: 0 auto;
   margin-top: 4.7rem;
   cursor: pointer;
-  padding: 0.9rem 0 0.7rem 0;
+  padding: 0.9rem 2rem;
   border: 1px solid #CB0000;
   width: 100%;
   max-width: 25rem;
@@ -4270,11 +4271,11 @@ textarea {
 }
 
 .contact-form__form-item--label-message {
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 @media (max-width: 767px) {
   .contact-form__form-item--label-message {
-    margin-top: 0;
+    padding-top: 0;
   }
 }
 
