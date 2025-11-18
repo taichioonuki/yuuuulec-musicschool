@@ -29,7 +29,6 @@
 
 .blog-details__img {
     width: 60rem;
-    max-width: 60rem;
     height: 35rem;
 
     @include sp {
@@ -256,10 +255,9 @@ hr {
 .blog__img {
     position: relative;
     width: 20rem;
-    max-width: 20rem;
 
     @include sp {
-        width: 16rem;
+        width: 100%;
     }
 
     img {

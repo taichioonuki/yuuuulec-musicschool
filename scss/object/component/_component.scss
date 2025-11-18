@@ -72,15 +72,10 @@
     margin-left: auto;
     padding-right: 11.5rem;
 
-
     @include sp {
         padding-right: 2rem;
         margin-bottom: 1.5rem;
         margin-left: auto;
-    }
-
-    img {
-        width: 7rem;
     }
 
     a {
@@ -120,7 +115,6 @@
     text-align: center;
     display: block;
     width: 25rem;
-    max-width: 25rem;
     margin-inline: auto;
     transition: background-color 0.5s ease, color 0.5s ease;
     list-style: dots;
@@ -136,7 +130,6 @@
         font-size: 2rem;
         margin-top: 4rem;
         width: 33.5rem;
-        max-width: 33.5rem;
     }
 
     &:hover {
@@ -179,7 +172,6 @@
     border-radius: 50%;
     background-color: $red;
 }
-
 
 //下層ページ　FVの背景
 .c-fv__overlay--sub {
@@ -228,6 +220,11 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    margin: 0 2rem;
+}
+
+.c-breadcrumb__list::-webkit-scrollbar {
+    display: none;
 }
 
 .c-breadcrumb__item {
@@ -237,7 +234,7 @@
 
     &::after {
         content: ">";
-        margin: 0 2.2rem 0 1.4rem;
+        margin: 0 1.8rem;
         white-space: nowrap;
     }
 
@@ -328,7 +325,6 @@
 .c-prev--img,
 .c-next--img {
     width: 9.8rem;
-    max-width: 9.8rem;
 
     @include sp {
         display: none;
@@ -339,8 +335,6 @@
         object-fit: cover;
     }
 }
-
-
 
 .c-prev--right {
     text-align: right;
@@ -357,8 +351,7 @@
     line-height: calc(25 / 16);
     font-weight: 700;
     margin-top: 1.6rem;
-    gap: 1.6rem; //ブログ用 
-
+    gap: 1.6rem; //ブログ用
 
     p {
         flex: 1; //ブログ用
@@ -395,12 +388,11 @@
 
 .c-blog__list--related {
     display: block;
-    margin-top: 3rem;
+    margin: 3rem 0;
 
     @include sp {
         margin-top: 2rem;
     }
-
 
     data {
         font-size: 1.7rem;
@@ -500,7 +492,8 @@
 
 .c-blog--sub {
     .c-blog__text-wrapper time {
-        display: block;font-size: 1.7rem;
+        display: block;
+        font-size: 1.7rem;
         line-height: calc(30 / 17);
         margin-top: 0.2rem;
 
@@ -564,11 +557,9 @@ data {
     margin-top: 0;
     margin-top: 0.3rem;
 
-
     @include sp {
         text-align: right;
         margin-top: 0.6rem;
-
     }
 }
 
@@ -681,7 +672,6 @@ data {
         padding: 0;
     }
 }
-
 
 //blog_details result_details 関連記事内　タイトル
 .c-related-title {

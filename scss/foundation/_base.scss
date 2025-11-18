@@ -70,8 +70,8 @@ html {
     .inner {
         max-width: 920px;
         margin-inline: auto;
-        padding-left: 2rem !important;
-        padding-right: 2rem !important;
+        padding-left: 20px;
+        padding-right: 20px;
         box-sizing: border-box;
 
         @include sp {

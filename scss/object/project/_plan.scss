@@ -34,7 +34,7 @@
     font-weight: 700;
 
     @include sp {
-        padding: 1.8rem 6.5rem;
+        padding: 1.8rem 0;
         width: 21rem;
     }
 }
@@ -117,7 +117,7 @@
 }
 
 .plan__scroll {
-    overflow: visible;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
     padding-top: 3rem;
 
@@ -380,7 +380,6 @@ tbody tr__note {
     .plan__scroll {
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
-        max-width: 100%;
     }
 
     .plan-table {

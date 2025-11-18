@@ -71,7 +71,6 @@
 }
 
 .top__img-wrapper {
-    width: 26rem;
     overflow: hidden;
     position: relative;
 
@@ -121,7 +120,6 @@ data {
 .more-link a {
     display: inline-block;
     position: relative;
-    // border-bottom: 1px solid $black;
     &::after {
         content: "";
         position: absolute;
