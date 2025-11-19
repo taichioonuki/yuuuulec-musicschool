@@ -2338,9 +2338,8 @@ promotion
   -ms-flex-negative: 0;
       flex-shrink: 0;
   text-align: left;
-  max-width: 19.3rem;
   margin-left: 5rem;
-  width: 17rem;
+  width: 19.3rem;
 }
 @media (max-width: 767px) {
   .flow__heading {
