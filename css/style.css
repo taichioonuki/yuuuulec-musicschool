@@ -1684,6 +1684,8 @@ data {
 @media (max-width: 767px) {
   .reason__item-title::after {
     bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
