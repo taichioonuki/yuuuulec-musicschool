@@ -2624,7 +2624,7 @@ data {
 .voice__prev,
 .voice__next {
   position: absolute;
-  bottom: 18rem;
+  bottom: 17rem;
   border: none;
   background: none;
   padding: 0;
@@ -3780,7 +3780,7 @@ tbody tr__note {
 
 /* ドット（●） */
 .u-dot {
-  --size: 15px;
+  --size: 1.5rem;
   display: inline-block;
   width: var(--size);
   height: var(--size);
