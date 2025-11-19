@@ -293,6 +293,7 @@ hr {
         margin-bottom: 3rem;
     }
 }
+
 .sidebar__recommend-list {
     margin-top: 1.5rem;
 }
@@ -440,8 +441,8 @@ hr {
 .blog-details__container {
     display: flex;
     gap: 3rem;
-    padding: 7rem 0 3rem;
-box-sizing: border-box;
+    padding-top: 7rem;
+    box-sizing: border-box;
 
     @include sp {
         padding: 5rem 0;
