@@ -1298,7 +1298,7 @@ main {
 @media (max-width: 767px) {
   .c-blog__text-wrapper {
     width: 100%;
-    margin-top: 3.1rem;
+    margin-top: 1.1rem;
   }
 }
 .c-blog__text-wrapper time {
@@ -1309,7 +1309,7 @@ main {
 }
 @media (max-width: 767px) {
   .c-blog__text-wrapper time {
-    margin-top: 1.4rem;
+    margin-top: 0.4rem;
     text-align: left;
   }
 }
@@ -2950,11 +2950,6 @@ data {
   position: absolute;
   top: 0;
   left: 0;
-}
-@media (max-width: 767px) {
-  .blog-details__main {
-    padding-bottom: 3rem;
-  }
 }
 
 .blog-details__inner {
