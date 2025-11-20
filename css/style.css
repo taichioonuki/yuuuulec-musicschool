@@ -1056,18 +1056,15 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 7.8rem;
-  padding-bottom: 9.5rem;
 }
 @media (max-width: 767px) {
   .c-prev-next {
     gap: 5%;
-    padding-bottom: 6rem;
   }
 }
 @media screen and (max-width: 375px) {
   .c-prev-next {
     gap: 2.2rem;
-    padding-bottom: 6.5rem;
   }
 }
 
@@ -2960,6 +2957,15 @@ data {
   }
 }
 
+.blog-details__inner {
+  margin-bottom: 9rem;
+}
+@media (max-width: 767px) {
+  .blog-details__inner {
+    margin-bottom: 6.4rem;
+  }
+}
+
 .blog-details__date {
   display: block;
   text-align: left;
@@ -3214,7 +3220,7 @@ hr {
 }
 @media (max-width: 767px) {
   .blog__img {
-    width: 100%;
+    width: 16rem;
   }
 }
 .blog__img img {
