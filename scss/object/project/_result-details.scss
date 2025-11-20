@@ -143,6 +143,13 @@
     }
 }
 
+.related {
+
+    @include sp {
+        margin-bottom: 5rem;
+    }
+}
+
 .related__img {
     position: relative;
     width: 26rem;

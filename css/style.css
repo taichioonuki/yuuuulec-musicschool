@@ -2829,6 +2829,12 @@ data {
   }
 }
 
+@media (max-width: 767px) {
+  .related {
+    margin-bottom: 5rem;
+  }
+}
+
 .related__img {
   position: relative;
   width: 26rem;
