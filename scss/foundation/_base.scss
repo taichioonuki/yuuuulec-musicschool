@@ -17,80 +17,90 @@ html {
         font-size: calc(10 / 920 * 100vw);
     }
 
-        @include sp {
-            font-size: min(vw(10, 375), 500 / 375 * 10px);
-        }
+    @include sp {
+        font-size: min(vw(10, 375), 500 / 375 * 10px);
+    }
+}
+
+body {
+    color: #000000;
+    font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    // c-floating-btns がある場合 → main の余白はいらない
+    &:has(.c-floating-btns) main {
+        padding-bottom: 0;
     }
 
-    body {
-        color: #000000;
-        font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
-        font-size: 1.8rem;
-        font-weight: 500;
+    // c-floating-btns がない場合 → main に余白を確保
+    &:not(:has(.c-floating-btns)) main {
+        padding-bottom: 4rem; 
     }
+}
 
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+li {
+    list-style: none;
+    color: $black;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+        opacity: 0.5;
     }
+}
 
-    li {
-        list-style: none;
-        color: $black;
-    }
+.pc-only {
+    display: block !important;
 
-    a {
-        text-decoration: none;
-        color: $black;
-        cursor: pointer;
-        transition: opacity 0.5s ease;
-
-        &:hover {
-            opacity: 0.5;
-        }
-    }
-
-    .pc-only {
-        display: block !important;
-
-        @include sp {
-            display: none !important;
-        }
-    }
-
-    .sp-only {
+    @include sp {
         display: none !important;
-
-        @include sp {
-            display: block !important;
-        }
     }
+}
 
-    .inner {
-        max-width: 920px;
-        margin-inline: auto;
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
+.sp-only {
+    display: none !important;
 
-        @include sp {
-            max-width: none;
-        }
+    @include sp {
+        display: block !important;
     }
+}
 
-    main {
-        margin-top: 8rem;
-        display: block;
-        position: relative;
+.inner {
+    max-width: 920px;
+    margin-inline: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 
-        @include sp {
-            margin-top: 5rem;
-        }
+    @include sp {
+        max-width: none;
     }
+}
 
-    
+main {
+    margin-top: 8rem;
+    display: block;
+    position: relative;
 
-    // * {
-    //     outline: 1px solid red; /* 全要素の枠線を表示 */
-    //   }
+    @include sp {
+        margin-top: 5rem;
+    }
+}
+
+
+
+// * {
+//     outline: 1px solid red; /* 全要素の枠線を表示 */
+//   }

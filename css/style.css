@@ -341,6 +341,12 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
 }
+body:has(.c-floating-btns) main {
+  padding-bottom: 0;
+}
+body:not(:has(.c-floating-btns)) main {
+  padding-bottom: 4rem;
+}
 
 img {
   width: 100%;
@@ -1160,7 +1166,7 @@ main {
 
 .c-blog__list--related {
   display: block;
-  margin: 3rem 0;
+  margin-top: 3rem;
 }
 @media (max-width: 767px) {
   .c-blog__list--related {
