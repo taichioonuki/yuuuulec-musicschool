@@ -3970,12 +3970,12 @@ tbody tr__note {
 }
 
 .contact-send {
-  padding: 6.7rem 0 9rem;
+  padding: 6.7rem 0 5rem;
   text-align: center;
 }
 @media (max-width: 767px) {
   .contact-send {
-    padding: 4.7rem 0 5rem;
+    padding: 4.7rem 0 1rem;
   }
 }
 
