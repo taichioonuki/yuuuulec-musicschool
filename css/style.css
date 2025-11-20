@@ -2674,12 +2674,6 @@ data {
   }
 }
 
-@media (max-width: 767px) {
-  .result-details__wrapper {
-    padding-bottom: 4.5rem;
-  }
-}
-
 .result-details {
   padding: 7rem 0 6rem;
 }

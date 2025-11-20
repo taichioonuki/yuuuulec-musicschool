@@ -1,10 +1,5 @@
 @use "../../foundation/all" as *;
 @use "../component/component" as *;
-.result-details__wrapper {
-    @include sp {
-        padding-bottom: 4.5rem;
-    }
-}
 
 .result-details {
     padding: 7rem 0 6rem;
