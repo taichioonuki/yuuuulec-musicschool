@@ -35,7 +35,7 @@ body {
 
     // c-floating-btns がない場合 → main に余白を確保
     &:not(:has(.c-floating-btns)) main {
-        padding-bottom: 4rem; 
+        padding-bottom: 6rem; 
     }
 }
 
