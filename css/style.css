@@ -3947,6 +3947,7 @@ tbody tr__note {
   min-width: 0;
   text-align: left;
   word-break: break-word;
+  font-size: 1.8rem;
 }
 .search-message__title span {
   font-weight: 700;
