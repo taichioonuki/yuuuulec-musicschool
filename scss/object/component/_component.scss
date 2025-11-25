@@ -205,10 +205,13 @@
     font-size: 1.6rem;
     line-height: calc(33 / 16);
     background-color: rgba(232, 232, 232, 1);
-    padding-left: 8rem;
 
     @include sp {
         line-height: 1.5;
+        padding-left: 0;
+    }
+
+    .inner {
         padding-left: 0;
     }
 }

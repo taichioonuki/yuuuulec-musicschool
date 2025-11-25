@@ -345,7 +345,7 @@ body:has(.c-floating-btns) main {
   padding-bottom: 0;
 }
 body:not(:has(.c-floating-btns)) main {
-  padding-bottom: 4rem;
+  padding-bottom: 10rem;
 }
 
 img {
@@ -947,13 +947,15 @@ main {
   font-size: 1.6rem;
   line-height: 2.0625;
   background-color: rgb(232, 232, 232);
-  padding-left: 8rem;
 }
 @media (max-width: 767px) {
   .c-breadcrumb {
     line-height: 1.5;
     padding-left: 0;
   }
+}
+.c-breadcrumb .inner {
+  padding-left: 0;
 }
 
 .c-breadcrumb__list {
