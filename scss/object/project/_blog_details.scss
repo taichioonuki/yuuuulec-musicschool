@@ -19,6 +19,13 @@
     }
 }
 
+.blog-details__related {
+    
+    @include sp {
+        margin-bottom: 3rem;
+}
+}
+
 .blog-details__date {
     display: block;
     text-align: left;

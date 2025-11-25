@@ -100,10 +100,9 @@
     text-align: center;
     width: 85.8rem;
 
-        @include sp {
-            width: 100%;
-        }
-    
+    @include sp {
+        width: 100%;
+    }
 
     @include sp {
         margin-top: 2.1rem;
@@ -125,12 +124,14 @@
     gap: 2.9rem;
     margin-top: 2rem;
 
-    @include sp {
-    width: 97%;
-    }
+    // @include sp {
+    //     width: 97%;
+    // }
 }
 
 .message__item:nth-child(1) .message__item-title {
+    width: fit-content;
+    flex: 1;
 
     @include sp {
         position: relative;
@@ -149,17 +150,13 @@
     @include sp {
         font-size: 2rem;
         line-height: calc(50 / 20);
-        flex: none;
-        width: 11.5rem;
     }
 
     @media screen and (max-width: 360px) {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
-        width: 10rem;
     }
 }
-
 
 .dot-message {
     display: inline-block;
@@ -181,11 +178,11 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    }
+}
 
-    .message__item:first-child .dot-message::after {
-        height: 5.8rem; 
-    }
+.message__item:first-child .dot-message::after {
+    height: 5.8rem;
+}
 
 .dot-top {
     position: relative;
@@ -214,9 +211,6 @@
     @include sp {
         font-size: 2rem;
         line-height: calc(50 / 20);
-        flex: none;
-        width: 10rem;
-
     }
 
     @media screen and (max-width: 360px) {
