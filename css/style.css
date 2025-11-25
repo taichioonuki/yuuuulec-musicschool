@@ -2860,12 +2860,12 @@ data {
 
 .result-details__prev-next {
   gap: 19.8rem;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
 }
 @media (max-width: 767px) {
   .result-details__prev-next {
     gap: 2.2rem;
-    margin-bottom: 6.5rem;
+    padding-bottom: 6.5rem;
   }
 }
 
@@ -4261,18 +4261,26 @@ textarea {
 }
 
 .contact-form__form-item--submit {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 2.5rem;
   background-color: #CB0000;
   color: #FFFFFF;
   font-weight: 700;
   line-height: 1.32;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.5rem;
   text-align: center;
   margin: 0 auto;
   margin-top: 5.2rem;
   cursor: pointer;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 0;
   border: 1px solid #CB0000;
   width: 100%;
   max-width: 25rem;
@@ -4291,6 +4299,10 @@ textarea {
 .contact-form__form-item--submit:hover {
   background-color: white;
   color: #CB0000;
+}
+
+.contact-form__form-item--submit span:last-child {
+  letter-spacing: 0;
 }
 
 .contact-form__form-item--label-message {

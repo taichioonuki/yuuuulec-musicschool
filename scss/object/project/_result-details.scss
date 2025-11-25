@@ -175,10 +175,10 @@
 
 .result-details__prev-next {
     gap: 19.8rem; 
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
 
     @include sp {
         gap: 2.2rem;
-        margin-bottom: 6.5rem;
+        padding-bottom: 6.5rem;
     }
 }
