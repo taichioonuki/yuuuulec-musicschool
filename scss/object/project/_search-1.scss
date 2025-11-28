@@ -4,7 +4,6 @@
 .search-message {
     text-align: center;
     align-items: flex-start;
-    margin-top: 6.6rem;
     display: flex;
     justify-content: space-between;
     line-height: calc(30 / 18);
@@ -18,12 +17,8 @@
     }
 }
 
-.c-blog--sub--search {
-    padding: 4.2rem 0 5rem;
-
-    @include sp {
-        padding: 4rem 0 5rem;
-    }
+.blog--sub--search {
+    margin-top: 4.3rem;
 }
 
 .blog__list--sub {
@@ -36,6 +31,7 @@ min-width: 0;
 text-align: left;
 word-break: break-word;
 font-size: 1.8rem;
+margin: 0;
     span {
         font-weight: 700;
     }
@@ -51,10 +47,6 @@ font-size: 1.8rem;
     margin-left: auto;
 }
 
-.search {
-    padding-bottom: 22rem;
-}
-
 .pagination__search {
-margin-top: 5.3rem;
+margin-top: 6.5rem;
 }
