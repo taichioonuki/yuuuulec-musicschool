@@ -2964,12 +2964,6 @@ data {
   }
 }
 
-@media (max-width: 767px) {
-  .blog-details__related {
-    margin-bottom: 3rem;
-  }
-}
-
 .blog-details__date {
   display: block;
   text-align: left;
@@ -3450,7 +3444,7 @@ hr {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 0;
+    gap: 3rem;
   }
 }
 

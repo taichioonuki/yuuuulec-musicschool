@@ -19,13 +19,6 @@
     }
 }
 
-.blog-details__related {
-    
-    @include sp {
-        margin-bottom: 3rem;
-}
-}
-
 .blog-details__date {
     display: block;
     text-align: left;
@@ -458,7 +451,7 @@ hr {
     @include sp {
         padding: 5rem 0;
         flex-direction: column;
-        gap: 0;
+        gap: 3rem;
     }
 }
 
