@@ -2955,6 +2955,15 @@ data {
   }
 }
 
+.blog_details {
+  padding: 7rem 0 3.5rem;
+}
+@media (max-width: 767px) {
+  .blog_details {
+    padding: 5rem 0 5.5rem;
+  }
+}
+
 .blog-details__main {
   position: relative;
 }
@@ -3470,7 +3479,6 @@ hr {
 }
 @media (max-width: 767px) {
   .blog-details__container {
-    padding: 5rem 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
