@@ -2941,13 +2941,13 @@ data {
   margin-top: 8rem;
 }
 
-.message {
+.message__404 {
   padding-top: 7rem;
   text-align: center;
   line-height: 1.6666666667;
 }
 @media (max-width: 767px) {
-  .message {
+  .message__404 {
     padding-top: 4rem;
   }
 }
