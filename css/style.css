@@ -349,7 +349,7 @@ body:not(:has(.c-floating-btns)) main {
 }
 @media (max-width: 767px) {
   body:not(:has(.c-floating-btns)) main {
-    padding-bottom: 4rem;
+    padding-bottom: 10.8rem;
   }
 }
 
