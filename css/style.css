@@ -3957,11 +3957,16 @@ tbody tr__note {
 }
 @media (max-width: 767px) {
   .search-message {
-    margin-top: 4rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog--sub {
+    padding-top: 3.8rem;
   }
 }
 

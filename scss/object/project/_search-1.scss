@@ -11,10 +11,17 @@
     gap: 1rem;
 
     @include sp {
-        margin-top: 4rem;
         justify-content: center;
         text-align: center;
     }
+}
+
+.blog--sub {
+    padding: 6.5rem 0 6rem;
+    
+    @include sp {
+    padding-top: 3.8rem;
+}
 }
 
 .blog--sub--search {
