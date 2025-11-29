@@ -2,12 +2,12 @@
 @use "../component/component" as *;
 
 .message {
-    padding: 7rem 0 4.5rem;
+    padding-top: 7rem;
     text-align: center;
     line-height: calc(30 / 18);
 
     @include sp {
-        padding: 4rem 0 1.5rem;
+        padding-top: 4rem;
     }
 }
 

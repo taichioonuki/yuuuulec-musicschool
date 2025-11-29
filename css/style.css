@@ -2942,13 +2942,13 @@ data {
 }
 
 .message {
-  padding: 7rem 0 4.5rem;
+  padding-top: 7rem;
   text-align: center;
   line-height: 1.6666666667;
 }
 @media (max-width: 767px) {
   .message {
-    padding: 4rem 0 1.5rem;
+    padding-top: 4rem;
   }
 }
 
