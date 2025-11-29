@@ -2,7 +2,7 @@
 @use "../component/component" as *;
 
 .result-details {
-    padding: 7rem 0 6rem;
+    padding: 7rem 0 10rem;
 
     data {
         font-size: 1.7rem;
@@ -11,7 +11,7 @@
     }
 
     @include sp {
-        padding: 5rem 0 4rem;
+        padding: 5rem 0 6rem;
     }
 }
 
@@ -175,10 +175,10 @@
 
 .result-details__prev-next {
     gap: 19.8rem; 
-    padding-bottom: 10rem;
+    margin-top: 6.5rem;
 
     @include sp {
         gap: 2.2rem;
-        padding-bottom: 6.5rem;
+        margin-top: 4.5rem;
     }
 }

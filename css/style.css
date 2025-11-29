@@ -2672,7 +2672,7 @@ data {
 }
 
 .result-details {
-  padding: 7rem 0 6rem;
+  padding: 7rem 0 10rem;
 }
 .result-details data {
   font-size: 1.7rem;
@@ -2681,7 +2681,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details {
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 6rem;
   }
 }
 
@@ -2861,12 +2861,12 @@ data {
 
 .result-details__prev-next {
   gap: 19.8rem;
-  padding-bottom: 10rem;
+  margin-top: 6.5rem;
 }
 @media (max-width: 767px) {
   .result-details__prev-next {
     gap: 2.2rem;
-    padding-bottom: 6.5rem;
+    margin-top: 4.5rem;
   }
 }
 
