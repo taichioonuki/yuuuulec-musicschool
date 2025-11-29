@@ -5,13 +5,12 @@
     padding-top: 7rem;
 
     @include sp {
-        padding-top: 1.5rem;
+        padding-top: 4.5rem;
     }
 }
 
 .contact-form__text {
     line-height: calc(30 / 18);
-    // margin-bottom: 6.3rem;
     text-align: center;
 
     @include sp {
