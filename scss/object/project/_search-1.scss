@@ -16,16 +16,25 @@
     }
 }
 
-.blog--sub {
+.search__sub {
     padding: 6.5rem 0 6rem;
-    
+
+    time {
+        margin-top: 0.2rem;
+
+        @include sp {
+            text-align: right;
+            margin-top: 0.9rem;
+        }
+    }
+
     @include sp {
-    padding-top: 3.8rem;
+    padding-top: 3.5rem;
 }
 }
 
 .blog--sub--search {
-    margin-top: 4.3rem;
+    margin-top: 4.2rem;
 }
 
 .blog__list--sub {

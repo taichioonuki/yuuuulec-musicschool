@@ -3964,14 +3964,26 @@ tbody tr__note {
   }
 }
 
+.search__sub {
+  padding: 6.5rem 0 6rem;
+}
+.search__sub time {
+  margin-top: 0.2rem;
+}
 @media (max-width: 767px) {
-  .blog--sub {
-    padding-top: 3.8rem;
+  .search__sub time {
+    text-align: right;
+    margin-top: 0.9rem;
+  }
+}
+@media (max-width: 767px) {
+  .search__sub {
+    padding-top: 3.5rem;
   }
 }
 
 .blog--sub--search {
-  margin-top: 4.3rem;
+  margin-top: 4.2rem;
 }
 
 .blog__list--sub {
