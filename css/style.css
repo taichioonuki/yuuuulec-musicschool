@@ -347,6 +347,11 @@ body:has(.c-floating-btns) main {
 body:not(:has(.c-floating-btns)) main {
   padding-bottom: 10rem;
 }
+@media (max-width: 767px) {
+  body:not(:has(.c-floating-btns)) main {
+    padding-bottom: 4rem;
+  }
+}
 
 img {
   width: 100%;
