@@ -3999,6 +3999,7 @@ tbody tr__note {
   word-break: break-word;
   font-size: 1.8rem;
   margin: 0;
+  font-weight: 500;
 }
 .search-message__title span {
   font-weight: 700;
