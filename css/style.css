@@ -342,17 +342,6 @@ body {
   font-weight: 500;
   letter-spacing: 0.03em;
 }
-body:has(.c-floating-btns) main {
-  padding-bottom: 0;
-}
-body:not(:has(.c-floating-btns)) main {
-  padding-bottom: 10rem;
-}
-@media (max-width: 767px) {
-  body:not(:has(.c-floating-btns)) main {
-    padding-bottom: 10.8rem;
-  }
-}
 
 img {
   width: 100%;
@@ -760,6 +749,19 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+body:has(.c-floating-btns) .page-last {
+  padding-bottom: 0;
+}
+
+body:not(:has(.c-floating-btns)) .page-last {
+  padding-bottom: 10rem;
+}
+@media (max-width: 767px) {
+  body:not(:has(.c-floating-btns)) .page-last {
+    padding-bottom: 10.8rem;
+  }
 }
 
 .c-btn-red {

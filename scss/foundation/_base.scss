@@ -28,20 +28,6 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0.03em;
-
-    // c-floating-btns がある場合 → main の余白はいらない
-    &:has(.c-floating-btns) main {
-        padding-bottom: 0;
-    }
-
-    // c-floating-btns がない場合 → main に余白を確保
-    &:not(:has(.c-floating-btns)) main {
-        padding-bottom: 10rem;
-        
-        @include sp {
-            padding-bottom: 10.8rem;
-        }
-    }
 }
 
 img {

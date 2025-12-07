@@ -10,6 +10,20 @@
     flex-direction: column;
     justify-content: flex-end;
 }
+// c-floating-btns がある場合 →余白はいらない
+body:has(.c-floating-btns) .page-last {
+    padding-bottom: 0;
+}
+
+// c-floating-btns がない場合 → 余白を確保
+body:not(:has(.c-floating-btns)) .page-last {
+    padding-bottom: 10rem;
+    
+    @include sp {
+        padding-bottom: 10.8rem;
+    }
+}
+
 
 // 背景が赤いボタン
 .c-btn-red {
