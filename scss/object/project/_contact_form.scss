@@ -171,7 +171,7 @@ textarea {
             opacity: 0;
             font-size: 1.2rem;
             line-height: calc(33 / 15);
-            transition: opacity 0.3s ease
+            transition: opacity 0.5s ease
         }
 
         &:checked {
@@ -240,8 +240,8 @@ textarea {
     border: 1px solid #CB0000;
     width: 100%;
     max-width: 25rem;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
 
     @include sp {
         font-size: 2rem;

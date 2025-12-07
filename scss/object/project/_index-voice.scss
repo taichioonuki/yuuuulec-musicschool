@@ -28,7 +28,7 @@
     }
 }
 
-.voice__item a{
+.voice__item a {
     flex-shrink: 0;
     color: $white;
     width: 100%;
@@ -44,6 +44,7 @@
         .voice__img img {
             transform: scale(1.1);
         }
+
         .voice__text-block {
             opacity: 0.5;
         }
@@ -51,16 +52,16 @@
 }
 
 .voice__item a.voice__link {
-    opacity: 1; 
+    opacity: 1;
 }
 
 .voice__img {
     overflow: hidden;
 }
 
-.voice__img img{
+.voice__img img {
     object-fit: cover;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
     aspect-ratio: 27 / 19;
     height: 100%;
     width: 100%;
@@ -68,13 +69,11 @@
     @include sp {
         aspect-ratio: 335 / 200;
     }
-
-
 }
 
 .voice__text-block {
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s ease;
     margin-top: 1.7rem;
 
     @include sp {
@@ -118,7 +117,7 @@
     cursor: pointer;
     z-index: 10;
     display: block;
-    transition: all 0.3s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 
     &:hover {
         transform: scale(1.2);
@@ -127,14 +126,14 @@
 
     @include sp {
         bottom: 19rem;
-        }
+    }
 }
 
 .voice__prev img,
 .voice__next img {
     display: block;
-    width: 3rem;  
-    height: auto; 
+    width: 3rem;
+    height: auto;
 }
 
 .voice__prev {

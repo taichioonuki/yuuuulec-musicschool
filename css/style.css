@@ -340,6 +340,7 @@ body {
   font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
+  letter-spacing: 0.03em;
 }
 body:has(.c-floating-btns) main {
   padding-bottom: 0;
@@ -467,8 +468,8 @@ main {
 .header__logo {
   cursor: pointer;
   width: 19.2rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   margin: 0;
   height: 8rem;
 }
@@ -559,8 +560,8 @@ main {
             flex-direction: column;
     row-gap: 4rem;
     text-align: center;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
     z-index: 10000;
   }
   .header__nav.active {
@@ -608,8 +609,6 @@ main {
 }
 
 .header__nav-item a {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,8 +654,10 @@ main {
           transform: scaleX(0);
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 @media (max-width: 767px) {
   .header__nav-item a span::after {
@@ -676,8 +677,6 @@ main {
   font-size: 1.5rem;
   line-height: 2.2;
   font-weight: 700;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   padding: 0.7rem 3rem 0.5rem;
   display: inline-block;
 }
@@ -715,8 +714,10 @@ main {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: top 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  transition: top 0.5s, opacity 0.5s, -webkit-transform 0.5s;
+  transition: top 0.5s, transform 0.5s, opacity 0.5s;
+  transition: top 0.5s, transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 .hamburger span:nth-of-type(1) {
   top: 1.1rem;
@@ -767,6 +768,8 @@ main {
   border: 1px solid #CB0000;
   display: inline-block;
   text-align: center;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 .c-btn-red:hover {
   background-color: #FFFFFF;
@@ -786,15 +789,11 @@ main {
   width: 30rem;
   pointer-events: auto;
   margin-left: auto;
-  cursor: pointer;
-  display: block;
   padding: 1.7rem 0 1rem 0;
   border: 1px solid #CB0000;
   text-align: center;
   white-space: nowrap;
   opacity: 1;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
 }
 .c-contact__btn:hover {
   background-color: #FFFFFF;
@@ -836,22 +835,6 @@ main {
 }
 .c-to-top a:hover {
   opacity: 0.5;
-}
-
-.c-contact__btn {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.c-contact__btn:hover {
-  opacity: 1;
-}
-.c-contact__btn a {
-  color: inherit;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.c-contact__btn a:hover {
-  opacity: 1;
 }
 
 .c-to-home {
@@ -1255,8 +1238,8 @@ main {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 5rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 @media (max-width: 767px) {
   .c-blog__item--sub a {
@@ -1443,8 +1426,8 @@ data {
   background-color: #FFFFFF;
   color: #000000;
   border: 1px solid #000000;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -1545,8 +1528,8 @@ data {
 .footer__nav-item a {
   color: #FFFFFF;
   padding: 1rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .footer__nav-item a:hover {
   opacity: 0.5;
@@ -1562,8 +1545,8 @@ data {
           justify-content: center;
 }
 .footer__logo a {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   width: 3.2rem;
 }
 .footer__logo a:hover {
@@ -1603,8 +1586,8 @@ data {
   }
 }
 .sns-icons a {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   width: 2.2rem;
 }
 .sns-icons a:hover {
@@ -2484,8 +2467,6 @@ data {
   line-height: 1.6666666667;
   margin-top: 4.4rem;
   text-align: right;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 @media (max-width: 767px) {
   .more-link {
@@ -2506,8 +2487,8 @@ data {
   width: 100%;
   height: 0.5px;
   background: #000000;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .more-link a:hover::after {
   width: 100%;
@@ -2574,8 +2555,10 @@ data {
 .voice__img img {
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   aspect-ratio: 27/19;
   height: 100%;
   width: 100%;
@@ -2588,8 +2571,8 @@ data {
 
 .voice__text-block {
   opacity: 1;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
   margin-top: 1.7rem;
 }
 @media (max-width: 767px) {
@@ -2635,8 +2618,10 @@ data {
   cursor: pointer;
   z-index: 10;
   display: block;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 .voice__prev:hover,
 .voice__next:hover {
@@ -3376,8 +3361,8 @@ hr {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 @media (max-width: 767px) {
   .sidebar__search-form button {
@@ -4252,8 +4237,8 @@ textarea {
   opacity: 0;
   font-size: 1.2rem;
   line-height: 2.2;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .checkbox-group input[type=checkbox]:checked {
   background-color: #FFFFFF;
@@ -4331,8 +4316,8 @@ textarea {
   border: 1px solid #CB0000;
   width: 100%;
   max-width: 25rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
 @media (max-width: 767px) {
   .contact-form__form-item--submit {
