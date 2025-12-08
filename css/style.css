@@ -3696,7 +3696,7 @@ hr {
 }
 
 .plan-table__col--feature {
-  width: 22rem;
+  width: 25%;
 }
 @media (max-width: 767px) {
   .plan-table__col--feature {
@@ -3705,7 +3705,7 @@ hr {
 }
 
 .plan-table__col--plan {
-  width: 22rem;
+  width: 25%;
 }
 @media (max-width: 767px) {
   .plan-table__col--plan {

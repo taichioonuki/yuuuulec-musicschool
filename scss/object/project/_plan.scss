@@ -167,7 +167,7 @@
 }
 
 .plan-table__col--feature {
-    width: 22rem;
+    width: 25%;
 
     @include sp {
         width: 16.9rem;
@@ -175,7 +175,7 @@
 }
 
 .plan-table__col--plan {
-    width: 22rem;
+    width: 25%;
 
     @include sp {
         width: 16.65rem;
@@ -246,7 +246,6 @@
     padding-left: 2rem;
 
     @include sp {
-        // padding: 3rem 1rem;
         padding: 0 1rem;
         height: 8.5rem;
     }
