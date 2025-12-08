@@ -2652,6 +2652,11 @@ data {
     left: 2rem;
   }
 }
+@media screen and (max-width: 360px) {
+  .voice__prev {
+    left: 2.5rem;
+  }
+}
 
 .voice__next {
   right: -2rem;
@@ -2659,6 +2664,11 @@ data {
 @media (max-width: 767px) {
   .voice__next {
     right: 2rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .voice__next {
+    right: 2.5rem;
   }
 }
 

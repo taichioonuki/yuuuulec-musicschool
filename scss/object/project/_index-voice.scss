@@ -142,6 +142,10 @@
     @include sp {
         left: 2rem;
     }
+@media screen and (max-width: 360px) {
+    left: 2.5rem;
+    
+}
 }
 
 .voice__next {
@@ -149,5 +153,9 @@
 
     @include sp {
         right: 2rem;
+    }
+
+    @media screen and (max-width: 360px) {
+        right: 2.5rem;
     }
 }
