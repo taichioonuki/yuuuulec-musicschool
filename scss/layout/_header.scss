@@ -46,12 +46,7 @@
    height: 8rem;
 
    @include sp {
-      width: 25rem;
-      height: 5rem;
-   }
-
-   @media (max-width: 375px) {
-      width: 20.8rem;
+      width: 21rem;
       height: 5rem;
    }
 
@@ -73,7 +68,7 @@
    height: auto;
 
    @include sp {
-      width: 2rem;
+      width: 2.3rem;
    }
 }
 
@@ -86,6 +81,7 @@
 
    @include sp {
       font-size: 1.3rem;
+      letter-spacing: 0rem;
    }
 }
 
