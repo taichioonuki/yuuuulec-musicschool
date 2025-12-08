@@ -28,7 +28,7 @@
 
     time {
         display: block;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
 
         @include sp {
             margin-top: 1.2rem;
@@ -50,7 +50,7 @@
 }
 
 .result-details__img {
-    width: 88rem;
+    max-width: 88rem;
     position: relative;
 
     @include sp {
@@ -109,7 +109,7 @@
 
 .result-details__profile {
     display: flex;
-    margin-top: 6.5rem;
+    margin-top: 6rem;
     gap: 4rem;
 
     @include sp {

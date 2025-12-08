@@ -2700,7 +2700,7 @@ data {
 }
 .result-details__container time {
   display: block;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 @media (max-width: 767px) {
   .result-details__container time {
@@ -2723,7 +2723,7 @@ data {
 }
 
 .result-details__img {
-  width: 88rem;
+  max-width: 88rem;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -2787,7 +2787,7 @@ data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 6.5rem;
+  margin-top: 6rem;
   gap: 4rem;
 }
 @media (max-width: 767px) {
