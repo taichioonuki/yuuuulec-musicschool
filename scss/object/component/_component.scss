@@ -10,20 +10,6 @@
     flex-direction: column;
     justify-content: flex-end;
 }
-// c-floating-btns がある場合 →余白はいらない
-body:has(.c-floating-btns) .page-last {
-    padding-bottom: 0;
-}
-
-// c-floating-btns がない場合 → 余白を確保
-body:not(:has(.c-floating-btns)) .page-last {
-    padding-bottom: 10rem;
-    
-    @include sp {
-        padding-bottom: 10.8rem;
-    }
-}
-
 
 // 背景が赤いボタン
 .c-btn-red {
@@ -94,6 +80,7 @@ body:not(:has(.c-floating-btns)) .page-last {
         display: inline-block;
         clip-path: circle(50%);
         transition: opacity 0.5s ease;
+        width: 6.8rem;
 
         &:hover {
             opacity: 0.5;
@@ -216,8 +203,6 @@ body:not(:has(.c-floating-btns)) .page-last {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    row-gap: 0;
-    column-gap: 0.6rem;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -235,7 +220,7 @@ body:not(:has(.c-floating-btns)) .page-last {
 
     &::after {
         content: ">";
-        margin: 0 1.8rem;
+        margin: 0 1.9rem;
         white-space: nowrap;
     }
 

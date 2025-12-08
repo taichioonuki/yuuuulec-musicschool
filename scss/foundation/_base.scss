@@ -90,7 +90,14 @@ main {
     }
 }
 
+//追従ボタンがない場合に直前のセクションに余白を
+main .add-bottom-padding {
+    padding-bottom: 10rem; 
 
+    @include sp {
+        padding-bottom: 10.8rem;
+    }
+}
 
 // * {
 //     outline: 1px solid red; /* 全要素の枠線を表示 */

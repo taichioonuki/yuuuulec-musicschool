@@ -9,6 +9,29 @@
     }
 }
 
+.blog-details__sns-icon {
+
+&.facebook {
+    width: 10.5rem;
+}
+&.twitter {
+    width: 8.8rem;
+}
+&.hatena {
+    width: 9.3rem;
+}
+&.line {
+    width: 8.1rem;
+}
+&.pocket {
+    width: 9.1rem;
+}
+
+@include sp {
+    width: 6.5rem;
+}
+}
+
 .blog-details__main {
     position: relative;
 

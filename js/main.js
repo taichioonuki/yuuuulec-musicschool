@@ -100,7 +100,7 @@ function getSpaceBetween() {
 function initVoiceSwiper() {
     const voiceInner = document.querySelector('.voice__inner');
     if (!voiceInner) return; // 要素がなければ何もしない
-    
+
     return new Swiper('.voice__inner', {
         loop: true,
         navigation: {
@@ -110,7 +110,7 @@ function initVoiceSwiper() {
         slidesPerView: 3,
         spaceBetween: 35,
         breakpoints: {
-            0: { slidesPerView: 1,spaceBetween: 0 },
+            0: { slidesPerView: 1, spaceBetween: 0 },
             768: { slidesPerView: 3 },
         },
         observer: true,
@@ -121,7 +121,7 @@ function initVoiceSwiper() {
 }
 
 // DOM読み込み後にSwiper初期化
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const voiceInner = document.querySelector('.voice__inner');
 
     if (voiceInner) {
@@ -142,5 +142,35 @@ document.addEventListener('DOMContentLoaded', function() {
             preventClicks: false,
             touchStartPreventDefault: false,
         });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const floatingBtn = document.querySelector('.c-floating-btns');
+
+    if (!floatingBtn) {
+        const sections = document.querySelectorAll('main > section');
+        if (sections.length > 0) {
+            const lastSection = sections[sections.length - 1];
+            lastSection.classList.add('add-bottom-padding');
+        }
+
+        const fv = document.querySelector('.fv');
+        if (fv) fv.classList.add('add-bottom-padding');
+    }
+});
+
+//下部の追従ボタンがなければ余白を追加
+document.addEventListener('DOMContentLoaded', () => {
+    const floatingBtn = document.querySelector('.c-floating-btns');
+
+    if (!floatingBtn) {
+        // main直下の最後の要素（*）を取得
+        const lastContent = document.querySelector('main > *:last-child');
+        
+        if (lastContent) {
+            // 最後のコンテンツ要素にクラスを付与
+            lastContent.classList.add('add-bottom-padding');
+        }
     }
 });
