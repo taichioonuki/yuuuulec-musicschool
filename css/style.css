@@ -596,9 +596,7 @@ main .add-bottom-padding {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 32rem;
-    background-color: #CB0000;
     height: 17.4rem;
-    background-color: #CB0000;
     margin-right: 0;
   }
 }
@@ -629,6 +627,7 @@ main .add-bottom-padding {
 }
 @media (max-width: 767px) {
   .header__nav-item a {
+    background-color: #CB0000;
     font-size: 1.8rem;
     height: 5.8rem;
     width: 100%;
@@ -753,7 +752,7 @@ main .add-bottom-padding {
 .c-floating-btns {
   position: sticky;
   bottom: 0;
-  z-index: 10001;
+  z-index: 10;
   pointer-events: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2502,7 +2501,7 @@ data {
   text-align: center;
   background-color: #CB0000;
   position: relative;
-  z-index: 100;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .voice {

@@ -140,9 +140,7 @@
       text-align: left;
       flex-direction: column;
       width: 32rem;
-      background-color: $red;
       height: 17.4rem;
-      background-color: $red;
       margin-right: 0;
    }
 }
@@ -168,6 +166,7 @@
    }
 
    @include sp {
+      background-color: #CB0000;
       font-size: 1.8rem;
       height: 5.8rem;
       width: 100%;
