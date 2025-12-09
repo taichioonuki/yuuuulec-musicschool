@@ -2681,7 +2681,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details {
-    padding: 5rem 0 13.7rem;
+    padding: 5rem 0 19.7rem;
   }
 }
 
@@ -2690,7 +2690,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details__wrapper {
-    margin-bottom: 6.5rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -2804,7 +2804,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details__text {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
 }
 
@@ -2832,12 +2832,6 @@ data {
 @media (max-width: 767px) {
   .result-details__list {
     margin-top: 2rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .related {
-    margin-bottom: 5rem;
   }
 }
 
@@ -2875,7 +2869,7 @@ data {
 @media (max-width: 767px) {
   .result-details__prev-next {
     gap: 2.2rem;
-    margin-top: 4.5rem;
+    margin-top: 4rem;
   }
 }
 

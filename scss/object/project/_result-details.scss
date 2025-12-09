@@ -11,7 +11,7 @@
     }
 
     @include sp {
-        padding: 5rem 0 13.7rem;
+        padding: 5rem 0 19.7rem;
     }
 }
 
@@ -19,7 +19,7 @@
     margin-bottom: 10rem;
 
     @include sp {
-        margin-bottom: 6.5rem;
+        margin-bottom: 6rem;
     }
 }
 
@@ -123,7 +123,7 @@
     line-height: calc(30 / 18);
 
     @include sp {
-        margin-top: 2.5rem;
+        margin-top: 3rem;
     }
 }
 
@@ -148,12 +148,6 @@
 
     @include sp {
         margin-top: 2rem;
-    }
-}
-
-.related {
-    @include sp {
-        margin-bottom: 5rem;
     }
 }
 
@@ -186,6 +180,6 @@
 
     @include sp {
         gap: 2.2rem;
-        margin-top: 4.5rem;
+        margin-top: 4rem;
     }
 }
