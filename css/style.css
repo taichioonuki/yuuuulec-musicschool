@@ -757,6 +757,13 @@ main {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+@media (max-width: 767px) {
+  .c-floating-btns {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
 
 .c-btn-red {
   background-color: #CB0000;
