@@ -27,7 +27,7 @@ body {
     font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
-    letter-spacing: 0.001em;
+    letter-spacing: 0;
 }
 
 img {
@@ -90,14 +90,14 @@ main {
     }
 }
 
-//追従ボタンがない場合に直前のセクションに余白を
-main .add-bottom-padding {
-    padding-bottom: 10rem; 
+// //追従ボタンがない場合に直前のセクションに余白を
+// main .add-bottom-padding {
+//     padding-bottom: 10rem; 
 
-    @include sp {
-        padding-bottom: 10.8rem;
-    }
-}
+//     @include sp {
+//         padding-bottom: 10.8rem;
+//     }
+// }
 
 // * {
 //     outline: 1px solid red; /* 全要素の枠線を表示 */

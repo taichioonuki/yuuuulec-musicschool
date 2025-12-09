@@ -340,7 +340,7 @@ body {
   font-family: "YuGothic", "Yu Gothic", "游ゴシック", "Noto Sans JP", sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
-  letter-spacing: 0.001em;
+  letter-spacing: 0;
 }
 
 img {
@@ -405,15 +405,6 @@ main {
 @media (max-width: 767px) {
   main {
     margin-top: 5rem;
-  }
-}
-
-main .add-bottom-padding {
-  padding-bottom: 10rem;
-}
-@media (max-width: 767px) {
-  main .add-bottom-padding {
-    padding-bottom: 10.8rem;
   }
 }
 
@@ -750,8 +741,9 @@ main .add-bottom-padding {
 }
 
 .c-floating-btns {
-  position: sticky;
+  position: absolute;
   bottom: 0;
+  right: 0;
   z-index: 10;
   pointer-events: none;
   display: -webkit-box;
@@ -1198,11 +1190,11 @@ main .add-bottom-padding {
 }
 
 .c-blog--sub {
-  padding: 6.5rem 0 6rem;
+  padding: 6.5rem 0 21rem;
 }
 @media (max-width: 767px) {
   .c-blog--sub {
-    padding-top: 4.8rem;
+    padding-top: 20.3rem;
   }
 }
 
@@ -2350,11 +2342,11 @@ promotion
 }
 
 .blog {
-  padding: 6.8rem 0 5rem;
+  padding: 6.8rem 0 20.5rem;
 }
 @media (max-width: 767px) {
   .blog {
-    padding: 5rem 0 4.5rem;
+    padding: 5rem 0 19.1rem;
   }
 }
 
@@ -2496,7 +2488,7 @@ data {
 }
 
 .voice {
-  padding: 4.4rem 4rem 5rem;
+  padding: 4.4rem 4rem 8rem;
   color: #FFFFFF;
   text-align: center;
   background-color: #CB0000;
@@ -2673,7 +2665,7 @@ data {
 }
 
 .result-details {
-  padding-top: 7rem;
+  padding: 7rem 0 18.7rem;
 }
 .result-details data {
   font-size: 1.7rem;
@@ -2682,7 +2674,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details {
-    padding-top: 5rem;
+    padding: 5rem 0 13.7rem;
   }
 }
 
@@ -2881,7 +2873,7 @@ data {
 }
 
 .result {
-  padding: 6.5rem 0 5.5rem;
+  padding: 6.5rem 0 21rem;
 }
 
 .result__list {
@@ -2938,13 +2930,13 @@ data {
 }
 
 .message__404 {
-  padding-top: 7rem;
+  padding: 7rem 0 9rem;
   text-align: center;
   line-height: 1.6666666667;
 }
 @media (max-width: 767px) {
   .message__404 {
-    padding-top: 4rem;
+    padding: 4rem 0 5rem;
   }
 }
 
@@ -2957,11 +2949,11 @@ data {
 }
 
 .blog_details {
-  padding: 7rem 0 3.5rem;
+  padding: 7rem 0 18.7rem;
 }
 @media (max-width: 767px) {
   .blog_details {
-    padding: 5rem 0 5.5rem;
+    padding: 5rem 0 19.7rem;
   }
 }
 
@@ -3635,10 +3627,10 @@ hr {
    プラン内容・月額料金
    =========================== */
 .plan {
-  padding: 0 0 6.5rem;
+  padding-bottom: 22.3rem;
 }
 .plan .c-section-title {
-  margin-bottom: 4.8rem;
+  margin-bottom: 18.6rem;
 }
 @media (max-width: 767px) {
   .plan .c-section-title {
@@ -3982,7 +3974,7 @@ tbody tr__note {
 }
 
 .search__sub {
-  padding: 6.5rem 0 6rem;
+  padding: 6.5rem 0 21rem;
 }
 .search__sub time {
   margin-top: 0.2rem;
@@ -3995,7 +3987,7 @@ tbody tr__note {
 }
 @media (max-width: 767px) {
   .search__sub {
-    padding-top: 3.5rem;
+    padding: 3.5rem 0 20.3rem;
   }
 }
 
@@ -4038,12 +4030,12 @@ tbody tr__note {
 }
 
 .contact-send {
-  padding-top: 6.7rem;
+  padding: 6.7rem 0 9rem;
   text-align: center;
 }
 @media (max-width: 767px) {
   .contact-send {
-    padding-top: 4.7rem;
+    padding: 4.7rem 0 10.8rem;
   }
 }
 
@@ -4060,11 +4052,11 @@ tbody tr__note {
 }
 
 .contact-form {
-  padding-top: 7rem;
+  padding: 7rem 0 10rem;
 }
 @media (max-width: 767px) {
   .contact-form {
-    padding: 4.5rem 0 3rem;
+    padding: 4.5rem 0 10.8rem;
   }
 }
 

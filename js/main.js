@@ -51,6 +51,55 @@ $(function () {
 });
 
 // =========================
+// 下部のトップに戻るボタン・お問い合わせボタンを追従
+
+// =========================
+
+$(function () {
+    const $floatingBtnsContainer = $('.c-floating-btns');
+    // ★ フッター要素を取得
+    const $footer = $('#footer');
+    
+    function setAbsoluteFollowPosition() {
+        const scrollPosition = $(window).scrollTop(); // スクロール量
+        const windowHeight = $(window).height();       // 画面の高さ
+        const containerHeight = $floatingBtnsContainer.outerHeight(true); // ボタンの総高さ
+        
+        // ★ フッターの上端がページのどこにあるか計算（ページ最上部からの距離）
+        const footerTopOffset = $footer.offset().top; 
+        
+        // ★ ボタンが追従を止めなければならない top 座標を計算
+        // (フッターの上端 - ボタンの高さ)
+        const stopPosition = footerTopOffset - containerHeight;
+
+        // ボタンを画面の底に張り付かせる top 座標を計算 (通常の追従位置)
+        const followPosition = scrollPosition + windowHeight - containerHeight;
+        
+        let finalTop;
+
+        // ★ ロジック:
+        // ボタンが追従位置にある場合 (followPosition) が、
+        // 停止位置 (stopPosition) よりも上（小さい）であれば、追従を止めずに続ける。
+        if (followPosition < stopPosition) {
+            // 追従を続ける
+            finalTop = followPosition;
+        } else {
+            // 追従を停止し、フッターの上端に固定する
+            finalTop = stopPosition;
+        }
+
+        // CSSを操作して位置を適用
+        $floatingBtnsContainer.css({
+            'top': finalTop + 'px',
+            'bottom': 'auto'
+        });
+    }
+
+    $(window).on('scroll resize load', setAbsoluteFollowPosition);
+    setAbsoluteFollowPosition();
+});
+
+// =========================
 // アコーディオン（FAQ）
 // =========================
 $(function () {

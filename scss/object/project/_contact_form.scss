@@ -2,10 +2,10 @@
 @use "../component/component" as *;
 
 .contact-form {
-    padding-top: 7rem;
+    padding: 7rem 0 10rem;
 
     @include sp {
-        padding: 4.5rem 0 3rem;
+        padding: 4.5rem 0 10.8rem;
     }
 }
 
