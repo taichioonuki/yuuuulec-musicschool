@@ -2980,7 +2980,7 @@ data {
   width: 9.1rem;
 }
 @media (max-width: 767px) {
-  .blog-details__sns-icon {
+  .blog-details__sns-icon.facebook, .blog-details__sns-icon.twitter, .blog-details__sns-icon.hatena, .blog-details__sns-icon.line, .blog-details__sns-icon.pocket {
     width: 6.5rem;
   }
 }

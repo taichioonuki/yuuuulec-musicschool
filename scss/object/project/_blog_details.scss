@@ -28,7 +28,13 @@
 }
 
 @include sp {
+    &.facebook,
+    &.twitter,
+    &.hatena,
+    &.line,
+    &.pocket {
     width: 6.5rem;
+}
 }
 }
 
