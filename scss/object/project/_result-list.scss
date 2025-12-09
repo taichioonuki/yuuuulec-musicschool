@@ -3,6 +3,10 @@
 
 .result {
     padding: 6.5rem 0 21rem;
+
+    @include sp {
+        padding: 5rem 0 20.3rem;
+    }
 }
 
 .result__list {
