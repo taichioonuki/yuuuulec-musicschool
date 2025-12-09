@@ -3904,7 +3904,7 @@ tbody tr__note {
 /* SP調整 */
 @media (max-width: 767px) {
   .plan {
-    padding-bottom: 3.5rem;
+    padding-bottom: 18.5rem;
   }
   .plan__scroll {
     overflow-x: scroll;
