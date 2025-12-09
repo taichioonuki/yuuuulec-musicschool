@@ -1201,7 +1201,7 @@ main {
 }
 @media (max-width: 767px) {
   .c-blog--sub {
-    padding-top: 20.3rem;
+    padding: 5rem 0 20.3rem;
   }
 }
 
@@ -1227,7 +1227,7 @@ main {
 }
 @media (max-width: 767px) {
   .c-blog__item--sub {
-    margin-bottom: 3.6rem;
+    margin-bottom: 3.7rem;
   }
 }
 .c-blog__item--sub a {
