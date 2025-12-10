@@ -113,6 +113,10 @@
 
 .contact-form__form-item--label--checkbox {
     cursor: default;
+
+    @include sp {
+        display: flex;
+    }
 }
 
 input,
