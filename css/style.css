@@ -4399,4 +4399,10 @@ textarea {
 
 .mgb-40 {
   margin-bottom: 4rem;
+}
+
+@media (max-width: 767px) {
+  .floating-btn {
+    right: 6.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

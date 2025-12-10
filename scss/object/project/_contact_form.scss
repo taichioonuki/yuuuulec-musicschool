@@ -290,3 +290,9 @@ textarea {
 .mgb-40 {
     margin-bottom: 4rem;
 }
+
+.floating-btn {
+    @include sp {
+        right: 6.5rem;
+    }
+}
