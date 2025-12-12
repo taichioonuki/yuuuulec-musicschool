@@ -478,11 +478,6 @@ main {
   height: 100%;
   gap: 1rem;
 }
-@media (max-width: 767px) {
-  .header__logo a {
-    gap: 0.6rem;
-  }
-}
 
 .header__logo-img {
   display: inline-block;

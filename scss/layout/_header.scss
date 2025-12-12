@@ -55,10 +55,6 @@
       align-items: center;
       height: 100%;
       gap: 1rem;
-
-      @include sp {
-         gap: 0.6rem;
-      }
    }
 }
 
