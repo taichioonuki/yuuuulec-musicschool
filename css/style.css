@@ -2721,7 +2721,6 @@ data {
 }
 
 .result-details__img {
-  max-width: 88rem;
   position: relative;
 }
 @media (max-width: 767px) {
