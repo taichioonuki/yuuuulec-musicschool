@@ -624,6 +624,8 @@ main {
     width: 100%;
     color: #FFFFFF;
     padding: 0 2rem;
+    -webkit-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
   }
   .header__nav-item a:hover {
     background-color: #000000;
@@ -771,8 +773,8 @@ main {
   border: 1px solid #CB0000;
   display: inline-block;
   text-align: center;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 .c-btn-red:hover {
   background-color: #FFFFFF;
@@ -783,6 +785,8 @@ main {
 .c-contact__btn {
   color: #FFFFFF;
   background-color: #CB0000;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
   cursor: pointer;
   font-size: 2rem;
   font-weight: 700;
@@ -850,8 +854,8 @@ main {
   display: block;
   width: 25rem;
   margin-inline: auto;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, color 0.5s ease;
   list-style: dots;
   margin-top: 4rem;
   padding: 1rem 0 0.7rem;
@@ -4357,7 +4361,8 @@ textarea {
   width: 100%;
   max-width: 25rem;
   -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 @media (max-width: 767px) {
   .contact-form__form-item--submit {
