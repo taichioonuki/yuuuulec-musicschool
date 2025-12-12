@@ -738,8 +738,8 @@ main {
 }
 
 .c-floating-btns {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  bottom: 27rem;
   right: 0;
   z-index: 10;
   pointer-events: none;
