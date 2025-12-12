@@ -51,6 +51,38 @@ $(function () {
 });
 
 // =========================
+// 下部のトップに戻るボタン・お問い合わせボタンを追従 (FIXEDベースで安定化)
+// =========================
+$(function () {
+    const $floatingBtnsContainer = $('.c-floating-btns');
+    const $footer = $('#footer');
+    
+    function setFixedFollowPosition() {
+        if ($footer.length === 0 || $floatingBtnsContainer.length === 0) return; 
+        
+        const scrollPosition = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const containerHeight = $floatingBtnsContainer.outerHeight(true); 
+        
+        const footerTopOffset = $footer.offset().top; 
+        const fixedBottomDocumentPosition = scrollPosition + windowHeight;
+        
+        // ボタンの下端がフッターの上端を越えているか？
+        if (fixedBottomDocumentPosition > footerTopOffset) {
+            // YES: 干渉している
+            const overlap = fixedBottomDocumentPosition - footerTopOffset;
+            $floatingBtnsContainer.css('transform', `translateY(-${overlap}px)`);
+        } else {
+            // NO: 干渉していない
+            $floatingBtnsContainer.css('transform', 'translateY(0)');
+        }
+    }
+
+    $(window).on('scroll resize load', setFixedFollowPosition);
+    setFixedFollowPosition();
+});
+
+// =========================
 // アコーディオン（FAQ）
 // =========================
 $(function () {

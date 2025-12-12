@@ -739,7 +739,7 @@ main {
 
 .c-floating-btns {
   position: fixed;
-  bottom: 27rem;
+  bottom: 0;
   right: 0;
   z-index: 10;
   pointer-events: none;
@@ -756,9 +756,8 @@ main {
 }
 @media (max-width: 767px) {
   .c-floating-btns {
-    right: 50%;
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    right: 0;
+    left: 0;
   }
 }
 
@@ -824,7 +823,7 @@ main {
 }
 @media (max-width: 767px) {
   .c-to-top {
-    padding-right: 0;
+    padding-right: 2rem;
     margin-bottom: 1.5rem;
     margin-left: auto;
   }
