@@ -779,8 +779,8 @@ main {
 .c-contact__btn {
   color: #FFFFFF;
   background-color: #CB0000;
-  -webkit-transition: background-color 0.5s ease;
-  transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
   cursor: pointer;
   font-size: 2rem;
   font-weight: 700;
