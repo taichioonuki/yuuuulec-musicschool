@@ -1,8 +1,17 @@
 @use "../../foundation/all" as *;
 
 //トップに戻るボタンとお問い合わせボタン
+.c-sticky-anchor {
+    position: absolute;
+    right: 0;
+    bottom:0;
+    z-index: 5;
+    pointer-events: none;
+    height: 100%;
+    width: 30rem;
+}
 .c-floating-btns {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     right: 0;
     z-index: 10;
@@ -12,7 +21,7 @@
     justify-content: flex-end;
     will-change: transform; 
     transform: translateZ(0);
-    
+
     @include sp {
     right: 0;
     left: 0;
