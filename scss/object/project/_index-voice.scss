@@ -142,10 +142,11 @@
     @include sp {
         left: 2rem;
     }
-@media screen and (max-width: 360px) {
-    left: 2.5rem;
-    
-}
+
+    @media screen and (max-width: 360px) {
+        left: 2.5rem;
+
+    }
 }
 
 .voice__next {

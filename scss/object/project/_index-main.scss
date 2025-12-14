@@ -102,9 +102,6 @@
 
     @include sp {
         width: 100%;
-    }
-
-    @include sp {
         margin-top: 2.1rem;
     }
 }
@@ -123,10 +120,6 @@
     justify-content: center;
     gap: 2.9rem;
     margin-top: 2rem;
-
-    // @include sp {
-    //     width: 97%;
-    // }
 }
 
 .message__item:nth-child(1) .message__item-title {
@@ -141,7 +134,7 @@
 .message__item-title {
     font-size: 2.5rem;
     font-weight: 700;
-    line-height: calc(50 /25);
+    line-height: calc(50 / 25);
     color: $red;
     text-align: right;
     flex: 1;

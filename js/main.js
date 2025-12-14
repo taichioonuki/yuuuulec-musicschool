@@ -65,7 +65,11 @@ $(function () {
         const containerHeight = $floatingBtnsContainer.outerHeight(true); 
         
         const footerTopOffset = $footer.offset().top; 
+        const footerHeight = $footer.outerHeight(true);
+
         const fixedBottomDocumentPosition = scrollPosition + windowHeight;
+
+        const footerBottomOffset = footerTopOffset + footerHeight;
         
         // ボタンの下端がフッターの上端を越えているか？
         if (fixedBottomDocumentPosition > footerTopOffset) {
