@@ -550,8 +550,8 @@ main {
             flex-direction: column;
     row-gap: 4rem;
     text-align: center;
-    -webkit-transition: background-color 0.5s ease;
-    transition: background-color 0.5s ease;
+    -webkit-transition: right 0.5s ease, background-color 0.5s ease;
+    transition: right 0.5s ease, background-color 0.5s ease;
     z-index: 10000;
   }
   .header__nav.active {
