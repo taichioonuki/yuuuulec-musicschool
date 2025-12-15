@@ -758,7 +758,7 @@ main {
 
 .c-floating-btns {
   position: sticky;
-  top: calc(100vh - 15.5rem);
+  top: calc(100vh - 14.5rem);
   right: 0;
   z-index: 10;
   pointer-events: none;
@@ -775,11 +775,6 @@ main {
   will-change: transform;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
-}
-@media (max-width: 767px) {
-  .c-floating-btns {
-    top: calc(100vh - 14.5rem);
-  }
 }
 
 .c-btn-red {
