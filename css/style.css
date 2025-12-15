@@ -758,7 +758,7 @@ main {
 
 .c-floating-btns {
   position: sticky;
-  top: 77%;
+  top: calc(100vh - 15.5rem);
   right: 0;
   z-index: 10;
   pointer-events: none;
@@ -778,7 +778,7 @@ main {
 }
 @media (max-width: 767px) {
   .c-floating-btns {
-    top: 71%;
+    top: calc(100vh - 14rem);
   }
 }
 
