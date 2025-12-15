@@ -28,7 +28,6 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
     letter-spacing: 0;
-    position: relative;
 }
 
 img {
@@ -84,6 +83,7 @@ a {
 main {
     margin-top: 8rem;
     display: block;
+    position: relative;
 
     @include sp {
         margin-top: 5rem;

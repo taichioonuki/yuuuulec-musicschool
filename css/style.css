@@ -341,7 +341,6 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0;
-  position: relative;
 }
 
 img {
@@ -401,6 +400,7 @@ a:hover {
 main {
   margin-top: 8rem;
   display: block;
+  position: relative;
 }
 @media (max-width: 767px) {
   main {
@@ -753,7 +753,7 @@ main {
 
 .c-floating-btns {
   position: sticky;
-  bottom: 0;
+  top: 77%;
   right: 0;
   z-index: 10;
   pointer-events: none;
