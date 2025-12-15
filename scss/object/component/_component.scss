@@ -9,6 +9,10 @@
     pointer-events: none;
     height: 100%;
     width: 30rem;
+
+    @include sp {
+        width: 100%;
+    }
 }
 .c-floating-btns {
     position: sticky;
@@ -23,8 +27,7 @@
     transform: translateZ(0);
 
     @include sp {
-    right: 0;
-    left: 0;
+    top:71%;
     }
 }
 

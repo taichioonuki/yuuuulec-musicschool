@@ -750,6 +750,11 @@ main {
   height: 100%;
   width: 30rem;
 }
+@media (max-width: 767px) {
+  .c-sticky-anchor {
+    width: 100%;
+  }
+}
 
 .c-floating-btns {
   position: sticky;
@@ -773,8 +778,7 @@ main {
 }
 @media (max-width: 767px) {
   .c-floating-btns {
-    right: 0;
-    left: 0;
+    top: 71%;
   }
 }
 
