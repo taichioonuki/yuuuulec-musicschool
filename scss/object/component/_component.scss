@@ -16,8 +16,7 @@
 }
 .c-floating-btns {
     position: sticky;
-    // top: 77%;
-    top: calc(100vh - 15.5rem);
+    top: calc(100% - 15rem);
     right: 0;
     z-index: 10;
     pointer-events: none;
@@ -28,7 +27,7 @@
     transform: translateZ(0);
 
     @include sp {
-        top: calc(100vh - 14.5rem);
+        top: calc(100% - 14rem);
     }
 }
 
@@ -90,6 +89,7 @@
     width: fit-content;
     pointer-events: auto;
     margin-left: auto;
+    line-height: 0;
     padding-right: 11.5rem;
 
     @include sp {
