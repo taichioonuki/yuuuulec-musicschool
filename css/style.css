@@ -4043,6 +4043,11 @@ tbody tr__note {
 .pagination__search {
   margin-top: 6.5rem;
 }
+@media (max-width: 767px) {
+  .pagination__search {
+    margin-top: 5.5rem;
+  }
+}
 
 .contact-send {
   padding: 6.7rem 0 9rem;

@@ -65,4 +65,8 @@ font-weight: 500;
 
 .pagination__search {
 margin-top: 6.5rem;
+
+    @include sp {
+        margin-top: 5.5rem;
+    }
 }
