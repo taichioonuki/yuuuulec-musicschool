@@ -17,7 +17,7 @@
 }
 
 .search__sub {
-    padding: 6.5rem 0 5.5rem;
+    padding: 6.5rem 0 21.5rem;
 
     time {
         margin-top: 0.2rem;
@@ -29,7 +29,7 @@
     }
 
     @include sp {
-    padding: 3.5rem 0 5rem;
+    padding: 3.5rem 0 19rem;
 }
 }
 
@@ -67,6 +67,6 @@ font-weight: 500;
 margin-top: 6.5rem;
 
     @include sp {
-        margin-top: 5.5rem;
+        margin-top: 5rem;
     }
 }

@@ -3989,7 +3989,7 @@ tbody tr__note {
 }
 
 .search__sub {
-  padding: 6.5rem 0 5.5rem;
+  padding: 6.5rem 0 21.5rem;
 }
 .search__sub time {
   margin-top: 0.2rem;
@@ -4002,7 +4002,7 @@ tbody tr__note {
 }
 @media (max-width: 767px) {
   .search__sub {
-    padding: 3.5rem 0 5rem;
+    padding: 3.5rem 0 19rem;
   }
 }
 
@@ -4045,7 +4045,7 @@ tbody tr__note {
 }
 @media (max-width: 767px) {
   .pagination__search {
-    margin-top: 5.5rem;
+    margin-top: 5rem;
   }
 }
 
