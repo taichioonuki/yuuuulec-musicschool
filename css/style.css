@@ -752,7 +752,10 @@ main {
 }
 @media (max-width: 767px) {
   .c-sticky-anchor {
-    width: 100%;
+    width: 33.5rem;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
 }
 
@@ -777,7 +780,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30rem;
 }
 @media (max-width: 767px) {
   .c-floating-btns {
@@ -849,7 +851,6 @@ main {
 @media (max-width: 767px) {
   .c-to-top {
     margin-bottom: 1.5rem;
-    margin-right: 2rem;
   }
 }
 .c-to-top a {
