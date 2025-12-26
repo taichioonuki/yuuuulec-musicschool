@@ -2128,7 +2128,6 @@ promotion
   line-height: 1;
   text-align: center;
   margin-right: 0.8rem;
-  padding-bottom: 0.2rem;
 }
 @media (max-width: 767px) {
   .faq__icon {
@@ -2139,11 +2138,13 @@ promotion
 .faq__icon--q {
   background-color: #000000;
   color: #fff;
+  padding-bottom: 0.45rem;
 }
 
 .faq__icon--a {
   background-color: #CB0000;
   color: #fff;
+  padding-bottom: 0.1rem;
 }
 
 .faq__text {

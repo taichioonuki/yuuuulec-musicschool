@@ -102,7 +102,10 @@
     line-height: 1;
     text-align: center;
     margin-right: 0.8rem;
-    padding-bottom: 0.2rem;
+    // outline: 1px solid cyan; /* 外枠 */
+    // background-image: 
+    //     linear-gradient(to right, transparent 49%, red 50%, transparent 51%), /* 垂直線 */
+    //     linear-gradient(to bottom, transparent 49%, red 50%, transparent 51%); /* 水平線 */
 
     @include sp {
         margin-right: 2rem;
@@ -112,11 +115,13 @@
 .faq__icon--q {
     background-color: $black;
     color: #fff;
+    padding-bottom: 0.45rem;
 }
 
 .faq__icon--a {
     background-color: $red;
     color: #fff;
+    padding-bottom: 0.1rem;
 }
 
 .faq__text {
