@@ -2143,13 +2143,23 @@ promotion
 .faq__icon--q {
   background-color: #000000;
   color: #fff;
-  padding-bottom: 0.65rem;
+  padding-bottom: 0.25rem;
+}
+@media (max-width: 767px) {
+  .faq__icon--q {
+    padding-bottom: 0.65rem;
+  }
 }
 
 .faq__icon--a {
   background-color: #CB0000;
   color: #fff;
-  padding-bottom: 0.175rem;
+  padding-bottom: 0.11rem;
+}
+@media (max-width: 767px) {
+  .faq__icon--a {
+    padding-bottom: 0.175rem;
+  }
 }
 
 .faq__text {
