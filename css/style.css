@@ -2143,7 +2143,7 @@ promotion
 .faq__icon--q {
   background-color: #000000;
   color: #fff;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.2rem;
 }
 @media (max-width: 767px) {
   .faq__icon--q {
