@@ -2143,7 +2143,7 @@ promotion
 .faq__icon--q {
   background-color: #000000;
   color: #fff;
-  padding-bottom: 0.355rem;
+  padding-bottom: 0.315rem;
 }
 @media (max-width: 767px) {
   .faq__icon--q {
@@ -2154,7 +2154,7 @@ promotion
 .faq__icon--a {
   background-color: #CB0000;
   color: #fff;
-  padding-bottom: 0.13rem;
+  padding-bottom: 0.15rem;
 }
 @media (max-width: 767px) {
   .faq__icon--a {
