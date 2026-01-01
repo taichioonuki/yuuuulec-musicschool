@@ -2154,12 +2154,6 @@ promotion
 .faq__icon--a {
   background-color: #CB0000;
   color: #fff;
-  padding-bottom: 0.15rem;
-}
-@media (max-width: 767px) {
-  .faq__icon--a {
-    padding-bottom: 0.175rem;
-  }
 }
 
 .faq__text {

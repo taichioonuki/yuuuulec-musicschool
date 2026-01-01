@@ -122,11 +122,6 @@
 .faq__icon--a {
     background-color: $red;
     color: #fff;
-    padding-bottom: 0.15rem;
-
-    @include sp {
-        padding-bottom: 0.175rem;
-    }
 }
 
 .faq__text {
