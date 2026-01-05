@@ -98,6 +98,9 @@ function getSpaceBetween() {
 }
 
 function initVoiceSwiper() {
+    const voiceInner = document.querySelector('.voice__inner');
+    if (!voiceInner) return; // 要素がなければ何もしない
+
     return new Swiper('.voice__inner', {
         loop: true,
         navigation: {
@@ -105,28 +108,69 @@ function initVoiceSwiper() {
             prevEl: '.voice__prev',
         },
         slidesPerView: 3,
-        spaceBetween: getSpaceBetween(),
+        spaceBetween: 35,
         breakpoints: {
-            0: { slidesPerView: 1 },
+            0: { slidesPerView: 1, spaceBetween: 0 },
             768: { slidesPerView: 3 },
         },
         observer: true,
         observeParents: true,
+        preventClicks: false,
+        touchStartPreventDefault: false,
     });
 }
 
 // DOM読み込み後にSwiper初期化
-document.addEventListener('DOMContentLoaded', function() {
-    const voiceInner = document.querySelector('.voice__inner'); // スライダー要素を取得
+document.addEventListener('DOMContentLoaded', function () {
+    const voiceInner = document.querySelector('.voice__inner');
 
-    if (typeof Swiper !== "undefined" && voiceInner) { // Swiperが定義されていて要素がある場合のみ
-        let voiceSwiper = initVoiceSwiper();
-
-        window.addEventListener('resize', function() {
-            if (voiceSwiper) voiceSwiper.destroy(true, true); // 前のSwiperを破棄
-            voiceSwiper = initVoiceSwiper(); // 再初期化
+    if (voiceInner) {
+        let voiceSwiper = new Swiper('.voice__inner', {
+            loop: true,
+            navigation: {
+                nextEl: '.voice__next',
+                prevEl: '.voice__prev',
+            },
+            slidesPerView: 3,
+            spaceBetween: 35,
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 3 },
+            },
+            observer: true,
+            observeParents: true,
+            preventClicks: false,
+            touchStartPreventDefault: false,
         });
-    } else {
-        console.warn("Swiperが未定義か、スライダー要素が見つかりません");
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const floatingBtn = document.querySelector('.c-floating-btns');
+
+    if (!floatingBtn) {
+        const sections = document.querySelectorAll('main > section');
+        if (sections.length > 0) {
+            const lastSection = sections[sections.length - 1];
+            lastSection.classList.add('add-bottom-padding');
+        }
+
+        const fv = document.querySelector('.fv');
+        if (fv) fv.classList.add('add-bottom-padding');
+    }
+});
+
+//下部の追従ボタンがなければ余白を追加
+document.addEventListener('DOMContentLoaded', () => {
+    const floatingBtn = document.querySelector('.c-floating-btns');
+
+    if (!floatingBtn) {
+        // main直下の最後の要素（*）を取得
+        const lastContent = document.querySelector('main > *:last-child');
+        
+        if (lastContent) {
+            // 最後のコンテンツ要素にクラスを付与
+            lastContent.classList.add('add-bottom-padding');
+        }
     }
 });

@@ -5,12 +5,12 @@
     padding: 6.4rem 0 9rem;
 
     @include sp {
-        padding: 4.9rem 0 4rem;
+        padding: 5rem 0 4rem;
     }
 }
 
 .reason__inner {
-    margin-top: 2.8rem;
+    margin-top: 2.5rem;
 
     @include sp {
         margin-top: 3.6rem;
@@ -20,23 +20,23 @@
 .reason__item {
     display: flex;
     margin-bottom: 5rem;
+    column-gap: 5rem;
 
     @include sp {
         flex-direction: column;
         margin-bottom: 3.9rem;
     }
 
-&:last-of-type {
+    &:last-of-type {
         margin-bottom: 0;
     }
 }
 
 .reason__img {
-    max-width: 35rem;
-    width: 100%;
+    width: 35rem;
 
     @include sp {
-        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -46,34 +46,31 @@
     @include sp {
         margin-top: 3rem;
     }
-        @include sp {
-        top: 2.5rem;
-    }
 }
 
 .reason__item-title {
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     display: block;
-    padding-left: 5rem; 
+    padding-bottom: 1rem;
     position: relative;
- 
-
 
     &::after {
         content: "";
         position: absolute;
-        bottom: -0.7rem;
-        left: 0;
-        width: 100%;
-        height: 0.2rem;
+        bottom: 0rem;
+        left: -5rem;
+        width: calc(100% + 5rem);
+        height: 2px;
         background-color: $red;
-        width: 100%;
-        margin-top: 1rem;
 
         @include sp {
-bottom: -1rem;        }
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
     }
+
     @include sp {
         font-size: 2rem;
         line-height: calc(30 / 20);
@@ -84,11 +81,11 @@ bottom: -1rem;        }
 .reason__item-text {
     font-size: 1.8rem;
     line-height: calc(33 / 18);
-margin-top: 4.9rem;
-margin-left: 5rem;
+    margin-top: 3.9rem;
+    position: relative;
 
     @include sp {
-        margin-top: 2.7rem;
+        margin-top: 1.7rem;
         margin-left: 0;
         font-size: 1.6rem;
         line-height: calc(30 / 16);

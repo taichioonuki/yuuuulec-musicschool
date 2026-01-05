@@ -2,10 +2,10 @@
 @use "../component/component" as *;
 
 .faq {
-    padding: 0 0 7rem;
+    padding-top: 6rem;
 
     @include sp {
-        padding-bottom: 4.3rem;
+        padding-top: 5.5rem;
     }
 }
 
@@ -37,7 +37,7 @@
         bottom: 0;
         max-width: 88rem;
         width: 100%;
-        height: 0.05rem;
+        height: 0.5px;
         background-color: rgba(0, 0, 0, 1);
     }
 
@@ -48,29 +48,31 @@
         top: 0;
         max-width: 88rem;
         width: 100%;
-        height: 0.05rem;
+        height: 0.5px;
         background-color: rgba(0, 0, 0, 1);
     }
 }
 
 .faq__question {
     all: unset;
+    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     width: 100%;
     position: relative;
-    padding: 2rem 0 1rem 2rem;
+    align-items: center;
+    padding: 1.5rem 6.5rem 1.5rem 2rem;
+    position: relative;
 
     &::after {
         content: "";
         position: absolute;
-        top: 50%;
-        right: 5rem;
-        width: 0.8rem;
-        height: 0.8rem;
-        border-right: 0.1rem solid #000;
-        border-bottom: 0.1rem solid #000;
-        transform: translateY(-50%) rotate(45deg);
+        right: 2.8rem;
+        width: 1.5rem;
+        height: 1rem;
+        background-image: url("../img/faq-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: 1.5rem;
         transition: transform 0.4s;
 
         @include sp {
@@ -79,15 +81,14 @@
     }
 
     &[aria-expanded="true"]::after {
-        transform: translateY(-50%) rotate(225deg);
+        transform: translateY(-50%) rotate(180deg);
     }
 
     @include sp {
-        padding: 1.5rem 0 1.2rem 0;
+        padding: 1.3rem 5rem 1.3rem 0;
         align-items: center;
     }
 }
-
 
 .faq__icon {
     display: flex;
@@ -98,6 +99,7 @@
     border-radius: 50%;
     font-weight: bold;
     font-size: 2rem;
+    line-height: 1;
     text-align: center;
     margin-right: 0.8rem;
 
@@ -109,6 +111,12 @@
 .faq__icon--q {
     background-color: $black;
     color: #fff;
+    padding-bottom: 0.315rem;
+
+    @include sp {
+        padding-bottom: 0.65rem;
+
+    }
 }
 
 .faq__icon--a {
@@ -125,21 +133,23 @@
         font-size: 1.6rem;
         line-height: calc(30 / 16);
         width: 29rem;
-        padding-right: 4.7rem;
     }
 }
 
 .faq__answer {
-    display: none;
     position: relative;
+    box-sizing: border-box;
     display: flex;
     color: $red;
-    padding: 2rem 0 1rem 2rem;
+    font-weight: 700;
+    align-items: center;
+    padding: 1.5rem 6.5rem 1.5rem 2rem;
     background-color: rgba(203, 0, 0, 0.098);
     width: 100%;
 
     @include sp {
         align-items: center;
-        padding: 1.3rem 0;
+        padding: 1rem 5rem 1rem 0;
+
     }
 }

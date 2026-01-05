@@ -19,3 +19,17 @@
 @use "./object/project/result-list" as *;
 
 @use "./object/utility/utility" as *;
+
+@use "./object/project/404" as *;
+
+@use "./object/project/blog_list" as *;
+
+@use "./object/project/blog_details" as *;
+
+@use "./object/project/plan" as *;
+
+@use "./object/project/search-1" as *;
+
+@use "./object/project/contact_send" as *;
+
+@use "./object/project/contact_form" as *;

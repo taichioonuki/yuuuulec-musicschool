@@ -31,9 +31,10 @@
     height: 6rem;
     width: 21rem;
     text-align: center;
+    font-weight: 700;
 
     @include sp {
-        padding: 1.8rem 6.5rem;
+        padding: 1.8rem 0;
         width: 21rem;
     }
 }
@@ -46,7 +47,7 @@
     text-align: center;
 
     @include sp {
-        padding: 1.8rem 3rem;
+        padding: 1.8rem 0;
         width: 21rem;
     }
 }
@@ -104,12 +105,22 @@
 // Plan Table (SCSS)
 // ==============================
 .plan {
-    padding: 0 0 6.5rem;
+    padding-bottom: 22.3rem;
+
+    .c-section-title {
+        margin-bottom: 4.8rem;
+
+        @include sp {
+            margin-bottom: 0.6rem;
+        }
+    }
 }
 
 .plan__scroll {
-    overflow: visible;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
+    padding-top: 3rem;
+
 
     @include sp {
         overflow-x: auto;
@@ -135,11 +146,7 @@
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
-    margin-top: 7.5rem;
-
-    @include sp {
-        margin-top: 3.6rem;
-    }
+    // margin-top: 3rem;
 }
 
 .plan-table th {
@@ -160,7 +167,7 @@
 }
 
 .plan-table__col--feature {
-    width: 22rem;
+    width: 25%;
 
     @include sp {
         width: 16.9rem;
@@ -168,13 +175,12 @@
 }
 
 .plan-table__col--plan {
-    width: 22rem;
+    width: 25%;
 
     @include sp {
-       width: 16.65rem;
+        width: 16.65rem;
     }
 }
-
 
 .plan-table__heading {
     background: $black;
@@ -202,6 +208,7 @@
     transform: translateX(-50%);
     display: inline-block;
     font-size: 1.7rem;
+    font-weight: 700;
     line-height: 1;
     padding: 1.8rem 0 0.5rem;
     background-color: $red;
@@ -214,6 +221,7 @@
     line-height: calc(33 / 20);
     text-align: center;
     margin-inline: auto;
+    font-weight: 700;
 
     @include sp {
         display: block;
@@ -225,15 +233,19 @@
 .plan-table__price-row th,
 .plan-table__price-row td {
     background: $white;
-    border-top: 1px solid $gray;
+    border-top: 0.5px solid $black;
 }
+
+.plan-table__price-row td.plan-table__price--featured {
+    border-top: 0.5px solid $red;
+}
+
 
 .plan-table__label {
     text-align: left;
-    padding: 3.2rem 2rem 2.3rem;
+    padding-left: 2rem;
 
     @include sp {
-        // padding: 3rem 1rem;
         padding: 0 1rem;
         height: 8.5rem;
     }
@@ -242,7 +254,6 @@
 .plan-table__price {
     text-align: center;
     padding: 3rem 2rem 2.2rem;
-    border-bottom: 1px solid $gray;
 
     @include sp {
         padding: 3rem 2rem 2.2rem;
@@ -261,7 +272,6 @@
 
 .plan-table__price--featured {
     color: $red;
-    padding: 2.2rem 1rem;
 }
 
 .plan-table__heading--tall {
@@ -273,13 +283,14 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr:not(:last-child) {
-    border-bottom: 1px solid $gray;
+    border-bottom: 0.5px solid $black;
 }
 
 tbody tr__cell {
     text-align: center;
     padding: 1.1rem 1rem;
-    border-bottom: 1px solid $gray;
+    border-top: 0.5px solid $black;
+
 }
 
 tbody tr__note {
@@ -299,7 +310,7 @@ tbody tr__note {
 
 /* ドット（●） */
 .u-dot {
-    --size: 15px;
+    --size: 1.5rem;
     display: inline-block;
     width: var(--size);
     height: var(--size);
@@ -320,16 +331,22 @@ tbody tr__note {
     }
 }
 
-/* 左上の空セルに線をつける */
-.plan-table__heading--blank {
-    border-bottom: 0.5px solid $black;
+.plan-table tbody tr {
+
+    th,
+    td {
+        height: 8.5rem;
+    }
 }
 
 /* 一番下の行に線をつける */
 .plan-table tbody tr:last-child th,
 .plan-table tbody tr:last-child td {
     border-bottom: 0.5px solid $black;
+    height: 8.5rem;
 }
+
+
 
 /* 罫線 */
 .plan-table th,
@@ -349,16 +366,19 @@ tbody tr__note {
     border-right: 0;
 }
 
+.plan-table__cell.no-border-bottom {
+    border-bottom: none !important;
+}
+
 /* SP調整 */
 @include sp {
     .plan {
-        padding-bottom: 3.5rem;
+        padding-bottom: 18rem;
     }
 
     .plan__scroll {
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
-        max-width: 100%;
     }
 
     .plan-table {

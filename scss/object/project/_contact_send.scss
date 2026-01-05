@@ -7,14 +7,13 @@
 
 
     @include sp {
-        padding: 4.7rem 0 5rem;
+        padding: 4.7rem 0 10.8rem;
     }
 }
 
 .contact-send__text {
     line-height: calc(30 / 18);
     text-align: center;
-    margin-bottom: 4rem;
 
     @include sp {
         font-size: 1.6rem;
