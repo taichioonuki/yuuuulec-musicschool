@@ -50,7 +50,7 @@ function my_theme_enqueue_files()
     wp_enqueue_style('swiper-style', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css', array(), null);
 
     // メインのCSS（style.css）
-    wp_enqueue_style('main-style', get_template_directory_uri('/css/style.css'), array(), $now);
+    wp_enqueue_style('main-style', get_theme_file_uri('/css/style.css'), array(), $now);
 
 
     // --- JavaScriptの読み込み ---
@@ -79,7 +79,7 @@ function my_theme_enqueue_files()
 
     // メインのJS（main.js）
     // ※jQuery, simplebar, swiperの後に読み込むよう依存関係を指定
-    wp_enqueue_script('main-script', get_template_directory_uri('/js/main.js'), array('jquery', 'simplebar-script',
+    wp_enqueue_script('main-script', get_theme_file_uri('/js/main.js'), array('jquery', 'simplebar-script',
     'swiper-script'), $now, true);
 }
 // アクションフックに登録
