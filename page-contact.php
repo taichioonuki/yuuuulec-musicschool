@@ -2,247 +2,245 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex">
-  <title>きたむらミュージックスクール</title>
-  <meta name="description" content="きたむらミュージックスクールへのお問い合わせフォームです。無料体験のご予約、資料請求、料金プランに関するご質問など、お気軽にご連絡ください。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="お問い合わせフォーム | きたむらミュージックスクール">
-  <meta property="og:description" content="きたむらミュージックスクールへのお問い合わせフォームです。無料体験のご予約、資料請求、料金プランに関するご質問など、お気軽にご連絡ください。">
-  <meta property="og:url" content="https://test.madebyyuu.com/05/contact_form.html">
-  <meta property="og:site_name" content="きたむらミュージックスクール">
-  <meta property="og:image" content="https://test.madebyyuu.com/05/img/fv.jpg">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="お問い合わせフォーム | きたむらミュージックスクール">
-  <meta name="twitter:description" content="きたむらミュージックスクールへのお問い合わせフォームです。無料体験のご予約、資料請求、料金プランに関するご質問など、お気軽にご連絡ください。">
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>きたむらミュージックスクール</title>
+    <meta name="description" content="きたむらミュージックスクールへのお問い合わせフォームです。無料体験のご予約、資料請求、料金プランに関するご質問など、お気軽にご連絡ください。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="お問い合わせフォーム | きたむらミュージックスクール">
+    <meta property="og:description" content="きたむらミュージックスクールへのお問い合わせフォームです。無料体験のご予約、資料請求、料金プランに関するご質問など、お気軽にご連絡ください。">
+    <meta property="og:url" content="https://test.madebyyuu.com/05/contact_form.html">
+    <meta property="og:site_name" content="きたむらミュージックスクール">
+    <meta property="og:image" content="https://test.madebyyuu.com/05/img/fv.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="お問い合わせフォーム | きたむらミュージックスクール">
+    <meta name="twitter:description" content="きたむらミュージックスクールへのお問い合わせフォームです。無料体験のご予約、資料請求、料金プランに関するご質問など、お気軽にご連絡ください。">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <header id="header" class="header">
-    <div class="header__inner inner">
-      <div class="header__logo">
-        <a href="./index.html">
-          <span class="header__logo-img">
-            <picture>
-              <source media="(max-width: 767px)" srcset="./img/logo-sp.svg">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="音符" width="32" height="49">
-            </picture>
-          </span>
-          <span class="header__logo-text">きたむら<span class="header__logo-bottom"><br
-                class="pc-only">ミュージックスクール</span></span>
-        </a>
-      </div>
-      <div class="header__nav-inner">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a href="./plan.html"><span>料金</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="./blog_list.html"><span>ブログ</span></a>
-            </li>
-            <li class="header__nav-item">
-              <a href="./result_list.html"><span>卒業実績</span></a>
-            </li>
-          </ul>
-        </nav>
-        <a href="./contact_form.html" class="c-btn-red header__nav-item--contact pc-only">お問い合わせ</a>
-      </div>
-      <!-- ハンバーガーメニュー -->
-      <div class="hamburger sp-only">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </header>
+    <header id="header" class="header">
+        <div class="header__inner inner">
+            <div class="header__logo">
+                <a href="./index.html">
+                    <span class="header__logo-img">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="./img/logo-sp.svg">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="音符" width="32"
+                                height="49">
+                        </picture>
+                    </span>
+                    <span class="header__logo-text">きたむら<span class="header__logo-bottom"><br
+                                class="pc-only">ミュージックスクール</span></span>
+                </a>
+            </div>
+            <div class="header__nav-inner">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="./plan.html"><span>料金</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./blog_list.html"><span>ブログ</span></a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./result_list.html"><span>卒業実績</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="./contact_form.html" class="c-btn-red header__nav-item--contact pc-only">お問い合わせ</a>
+            </div>
+            <!-- ハンバーガーメニュー -->
+            <div class="hamburger sp-only">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <section id="fv" class="fv">
-      <div>
-        <picture>
-          <source media="(max-width: 767px)" srcset="./img/contact-sp.jpg">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" width="1080" height="200" alt="パソコン">
-        </picture>
-        <div class="c-fv__overlay--sub"></div>
-      </div>
-      <div class="c-fv__title-wrapper">
-        <h1 class="c-fv__title">お問い合わせ</h1>
-      </div>
-    </section>
-    <nav class="c-breadcrumb">
-      <div class="inner">
-        <ul class="c-breadcrumb__list">
-          <li class="c-breadcrumb__item">
-            <a href="./index.html">ホーム</a>
-          </li>
-          <li class="c-breadcrumb__item">お問い合わせ</li>
-        </ul>
-      </div>
-    </nav>
+    <main>
+        <section id="fv" class="fv">
+            <div>
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/contact-sp.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" width="1080" height="200"
+                        alt="パソコン">
+                </picture>
+                <div class="c-fv__overlay--sub"></div>
+            </div>
+            <div class="c-fv__title-wrapper">
+                <h1 class="c-fv__title">お問い合わせ</h1>
+            </div>
+        </section>
 
-    <div id="contact-form" class="contact-form">
-      <div class="inner">
-        <div class="contact-form__text-wrapper">
-          <p class="contact-form__text">
-            当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。
-            <br>通常３営業日以内にメールにてご連絡させていただきます。
-          </p>
+        <?php get_template_part('template-parts/breadcrumbs'); ?>
+
+
+        <div id="contact-form" class="contact-form">
+            <div class="inner">
+                <div class="contact-form__text-wrapper">
+                    <p class="contact-form__text">
+                        当校に関するご質問・ご相談・資料請求は下記のフォームからお気軽にお問い合わせください。
+                        <br>通常３営業日以内にメールにてご連絡させていただきます。
+                    </p>
+                </div>
+
+                <div class="contact-form__form-wrapper">
+                    <form action="./contact_send.html" method="get">
+                        <div class="form-item">
+                            <div class="form-group">
+                                <div class="form-group-heading">
+                                    <label class="contact-form__form-item--label" for="company">会社名</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-group">
+                                <div class="form-group-heading">
+                                    <label class="contact-form__form-item--label" for="name">お名前</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <input type="text" id="name" name="name" placeholder="北村　翔平">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-group">
+                                <div class="form-group-heading">
+                                    <label class="contact-form__form-item--label" for="email">メールアドレス</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <input type="email" id="email" name="email"
+                                        placeholder="info@kitamura.musicschool.jp">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item form-item--tel">
+                            <div class="form-group">
+                                <div class="form-group-heading">
+                                    <label class="contact-form__form-item--label" for="tel">電話番号</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item form-item--checkbox">
+                            <div class="form-group-heading">
+                                <p class="contact-form__form-item--label contact-form__form-item--label--checkbox">
+                                    目　的 <span>(複数選択可)</span>
+                                </p>
+                            </div>
+                            <div class="checkbox-group">
+                                <div class="checkbox-item">
+                                    <label><input type="checkbox" name="purpose[]" value="plan">プランについてのお問い合わせ</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label><input type="checkbox" name="purpose[]" value="hearing">ヒアリングのご予約</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label><input type="checkbox" name="purpose[]" value="material">資料請求</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <label><input type="checkbox" name="purpose[]" value="other">その他</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item">
+                            <div class="form-group">
+                                <div class="form-group-heading form-group-heading--message">
+                                    <label class="contact-form__form-item--label contact-form__form-item--label-message"
+                                        for="message">内　容</label>
+                                </div>
+                                <div class="form-group-body">
+                                    <textarea id="message" name="message"
+                                        placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="contact-form__form-item--submit">
+                            <span>送</span><span>信</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
 
-        <div class="contact-form__form-wrapper">
-          <form action="./contact_send.html" method="get">
-            <div class="form-item">
-              <div class="form-group">
-                <div class="form-group-heading">
-                  <label class="contact-form__form-item--label" for="company">会社名</label>
+        <div class="c-sticky-anchor">
+            <div class="c-floating-btns">
+                <div class="c-to-top">
+                    <a href="#">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/to-top.svg" width="68" height="68"
+                            alt="top">
+                    </a>
                 </div>
-                <div class="form-group-body">
-                  <input type="text" id="company" name="company" placeholder="きたむらミュージックスクール">
-                </div>
-              </div>
             </div>
-
-            <div class="form-item">
-              <div class="form-group">
-                <div class="form-group-heading">
-                  <label class="contact-form__form-item--label" for="name">お名前</label>
-                </div>
-                <div class="form-group-body">
-                  <input type="text" id="name" name="name" placeholder="北村　翔平">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-item">
-              <div class="form-group">
-                <div class="form-group-heading">
-                  <label class="contact-form__form-item--label" for="email">メールアドレス</label>
-                </div>
-                <div class="form-group-body">
-                  <input type="email" id="email" name="email" placeholder="info@kitamura.musicschool.jp">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-item form-item--tel">
-              <div class="form-group">
-                <div class="form-group-heading">
-                  <label class="contact-form__form-item--label" for="tel">電話番号</label>
-                </div>
-                <div class="form-group-body">
-                  <input type="tel" id="tel" name="tel" placeholder="090-1234-5678">
-                </div>
-              </div>
-            </div>
-
-            <div class="form-item form-item--checkbox">
-              <div class="form-group-heading">
-                <p class="contact-form__form-item--label contact-form__form-item--label--checkbox">
-                  目　的 <span>(複数選択可)</span>
-                </p>
-              </div>
-              <div class="checkbox-group">
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="purpose[]" value="plan">プランについてのお問い合わせ</label>
-                </div>
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="purpose[]" value="hearing">ヒアリングのご予約</label>
-                </div>
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="purpose[]" value="material">資料請求</label>
-                </div>
-                <div class="checkbox-item">
-                  <label><input type="checkbox" name="purpose[]" value="other">その他</label>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-item">
-              <div class="form-group">
-                <div class="form-group-heading form-group-heading--message">
-                  <label class="contact-form__form-item--label contact-form__form-item--label-message"
-                    for="message">内　容</label>
-                </div>
-                <div class="form-group-body">
-                  <textarea id="message" name="message" placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
-                </div>
-              </div>
-            </div>
-
-            <button type="submit" class="contact-form__form-item--submit">
-              <span>送</span><span>信</span>
-            </button>
-          </form>
         </div>
-      </div>
-    </div>
+    </main>
 
-    <div class="c-sticky-anchor">
-      <div class="c-floating-btns">
-        <div class="c-to-top">
-          <a href="#">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/to-top.svg" width="68" height="68" alt="top">
-          </a>
+    <footer id="footer" class="footer">
+        <div class="inner">
+            <div class="footer__nav">
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="./index.html">ホーム</a></li>
+                    <li class="footer__nav-item"><a href="./plan.html">料金</a></li>
+                    <li class="footer__nav-item">
+                        <a href="./blog_list.html">ブログ</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="./result_list.html">卒業実績</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__logo">
+                <a href="./index.html"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg"
+                        width="32" height="49" alt="きたむらミュージックスクール"></a>
+            </div>
+
+            <p class="footer__copyright">
+                Copyright &copy; 0000 KITAMURA music school Inc.<br class="sp-only">All Rights
+            </p>
+
+            <div class="sns-icons">
+                <a href="https://twitter.com">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-twitter.svg" width="22" height="18"
+                        alt="twitter">
+                </a>
+                <a href="https://www.facebook.com">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.svg" width="22" height="18"
+                        alt="facebook">
+                </a>
+                <a href="https://www.youtube.com">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.svg" width="22" height="18"
+                        alt="youtube">
+                </a>
+                <a href="https://www.instagram.com">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/icon-instagram.svg" width="22" height="18"
+                        alt="instagram">
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </main>
-
-  <footer id="footer" class="footer">
-    <div class="inner">
-      <div class="footer__nav">
-        <ul class="footer__nav-list">
-          <li class="footer__nav-item"><a href="./index.html">ホーム</a></li>
-          <li class="footer__nav-item"><a href="./plan.html">料金</a></li>
-          <li class="footer__nav-item">
-            <a href="./blog_list.html">ブログ</a>
-          </li>
-          <li class="footer__nav-item">
-            <a href="./result_list.html">卒業実績</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer__logo">
-        <a href="./index.html"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.svg" width="32"
-            height="49" alt="きたむらミュージックスクール"></a>
-      </div>
-
-      <p class="footer__copyright">
-        Copyright &copy; 0000 KITAMURA music school Inc.<br class="sp-only">All Rights
-      </p>
-
-      <div class="sns-icons">
-        <a href="https://twitter.com">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/icon-twitter.svg" width="22" height="18"
-            alt="twitter">
-        </a>
-        <a href="https://www.facebook.com">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.svg" width="22" height="18"
-            alt="facebook">
-        </a>
-        <a href="https://www.youtube.com">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.svg" width="22" height="18"
-            alt="youtube">
-        </a>
-        <a href="https://www.instagram.com">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/icon-instagram.svg" width="22" height="18"
-            alt="instagram">
-        </a>
-      </div>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
 </body>
 
 </html>

@@ -1388,8 +1388,7 @@ data {
     margin-top: 5.7rem;
   }
 }
-
-.c-pagination__list {
+.c-pagination .wp-pagenavi {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1400,15 +1399,10 @@ data {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  clear: both;
+  margin: 0;
 }
-@media (max-width: 767px) {
-  .c-pagination__list {
-    margin-top: 5.5rem;
-    font-size: 1.6rem;
-  }
-}
-
-.c-pagination__item {
+.c-pagination .wp-pagenavi a, .c-pagination .wp-pagenavi span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1421,78 +1415,45 @@ data {
   width: 5rem;
   height: 5rem;
   line-height: 1;
-  cursor: pointer;
   margin-right: 1rem;
   font-weight: 700;
-}
-.c-pagination__item:last-of-type {
-  margin-right: 0;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  text-decoration: none;
 }
 @media (max-width: 767px) {
-  .c-pagination__item {
+  .c-pagination .wp-pagenavi a, .c-pagination .wp-pagenavi span {
     width: 4.2rem;
     height: 4.2rem;
     font-size: 1.6rem;
     margin-right: 0.4rem;
   }
 }
-.c-pagination__item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #FFFFFF;
-  color: #000000;
-  border: 1px solid #000000;
-  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
-  transition: background-color 0.5s ease, color 0.5s ease;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-}
-.c-pagination__item a:hover {
+.c-pagination .wp-pagenavi a:hover, .c-pagination .wp-pagenavi span:hover {
   color: #FFFFFF;
   background-color: #000000;
-  opacity: 1;
 }
-.c-pagination__item.active {
+.c-pagination .wp-pagenavi span.current {
   cursor: default;
+  background-color: #000000;
+  color: #FFFFFF;
   font-size: 1.8rem;
-  line-height: 1;
 }
 @media (max-width: 767px) {
-  .c-pagination__item.active {
+  .c-pagination .wp-pagenavi span.current {
     font-size: 1.6rem;
   }
 }
-.c-pagination__item.active a {
-  cursor: default;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  color: #FFFFFF;
-  pointer-events: none;
-}
-.c-pagination__item.border-none {
+.c-pagination .wp-pagenavi span.extend {
   border: none;
   width: 4rem;
-  cursor: default;
-  padding: 0;
+  background-color: transparent;
+}
+.c-pagination .wp-pagenavi a:last-child, .c-pagination .wp-pagenavi span:last-child {
+  margin-right: 0;
 }
 
 .c-related-title {

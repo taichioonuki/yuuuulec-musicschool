@@ -1,15 +1,7 @@
 <?php get_header(); ?>
 <main>
-    <nav class="c-breadcrumb">
-        <div class="inner">
-            <ul class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item"> <a href="./index.html">ホーム</a> </li>
-                <li class="c-breadcrumb__item"> <a href="./blog_list.html">ブログ</a> </li>
-                <li class="c-breadcrumb__item"> <a href="./blog_list.html">ギター</a> </li>
-                <li class="c-breadcrumb__item"> アルペジオが劇的に向上する３つの習慣 </li>
-            </ul>
-        </div>
-    </nav>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
+
     <div class="blog_details">
         <div class="inner">
             <div class="blog-details__container">

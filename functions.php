@@ -84,3 +84,19 @@ function my_theme_enqueue_files()
 }
 // アクションフックに登録
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_files');
+
+
+// --------------------------------------------------
+// ブログ一覧ページの設定
+// --------------------------------------------------
+
+
+function my_page_conditions($query)
+{
+    if (!is_admin() && $query->is_main_query()) {
+        if (is_post_type_archive('blog')) {
+        $query->set('posts_per_page', 10);
+    }
+}
+}
+add_action('pre_get_posts', 'my_page_conditions');

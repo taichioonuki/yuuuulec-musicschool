@@ -13,16 +13,7 @@
         </div>
     </section>
 
-    <nav class="c-breadcrumb">
-        <div class="inner">
-            <ul class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item">
-                    <a href="./index.html">ホーム</a>
-                </li>
-                <li class="c-breadcrumb__item">プラン・料金</li>
-            </ul>
-        </div>
-    </nav>
+    <?php get_template_part('template-parts/breadcrumbs'); ?>
 
     <section id="price" class="price">
         <div class="inner">

@@ -68,24 +68,9 @@
     </header>
 
     <main>
-        <nav class="c-breadcrumb">
-            <div class="inner">
-                <ul class="c-breadcrumb__list">
-                    <li class="c-breadcrumb__item">
-                        <a href="./index.html">ホーム</a>
-                    </li>
-                    <li class="c-breadcrumb__item">
-                        <a href="./result_list.html">卒業実績</a>
-                    </li>
-                    <li class="c-breadcrumb__item">
-                        <a href="./result_list.html">ポップス</a>
-                    </li>
-                    <li class="c-breadcrumb__item">
-                        タイトルが入ります。タイトルが入ります。タイトルが入ります。
-                    </li>
-                </ul>
-            </div>
-        </nav>
+
+        <?php get_template_part('template-parts/breadcrumbs'); ?>
+
 
         <section class="result-details">
             <div class="inner">
