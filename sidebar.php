@@ -32,48 +32,44 @@
             おすすめの記事
         </p>
         <ul class="sidebar__recommend-list">
+            <?php 
+            $args = array(
+                'post_type' => 'blog',
+                'posts_per_page' => 3,
+                'orderby' => 'rand',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'blog_recommend',
+                        'field' => 'slug',
+                        'terms' => 'recommend',
+                    )
+                )
+            );
+            $recommend_query = new WP_Query($args);
+            if ($recommend_query->have_posts()) : 
+                while ($recommend_query->have_posts()) : $recommend_query->the_post();
+            ?>
             <li class="sidebar__recommend-item">
-                <a href="./blog_details.html" class="sidebar__recommend-link">
+                <a href="<?php the_permalink(); ?>" class="sidebar__recommend-link">
                     <div class="sidebar__recommend-img">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="./img/sidebar/recommend-sp.jpg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/recommend.jpg" width="95"
-                                height="75" alt="おすすめ記事" loading="lazy">
-                        </picture>
+                        <?php if (has_post_thumbnail()): ?>
+                        <?php the_post_thumbnail('medium', array('alt' => get_the_title(), 'loading' => 'lazy')); ?>
+                        <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/recommend.jpg" width="95"
+                            height="75" alt="default">
+                        <?php endif; ?>
                     </div>
                     <p class="sidebar__recommend-title">
-                        タイトルが入ります。タイトル
+                        <?php the_title(); ?>
                     </p>
                 </a>
             </li>
-            <li class="sidebar__recommend-item">
-                <a href="./blog_details.html" class="sidebar__recommend-link">
-                    <div class="sidebar__recommend-img">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="./img/sidebar/recommend-sp.jpg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/recommend.jpg" width="95"
-                                height="75" alt="おすすめ記事" loading="lazy">
-                        </picture>
-                    </div>
-                    <p class="sidebar__recommend-title">
-                        タイトルが入ります。タイトル
-                    </p>
-                </a>
-            </li>
-            <li class="sidebar__recommend-item">
-                <a href="./blog_details.html" class="sidebar__recommend-link">
-                    <div class="sidebar__recommend-img">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="./img/sidebar/recommend-sp.jpg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/recommend.jpg" width="95"
-                                height="75" alt="おすすめ記事" loading="lazy">
-                        </picture>
-                    </div>
-                    <p class="sidebar__recommend-title">
-                        タイトルが入ります。タイトル
-                    </p>
-                </a>
-            </li>
+            <?php 
+            endwhile; 
+            wp_reset_postdata();
+            else: ?>
+            <p>おすすめ記事がありません</p>
+            <?php endif; ?>
         </ul>
     </div>
 
@@ -82,21 +78,42 @@
             カテゴリー
         </p>
         <ul class="sidebar__category-list">
+            <?php 
+            $terms = get_terms(array(
+                'taxonomy' => 'blog_cate',
+                'hide_empty' => true,
+            ));
+            if (!empty($terms) && !is_wp_error($terms)):
+                foreach ($terms as $term): 
+            $post_args = array(
+            'post_type' => 'blog', 
+            'posts_per_page' => 1,
+            'tax_query' => array(
+            array(
+            'taxonomy' => 'blog_cate',
+            'field' => 'term_id',
+            'terms' => $term->term_id,
+            ),
+            ),
+            );
+            $post_query = new WP_Query($post_args);
+
+            if ($post_query->have_posts()) :
+                while ($post_query->have_posts()) : $post_query->the_post();
+    ?>
             <li class="sidebar__category-item">
-                <a href="./blog_details.html">カテゴリー</a>
+                <a href="<?php the_permalink(); ?>">
+                    <?php echo esc_html($term->name); ?>
+                </a>
             </li>
-            <li class="sidebar__category-item">
-                <a href="./blog_details.html">カテゴリー</a>
-            </li>
-            <li class="sidebar__category-item">
-                <a href="./blog_details.html">カテゴリー</a>
-            </li>
-            <li class="sidebar__category-item">
-                <a href="./blog_details.html">カテゴリー</a>
-            </li>
-            <li class="sidebar__category-item">
-                <a href="./blog_details.html">カテゴリー</a>
-            </li>
+            <?php endwhile;
+            wp_reset_postdata();
+            endif; 
+            endforeach;
+            else: ?>
+            <p>カテゴリーがありません</p>
+            <?php
+            endif; ?>
         </ul>
     </div>
 </aside>
