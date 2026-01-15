@@ -87,16 +87,21 @@ add_action('wp_enqueue_scripts', 'my_theme_enqueue_files');
 
 
 // --------------------------------------------------
-// ブログ一覧ページの設定
+// ブログ・卒業実績一覧ページの表示件数設定
 // --------------------------------------------------
 
 
 function my_page_conditions($query)
 {
     if (!is_admin() && $query->is_main_query()) {
-        if (is_post_type_archive('blog')) {
-        $query->set('posts_per_page', 10);
+        if (is_post_type_archive('blog') || is_post_type_archive('result')) {
+            $query->set('posts_per_page', 10); 
     }
 }
 }
-add_action('pre_get_posts', 'my_page_conditions');
+add_action('pre_get_posts', 'my_page_conditions');  //管理画面で 投稿メニュー を非表示
+function remove_menus () {
+  global $menu;
+  remove_menu_page( 'edit.php' );
+}
+add_action('admin_menu', 'remove_menus');

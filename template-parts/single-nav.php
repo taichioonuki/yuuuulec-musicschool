@@ -1,7 +1,18 @@
 <nav class="c-prev-next">
-    <?php $prev_post = get_previous_post();
-                            if ( ! empty( $prev_post ) ) :
-                            $prev_id = $prev_post->ID; ?>
+    <?php $prev_post = get_post_type();
+    if ($post_type === 'result') {
+        $taxonomy = 'genre';      // 卒業実績なら 'genre'
+    } elseif ($post_type === 'blog') {
+        $taxonomy = 'blog_cate';  // ブログなら 'blog_cate'
+    } else {
+        $taxonomy = 'category';   // 標準の投稿用
+    }
+    // 前の記事を取得
+    $prev_post = get_previous_post(true, '', $taxonomy);
+    if ( ! empty( $prev_post ) ) :
+        $prev_id = $prev_post->ID; 
+    ?>
+
     <div class="c-prev">
         <a href="<?php echo get_permalink($prev_id); ?>">
             <p class="c-prev-text c-back-black">◀︎
@@ -23,9 +34,11 @@
     <?php endif; ?>
 
     <?php 
-                            $next_post = get_next_post();
-                            if ( ! empty( $next_post ) ) :
-                            $next_id = $next_post->ID; ?>
+    // 次の記事を取得
+    $next_post = get_next_post(true, '', $taxonomy);
+    if ( ! empty( $next_post ) ) :
+        $next_id = $next_post->ID; 
+    ?>
     <div class=" c-next">
         <a href="<?php echo get_permalink($next_id); ?>">
             <p class="c-prev-text c-prev--right c-back-black">

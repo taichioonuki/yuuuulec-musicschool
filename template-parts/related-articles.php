@@ -1,14 +1,21 @@
-<?php $terms = get_the_terms(get_the_ID(), 'blog_cate');
+<?php $post_type_slug = get_post_type();
+if ($post_type_slug === 'result') {    $taxonomy_slug = 'genre';
+} else {
+    $taxonomy_slug = 'blog_cate';
+}
+
+$terms = get_the_terms(get_the_ID(), $taxonomy_slug);
+
 if (!empty($terms) && !is_wp_error($terms)):
     $term_ids = wp_list_pluck($terms, 'term_id');
     $args = [
         'posts_per_page' => 3,
-        'post_type' => 'blog',
+        'post_type' => $post_type_slug,
         'post__not_in' => [get_the_ID()],
         'orderby' => 'date',
         'order' => 'DESC',
         'tax_query' => [
-            [ 'taxonomy' => 'blog_cate',
+            [ 'taxonomy' => $taxonomy_slug,
             'field' => 'term_id',
             'terms' => $term_ids, ],
     ],
@@ -28,8 +35,8 @@ if (!empty($terms) && !is_wp_error($terms)):
                     <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimage.jpg" alt="no image">
                     <?php endif; ?>
                     <span class="c-blog__label">
-                        <?php $terms = get_the_terms(get_the_ID(), 'blog_cate');
-                                echo $terms ? esc_html($terms[0]->name) : ''; ?>
+                        <?php $terms = get_the_terms(get_the_ID(), $taxonomy_slug);
+            echo $terms ? esc_html($terms[0]->name) : ''; ?>
                     </span>
                 </div>
                 <div class="blog__text-wrapper">
@@ -42,6 +49,7 @@ if (!empty($terms) && !is_wp_error($terms)):
                 </div>
             </a>
         </li>
-        <?php endwhile;wp_reset_postdata(); ?>
+        <?php endwhile;
+    wp_reset_postdata(); ?>
     </ul>
 </aside> <?php endif;?> <?php endif;?>
