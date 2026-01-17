@@ -90,18 +90,48 @@ add_action('wp_enqueue_scripts', 'my_theme_enqueue_files');
 // ブログ・卒業実績一覧ページの表示件数設定
 // --------------------------------------------------
 
-
 function my_page_conditions($query)
 {
     if (!is_admin() && $query->is_main_query()) {
-        if (is_post_type_archive('blog') || is_post_type_archive('result')) {
+        // アーカイブページ または タクソノミー（genre）ページの場合
+        if (is_post_type_archive('blog') || is_post_type_archive('result') || is_tax('genre')) {
             $query->set('posts_per_page', 10); 
+        }
     }
 }
+add_action('pre_get_posts', 'my_page_conditions');
+
+
+/**
+ * 検索対象にカスタム投稿タイプ「blog」を追加する
+ */
+function my_posts_search_custom( $search, $wp_query ) {
+    global $wpdb;
+
+    if ( is_admin() || ! $wp_query->is_main_query() || ! $wp_query->is_search() ) {
+        return $search;
+    }
+
+    $s = $wp_query->query_vars['s'];
+    if ( empty( $s ) ) return $search;
+
+    $search_term = $wpdb->esc_like( $s );
+
+    $search = " AND (
+        (
+            ({$wpdb->posts}.post_title LIKE '%{$search_term}%') OR 
+            ({$wpdb->posts}.post_content LIKE '%{$search_term}%') OR 
+            (EXISTS (
+                SELECT 1 FROM {$wpdb->term_relationships} 
+                INNER JOIN {$wpdb->term_taxonomy} ON {$wpdb->term_relationships}.term_taxonomy_id = {$wpdb->term_taxonomy}.term_taxonomy_id 
+                INNER JOIN {$wpdb->terms} ON {$wpdb->term_taxonomy}.term_id = {$wpdb->terms}.term_id 
+                WHERE {$wpdb->term_relationships}.object_id = {$wpdb->posts}.ID 
+                AND {$wpdb->terms}.name LIKE '%{$search_term}%'
+            ))
+        )
+        AND ({$wpdb->posts}.post_type IN ('post', 'blog'))
+    )";
+
+    return $search;
 }
-add_action('pre_get_posts', 'my_page_conditions');  //管理画面で 投稿メニュー を非表示
-function remove_menus () {
-  global $menu;
-  remove_menu_page( 'edit.php' );
-}
-add_action('admin_menu', 'remove_menus');
+add_filter( 'posts_search', 'my_posts_search_custom', 1, 2 );

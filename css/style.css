@@ -4016,13 +4016,19 @@ tbody tr__note {
   }
 }
 
+.search-result__empty-text {
+  text-align: center;
+}
+
 .contact-send {
   padding: 6.7rem 0 9rem;
   text-align: center;
+  min-height: 55vh;
 }
 @media (max-width: 767px) {
   .contact-send {
     padding: 4.7rem 0 10.8rem;
+    min-height: 50vh;
   }
 }
 
@@ -4230,6 +4236,14 @@ textarea {
           flex-direction: column;
   gap: 2rem;
 }
+.checkbox-group .wpcf7-list-item {
+  display: block;
+  margin-bottom: 2rem;
+  margin-left: 0;
+}
+.checkbox-group .wpcf7-list-item:last-child {
+  margin-bottom: 0;
+}
 .checkbox-group input[type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -4368,15 +4382,27 @@ textarea {
   }
 }
 
-@media (max-width: 767px) {
-  .form-item:last-of-type {
-    gap: 0;
-  }
-}
-.form-item:last-of-type .form-group {
+div.contact-form__form-wrapper div.form-item.is-align-top.form-item--checkbox {
+  display: grid;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+div.contact-form__form-wrapper div.form-item.is-align-top .form-group {
+  display: grid;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+div.contact-form__form-wrapper div.form-item.is-align-top p.contact-form__form-item--label--checkbox {
+  margin: 0 !important;
+  line-height: 1.5;
+  padding-top: 0.5rem;
+}
+@media (max-width: 767px) {
+  div.contact-form__form-wrapper div.form-item.is-align-top p.contact-form__form-item--label--checkbox {
+    padding-top: 0;
+  }
 }
 
 .mgb-40 {
@@ -4386,5 +4412,36 @@ textarea {
 @media (max-width: 767px) {
   .floating-btn {
     right: 6.5rem;
+  }
+}
+
+.wpcf7-not-valid-tip {
+  margin-top: 6px;
+  color: #CB0000;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  border: none;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #CB0000;
+}
+@media (max-width: 767px) {
+  .wpcf7 form.invalid .wpcf7-response-output {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border: none;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #CB0000;
+}
+@media (max-width: 767px) {
+  .wpcf7 form.sent .wpcf7-response-output {
+    font-size: 1.6rem;
+    line-height: 1.5;
   }
 }/*# sourceMappingURL=style.css.map */

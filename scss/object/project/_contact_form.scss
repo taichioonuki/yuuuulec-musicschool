@@ -155,6 +155,17 @@ textarea {
     flex-direction: column;
     gap: 2rem;
 
+
+    .wpcf7-list-item {
+        display: block; 
+        margin-bottom: 2rem;  
+        margin-left: 0; 
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     input[type="checkbox"] {
         appearance: none;
         cursor: pointer;
@@ -275,15 +286,29 @@ textarea {
         padding-top: 0;
     }
 }
-
-.form-item:last-of-type {
-
-    @include sp {
-        gap: 0;
+// 詳細度をさらに引き上げ、タグの種類まで指定します
+div.contact-form__form-wrapper div.form-item.is-align-top {
+    // 目的（チェックボックス）の親
+    &.form-item--checkbox {
+        display: grid; // 念のため再宣言
+        align-items: flex-start;
     }
 
+    // 内容（textarea）の親
     .form-group {
+        display: grid; // 念のため再宣言
         align-items: flex-start;
+    }
+
+    // 「目的」ラベルのpタグ：余白を完全にリセット
+    p.contact-form__form-item--label--checkbox {
+        margin: 0 !important; // ブラウザ標準設定が強すぎる場合があるため、ここだけは例外的に検討
+        line-height: 1.5;      // 文字の高さを固定してズレを防ぐ
+        padding-top: 0.5rem;   // 入力側との微調整
+
+        @include sp {
+            padding-top: 0;
+        }
     }
 }
 
@@ -296,3 +321,30 @@ textarea {
         right: 6.5rem;
     }
 }
+
+.wpcf7-not-valid-tip {
+    margin-top: 6px;
+    color: $red;
+  }
+
+  .wpcf7 form.invalid .wpcf7-response-output {
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+    color: $red;
+    @include sp {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }
+  
+  .wpcf7 form.sent .wpcf7-response-output {
+    border: none;
+    font-size: 1.8rem;
+    text-align: center;
+    color: $red;
+    @include sp {
+      font-size: 1.6rem;
+      line-height: 1.5;
+    }
+  }

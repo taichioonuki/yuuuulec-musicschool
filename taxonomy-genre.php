@@ -19,25 +19,16 @@
         <div class="inner">
             <?php
     $term = get_queried_object();
-    $term_name = (isset($term->name)) ? $term->name : '卒業実績';
-    ?>
+$term_name = (isset($term->name)) ? $term->name : '卒業実績';
+?>
 
             <h2 class="c-section-title">
                 <?php echo esc_html($term_name); ?>
             </h2>
             <ul class="result__list">
-                <?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-$args = array(
-    'post_type'      => 'result', 
-    'posts_per_page' => 10,       
-    'paged'          => $paged,
-);
-$result_query = new WP_Query($args);
-?>
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-                <?php if ($result_query->have_posts()) : ?>
-                <?php while ($result_query->have_posts()) : $result_query->the_post(); ?>
                 <li class="result__item c-blog__item">
                     <a href="<?php the_permalink(); ?>">
                         <div class="result__img">
@@ -49,10 +40,10 @@ $result_query = new WP_Query($args);
                             <?php endif; ?>
 
                             <span class="c-blog__label">
-                                <?php 
-        $terms = get_the_terms(get_the_ID(), 'genre');
-        echo $terms ? esc_html($terms[0]->name) : ''; 
-        ?>
+                                <?php
+                $terms = get_the_terms(get_the_ID(), 'genre');
+                    echo $terms ? esc_html($terms[0]->name) : '';
+                    ?>
                             </span>
                         </div>
                         <h3 class="result__title">
@@ -61,8 +52,8 @@ $result_query = new WP_Query($args);
                         <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
                     </a>
                 </li>
+
                 <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </ul>
 

@@ -4,10 +4,12 @@
 .contact-send {
     padding: 6.7rem 0 9rem;
     text-align: center;
+    min-height: 55vh;
 
 
     @include sp {
         padding: 4.7rem 0 10.8rem;
+        min-height: 50vh;
     }
 }
 

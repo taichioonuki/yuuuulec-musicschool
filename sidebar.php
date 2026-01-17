@@ -15,8 +15,8 @@
     <div class="sidebar__search">
         <p class="title c-back-black">ブログ内を検索</p>
         <div class="sidebar__search--inner">
-            <form class="sidebar__search-form" action="./search-1.html" method="get">
-                <input type="search" name="search">
+            <form class="sidebar__search-form" action="<?php echo esc_url(home_url('/')); ?>" method="get">
+                <input type="search" name="s" value="<?php echo get_search_query(); ?>">
                 <button type="submit">
                     <span class="sidebar__search-icon">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/search.svg" width="40"
