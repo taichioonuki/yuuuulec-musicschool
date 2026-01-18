@@ -3,7 +3,7 @@
     <section id="fv" class="fv">
         <div>
             <picture>
-                <source media="(max-width: 767px)" srcset="./img/plan-sp.jpg">
+                <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/plan-sp.jpg">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/plan.jpg" width="1080" height="200" alt="ギター">
             </picture>
             <div class="c-fv__overlay--sub"></div>

@@ -4,7 +4,8 @@
     <section id="fv" class="fv">
         <div>
             <picture>
-                <source media="(max-width: 767px)" srcset="./img/contact-sp.jpg">
+                <source media="(max-width: 767px)"
+                    srcset="<?php echo get_template_directory_uri(); ?>/img/contact-sp.jpg">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/contact.jpg" width="1080" height="200"
                     alt="パソコンとヘッドホン">
             </picture>
