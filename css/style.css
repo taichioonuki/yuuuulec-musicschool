@@ -399,7 +399,6 @@ a:hover {
 
 main {
   margin-top: 8rem;
-  min-height: 60vh;
   display: block;
   position: relative;
 }
@@ -4024,12 +4023,10 @@ tbody tr__note {
 .contact-send {
   padding: 6.7rem 0 9rem;
   text-align: center;
-  min-height: 47vh;
 }
 @media (max-width: 767px) {
   .contact-send {
     padding: 4.7rem 0 10.8rem;
-    min-height: 50vh;
   }
 }
 
