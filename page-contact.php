@@ -32,16 +32,8 @@
         </div>
     </div>
 
-    <div class="c-sticky-anchor">
-        <div class="c-floating-btns">
-            <div class="c-to-top">
-                <a href="#">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/to-top.svg" width="68" height="68"
-                        alt="top">
-                </a>
-            </div>
-        </div>
-    </div>
+    <?php get_template_part('template-parts/floating-btns'); ?>
+
 </main>
 
 <?php get_footer(); ?>
