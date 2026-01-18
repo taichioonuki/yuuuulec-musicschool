@@ -136,7 +136,7 @@ $voice_query = new WP_Query($args);
                     <?php if ($voice_query->have_posts()) : ?>
                     <?php while ($voice_query->have_posts()) : $voice_query->the_post(); ?>
                     <div class="swiper-slide voice__item">
-                        <a href="./result_details.html" class="voice__link">
+                        <a href="<?php the_permalink(); ?>" class="voice__link">
                             <div class="voice__img">
                                 <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('medium'); ?>
