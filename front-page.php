@@ -2,7 +2,7 @@
 <main>
     <div class="fv">
         <picture>
-            <source media="(max-width: 767px)" srcset="./img/fv-sp.jpg">
+            <source media="(max-width: 767px)" srcset="<?php echo get_template_directory_uri(); ?>/img/fv-sp.jpg">
             <img src="<?php echo get_template_directory_uri(); ?>/img/fv.jpg" width="1080" height="470" alt="ギターを弾く女性">
         </picture>
         <div class="fv__overlay"></div>
@@ -18,7 +18,8 @@
             <p class="main-message__text">私たちは音楽を愛するすべての人が、音楽に熱狂できる世界を目指しています。</p>
             <div class="semicircle">
                 <picture>
-                    <source media="(max-width: 767px)" srcset="./img/semicircle-sp.svg">
+                    <source media="(max-width: 767px)"
+                        srcset="<?php echo get_template_directory_uri(); ?>/img/semicircle-sp.svg">
                     <img src="<?php echo get_template_directory_uri(); ?>/img/semicircle.svg" width="858" height="56"
                         alt="semicircle">
                 </picture>
@@ -68,7 +69,8 @@
                     <li class="reason__item">
                         <div class="reason__img">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="./img/reason01-sp.jpg">
+                                <source media="(max-width: 767px)"
+                                    srcset="<?php echo get_template_directory_uri(); ?>/img/reason01-sp.jpg">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/reason01.jpg"
                                     alt="犬を抱いてピアノの前に座る男性" width="350" height="247" loading="lazy">
                             </picture>
@@ -82,7 +84,8 @@
                     <li class="reason__item">
                         <div class="reason__img">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="./img/reason02-sp.jpg" width="335"
+                                <source media="(max-width: 767px)"
+                                    srcset="<?php echo get_template_directory_uri(); ?>/img/reason02-sp.jpg" width="335"
                                     height="200">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/reason02.jpg" alt="サポートを受ける生徒"
                                     width="350" height="247" loading="lazy">
@@ -99,7 +102,8 @@
                     <li class="reason__item">
                         <div class="reason__img">
                             <picture>
-                                <source media="(max-width: 767px)" srcset="./img/reason03-sp.jpg">
+                                <source media="(max-width: 767px)"
+                                    srcset="<?php echo get_template_directory_uri(); ?>/img/reason03-sp.jpg">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/reason03.jpg" alt="練習する生徒"
                                     width="350" height="247" loading="lazy">
                             </picture>
