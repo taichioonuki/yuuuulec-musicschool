@@ -3243,16 +3243,6 @@ blockquote.wp-block-quote {
     width: 16rem;
   }
 }
-.blog__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 200/140;
-}
-@media (max-width: 767px) {
-  .blog__img img {
-    aspect-ratio: 160/110;
-  }
-}
 
 .blog__text-wrapper {
   -webkit-box-flex: 1;
@@ -3447,6 +3437,17 @@ blockquote.wp-block-quote {
 @media (max-width: 767px) {
   .sidebar__recommend-img {
     width: 16rem;
+    aspect-ratio: 160/110;
+  }
+}
+
+img.attachment-medium.size-medium.wp-post-image {
+  aspect-ratio: 200/140;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  img.attachment-medium.size-medium.wp-post-image {
     aspect-ratio: 160/110;
   }
 }

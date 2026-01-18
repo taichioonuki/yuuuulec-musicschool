@@ -308,15 +308,6 @@ blockquote.wp-block-quote {
     @include sp {
         width: 16rem;
     }
-
-    img {
-        object-fit: cover;
-        aspect-ratio: 200 / 140;
-
-        @include sp {
-            aspect-ratio: 160 / 110;
-        }
-    }
 }
 
 .blog__text-wrapper {
@@ -338,6 +329,7 @@ blockquote.wp-block-quote {
         }
     }
 }
+
 
 /* ===========================
    sidebar
@@ -485,6 +477,16 @@ blockquote.wp-block-quote {
     @include sp {
         width: 16rem;
         aspect-ratio: 160 / 110;
+    }
+}
+
+
+img.attachment-medium.size-medium.wp-post-image {
+    aspect-ratio: 200 / 140;
+    object-fit: cover;
+
+    @include sp {
+            aspect-ratio: 160 / 110;
     }
 }
 
