@@ -3089,7 +3089,7 @@ img.attachment-large.size-large.wp-post-image {
 }
 @media (max-width: 767px) {
   .blog-details__text figure {
-    margin-top: 6.8rem;
+    margin-top: 6rem;
     width: 100%;
   }
 }
