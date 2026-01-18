@@ -4253,6 +4253,11 @@ textarea {
           flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 767px) {
+  .checkbox-group {
+    margin-top: 1rem;
+  }
+}
 .checkbox-group .wpcf7-list-item {
   display: block;
   margin-bottom: 2rem;
