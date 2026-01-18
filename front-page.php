@@ -293,20 +293,20 @@ $voice_query = new WP_Query($args);
                     <?php
                 // おすすめにチェックが入った最新3件を取得するクエリ
                 $blog_args = array(
-                    'post_type'      => 'blog',        
+                    'post_type'      => 'blog',
                     'posts_per_page' => 3,
-                    'orderby' => 'menu_order', 
-                    'order'   => 'ASC',             
-                    'tax_query'     => array(         
+                    'orderby' => 'menu_order',
+                    'order'   => 'ASC',
+                    'tax_query'     => array(
                         array(
-                            'taxonomy'     => 'blog_recommend', 
+                            'taxonomy'     => 'blog_recommend',
                             'field'    => 'name',
-                            'terms'   => 'おすすめ',              
+                            'terms'   => 'おすすめ',
                         )
                     )
                 );
-                $blog_query = new WP_Query($blog_args);
-                ?>
+$blog_query = new WP_Query($blog_args);
+?>
 
                     <?php if ($blog_query->have_posts()) : ?>
                     <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
@@ -321,11 +321,13 @@ $voice_query = new WP_Query($args);
                                 <?php endif; ?>
 
                                 <?php
-                                    $categories = get_the_category();
-                                    if (!empty($categories)) :
-                                        echo '<span class="c-blog__label">' . esc_html($categories[0]->name) . '</span>';
-                                    endif;
-                                    ?>
+$terms = get_the_terms(get_the_ID(), 'blog_cate');
+                        if (!empty($terms) && !is_wp_error($terms)) :
+                            echo '<span class="c-blog__label">' . esc_html($terms[0]->name) . '</span>';
+                        endif;
+                        ?>
+                                endif;
+                                ?>
                             </div>
                             <p class="blog__title"><?php the_title(); ?></p>
                             <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?>
@@ -333,7 +335,7 @@ $voice_query = new WP_Query($args);
                         </a>
                     </li>
                     <?php endwhile; ?>
-                    <?php wp_reset_postdata(  ); ?>
+                    <?php wp_reset_postdata(); ?>
                     <?php endif; ?>
                 </ul>
             </div>
