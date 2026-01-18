@@ -326,8 +326,6 @@ $terms = get_the_terms(get_the_ID(), 'blog_cate');
                             echo '<span class="c-blog__label">' . esc_html($terms[0]->name) . '</span>';
                         endif;
                         ?>
-                                endif;
-                                ?>
                             </div>
                             <p class="blog__title"><?php the_title(); ?></p>
                             <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?>
