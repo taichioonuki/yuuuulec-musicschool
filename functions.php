@@ -134,4 +134,6 @@ function my_posts_search_custom( $search, $wp_query ) {
 
     return $search;
 }
-add_filter( 'posts_search', 'my_posts_search_custom', 1, 2 );
+
+//検索結果　本文を３００文字に  
+add_filter( 'posts_search', 'my_posts_search_custom', 1, 2 );add_filter( 'excerpt_mblen', function( $length ) { return 300; }, 999 );
