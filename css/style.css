@@ -2675,7 +2675,7 @@ data {
 }
 @media (max-width: 767px) {
   .result-details__wrapper {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 }
 
