@@ -135,10 +135,3 @@ function my_posts_search_custom( $search, $wp_query ) {
     return $search;
 }
 add_filter( 'posts_search', 'my_posts_search_custom', 1, 2 );
-
-//お問い合わせページ　テキストエリア
-add_filter('wpcf7_form_elements', function($content) {
-    // cols, rows, maxlength という文字が含まれる属性を、中身の数字に関わらず一括削除します
-    $content = preg_replace('/ (cols|rows|maxlength)="\d*"/', '', $content);
-    return $content;
-});
