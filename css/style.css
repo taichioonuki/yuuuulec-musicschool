@@ -3458,7 +3458,7 @@ img.attachment-medium.size-medium.wp-post-image {
 }
 @media (max-width: 767px) {
   img.attachment-medium.size-medium.wp-post-image {
-    aspect-ratio: 160/110;
+    aspect-ratio: 335/200;
   }
 }
 

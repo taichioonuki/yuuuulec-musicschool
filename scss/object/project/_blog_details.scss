@@ -73,8 +73,8 @@ img.attachment-large.size-large.wp-post-image {
 .blog-details__img {
 
     @include sp {
-    width: 100%;
-    height: auto;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -495,7 +495,7 @@ img.attachment-medium.size-medium.wp-post-image {
     object-fit: cover;
 
     @include sp {
-            aspect-ratio: 160 / 110;
+        aspect-ratio: 335 / 200;
     }
 }
 
