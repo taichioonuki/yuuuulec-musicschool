@@ -63,7 +63,7 @@ img.attachment-large.size-large.wp-post-image {
 }
 
 .blog-details__inner {
-    margin-bottom: 9rem;
+    margin-bottom: 10rem;
 
     @include sp {
         margin-bottom: 9rem;
@@ -316,7 +316,7 @@ blockquote.wp-block-quote {
 
 .blog__img {
     position: relative;
-    width: 26rem;
+    width: 20rem;
     aspect-ratio: 260 / 183;
 
     @include sp {
