@@ -175,7 +175,7 @@ img.attachment-large.size-large.wp-post-image {
         border: none;
         height: 0.5px;
         background-color: $black;
-        margin-top: 4rem;
+        margin-top: 4.5rem;
         width: 100%;
 
         @include sp {
@@ -314,7 +314,7 @@ blockquote.wp-block-quote {
     position: relative;
     width: 26rem;
     aspect-ratio: 260 / 183;
-    
+
     @include sp {
         width: 16rem;
     }
