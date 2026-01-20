@@ -761,7 +761,7 @@ main {
 
 .c-floating-btns {
   position: sticky;
-  top: calc(100% - 16.1rem);
+  top: calc(100% - 17.5rem);
   right: 0;
   z-index: 10;
   pointer-events: none;
@@ -786,7 +786,7 @@ main {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    top: calc(100% - 14.1rem);
+    top: calc(100% - 15.5rem);
     width: 100%;
   }
 }
