@@ -309,7 +309,7 @@
 .c-prev-next {
     display: flex;
     justify-content: space-between;
-    gap: 7.8rem;
+    gap: 20rem;
 
     @include sp {
         gap: 5%;

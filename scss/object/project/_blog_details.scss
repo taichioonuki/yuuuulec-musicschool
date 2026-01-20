@@ -312,8 +312,9 @@ blockquote.wp-block-quote {
 
 .blog__img {
     position: relative;
-    width: 20rem;
-
+    width: 26rem;
+    aspect-ratio: 260 / 183;
+    
     @include sp {
         width: 16rem;
     }

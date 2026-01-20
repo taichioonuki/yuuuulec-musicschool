@@ -1081,7 +1081,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 7.8rem;
+  gap: 20rem;
 }
 @media (max-width: 767px) {
   .c-prev-next {
@@ -2671,7 +2671,7 @@ data {
 }
 
 .result-details__wrapper {
-  margin-bottom: 10rem;
+  margin-bottom: 9rem;
 }
 @media (max-width: 767px) {
   .result-details__wrapper {
@@ -3246,7 +3246,8 @@ blockquote.wp-block-quote {
 
 .blog__img {
   position: relative;
-  width: 20rem;
+  width: 26rem;
+  aspect-ratio: 260/183;
 }
 @media (max-width: 767px) {
   .blog__img {
