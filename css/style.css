@@ -786,7 +786,7 @@ main {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    top: calc(100% - 14.5rem);
+    top: calc(100% - 15rem);
     width: 100%;
   }
 }
