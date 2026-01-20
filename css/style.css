@@ -3197,6 +3197,10 @@ img.attachment-large.size-large.wp-post-image {
   }
 }
 
+p.blog-details__link-btn {
+  margin-top: 3rem;
+}
+
 blockquote.wp-block-quote {
   border-left: none;
   border: none;
