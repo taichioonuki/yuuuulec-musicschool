@@ -96,7 +96,10 @@
                         <div class="blog-details__text">
                             <?php the_content(); ?>
                         </div>
-                        <?php get_template_part('template-parts/single-nav'); ?>
+                        <div class="p-blog-nav">
+                            <?php get_template_part('template-parts/single-nav'); ?>
+                        </div>
+
                         <?php endwhile; endif; ?>
                     </div>
 
