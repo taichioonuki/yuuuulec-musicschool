@@ -1094,6 +1094,10 @@ main {
   }
 }
 
+.single-blog .c-prev-next {
+  gap: 8rem;
+}
+
 .c-prev,
 .c-next {
   -webkit-box-flex: 1;
