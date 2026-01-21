@@ -146,8 +146,6 @@ add_filter('upload_mimes', 'custom_upload_mimes');
 
 // セキュリティチェック（ファイルタイプ確認）を一時的に無効化する
 define('ALLOW_UNFILTERED_UPLOADS', true);
-define('ALLOW_UNFILTERED_UPLOADS', true); 
-
 
 // SVGとPNGのアップロード制限を強制解除する設定
 function my_custom_mime_types($mimes) {
