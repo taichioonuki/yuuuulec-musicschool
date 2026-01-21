@@ -319,6 +319,7 @@
         gap: 2.2rem;
     }
 }
+
 /* 「p-blog-nav」の中にある「c-prev-next」だけに gap を適用する */
 .p-blog-nav .c-prev-next {
     gap: 8rem;
@@ -584,7 +585,6 @@ data {
 }
 
 //ページネーション
-// ページネーション全体の枠
 .c-pagination {
     line-height: 1;
     margin-top: 7rem;
@@ -593,23 +593,21 @@ data {
         margin-top: 5.7rem;
     }
 
-    // WP-PageNaviが生成するラッパー
     .wp-pagenavi {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         clear: both; // 念のため
-        margin: 0; // デフォルトの余白をリセット
+        margin: 0;
 
-        // 各数字・ボタンの共通スタイル（元の .c-pagination__item に相当）
-        a, span {
+        a,
+        span {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 5rem;
             height: 5rem;
-            line-height: 1;
             margin-right: 1rem;
             font-weight: 700;
             background-color: $white;
@@ -628,10 +626,11 @@ data {
             &:hover {
                 color: $white;
                 background-color: $black;
+                opacity: 1;
             }
         }
 
-        // 現在のページ（元の .active に相当）
+        // 現在のページ
         span.current {
             cursor: default;
             background-color: $black;
@@ -643,19 +642,28 @@ data {
             }
         }
 
-        // 「...」の部分（元の .border-none に相当）
+        // 「...」の部分
         span.extend {
             border: none;
             width: 4rem;
-            background-color: transparent; // 背景を消す
+            background-color: transparent;
+            padding-bottom: 1rem;
+
+            @include sp {
+                width: auto;
+                font-size: 1.6rem;
+                margin-right: 0.4rem;
+            }
         }
-        
+
         // 最後の項目の余白を消す
-        a:last-child, span:last-child {
+        a:last-child,
+        span:last-child {
             margin-right: 0;
         }
     }
 }
+
 //blog_details result_details 関連記事内　タイトル
 .c-related-title {
     font-size: 2rem;
@@ -671,4 +679,3 @@ data {
         line-height: calc(28 / 17);
     }
 }
-
