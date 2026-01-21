@@ -654,6 +654,11 @@ data {
                 font-size: 1.6rem;
                 margin-right: 0.4rem;
             }
+
+            &:hover {
+                background-color: transparent;
+                opacity: 1;
+            }
         }
 
         // 最後の項目の余白を消す

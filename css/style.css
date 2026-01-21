@@ -1474,6 +1474,10 @@ data {
     margin-right: 0.4rem;
   }
 }
+.c-pagination .wp-pagenavi span.extend:hover {
+  background-color: transparent;
+  opacity: 1;
+}
 .c-pagination .wp-pagenavi a:last-child,
 .c-pagination .wp-pagenavi span:last-child {
   margin-right: 0;
