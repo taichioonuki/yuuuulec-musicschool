@@ -1444,8 +1444,7 @@ data {
     margin-right: 0.4rem;
   }
 }
-.c-pagination .wp-pagenavi a:hover,
-.c-pagination .wp-pagenavi span:hover {
+.c-pagination .wp-pagenavi a:hover {
   color: #FFFFFF;
   background-color: #000000;
   opacity: 1;
@@ -1476,6 +1475,8 @@ data {
 }
 .c-pagination .wp-pagenavi span.extend:hover {
   opacity: 1;
+  background-color: transparent;
+  color: #000000;
 }
 .c-pagination .wp-pagenavi a:last-child,
 .c-pagination .wp-pagenavi span:last-child {

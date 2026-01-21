@@ -622,12 +622,12 @@ data {
                 font-size: 1.6rem;
                 margin-right: 0.4rem;
             }
+        }
 
-            &:hover {
-                color: $white;
-                background-color: $black;
-                opacity: 1;
-            }
+        a:hover {
+            color: $white;
+            background-color: $black;
+            opacity: 1;
         }
 
         // 現在のページ
@@ -657,6 +657,8 @@ data {
 
             &:hover {
                 opacity: 1;
+                background-color: transparent;
+                color: $black;
             }
         }
 
