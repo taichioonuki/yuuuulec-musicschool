@@ -1482,11 +1482,6 @@ data {
   margin-right: 0;
 }
 
-.first + span.extend,
-.page + span.extend {
-  display: none;
-}
-
 .c-related-title {
   font-size: 2rem;
   line-height: 1.25;
