@@ -668,6 +668,11 @@ data {
     }
 }
 
+.first + span.extend,
+    .page + span.extend {
+        display: none; 
+    }
+
 //blog_details result_details 関連記事内　タイトル
 .c-related-title {
     font-size: 2rem;
