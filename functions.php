@@ -136,4 +136,24 @@ function my_posts_search_custom( $search, $wp_query ) {
 }
 
 //検索結果　本文を３００文字に  
-add_filter( 'posts_search', 'my_posts_search_custom', 1, 2 );add_filter( 'excerpt_mblen', function( $length ) { return 300; }, 999 );
+add_filter( 'posts_search', 'my_posts_search_custom', 1, 2 );add_filter( 'excerpt_mblen', function( $length ) { return 300; }, 999 );// SVGとPNGのアップロード制限を強制解除する設定
+function custom_upload_mimes($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    $mimes['png'] = 'image/png';
+    return $mimes;
+}
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+// セキュリティチェック（ファイルタイプ確認）を一時的に無効化する
+define('ALLOW_UNFILTERED_UPLOADS', true);
+
+// SVGとPNGのアップロード制限を強制解除する設定
+function custom_upload_mimes($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    $mimes['png'] = 'image/png';
+    return $mimes;
+}
+add_filter('upload_mimes', 'custom_upload_mimes');
+
+// セキュリティチェック（ファイルタイプ確認）を一時的に無効化する
+define('ALLOW_UNFILTERED_UPLOADS', true);
