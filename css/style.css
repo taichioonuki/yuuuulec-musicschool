@@ -1475,7 +1475,6 @@ data {
   }
 }
 .c-pagination .wp-pagenavi span.extend:hover {
-  background-color: transparent;
   opacity: 1;
 }
 .c-pagination .wp-pagenavi a:last-child,
