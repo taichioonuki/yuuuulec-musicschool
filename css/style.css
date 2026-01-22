@@ -2442,7 +2442,7 @@ promotion
   }
 }
 
-.blog__list img.attachment-large {
+.c-blog__item .top__img-wrapper img {
   aspect-ratio: 260/200;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2450,7 +2450,7 @@ promotion
   height: 100%;
 }
 @media (max-width: 767px) {
-  .blog__list img.attachment-large {
+  .c-blog__item .top__img-wrapper img {
     aspect-ratio: 335/200;
   }
 }
