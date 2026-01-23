@@ -83,11 +83,12 @@
 .top__img-wrapper img {
     aspect-ratio: 260 / 200;
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    max-width: 26rem;
+    height: auto;
 
     @include sp {
         aspect-ratio: 335 / 200;
+        max-width: 100%;
     }
 }
 
