@@ -10,8 +10,8 @@
 <body style="display: none;">
     <header id="header" class="header">
         <div class="header__inner inner">
-            <?php ( is_front_page() || is_search() ) ? 'h1' : 'div'; 
-?>
+            <?php $tag = ( is_front_page() || is_search() ) ? 'h1' : 'div';
+            ?>
             <<?php echo $tag; ?> class="header__logo">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <span class="header__logo-img">
