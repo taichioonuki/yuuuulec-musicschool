@@ -1,5 +1,5 @@
 <nav class="c-prev-next">
-    <?php $prev_post = get_post_type();
+    <?php $post_type = get_post_type();
     if ($post_type === 'result') {
         $taxonomy = 'genre';      // 卒業実績なら 'genre'
     } elseif ($post_type === 'blog') {

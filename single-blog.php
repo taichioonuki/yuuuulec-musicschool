@@ -12,6 +12,9 @@
                             <div class="blog-details__img">
                                 <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('large'); ?>
+                                <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimage.jpg"
+                                    alt="no image">
                                 <?php endif; ?>
                                 <span class="c-blog__label">
                                     <?php $terms = get_the_terms(get_the_ID(), 'blog_cate');
