@@ -786,7 +786,7 @@ main {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    top: calc(100% - 15.5rem);
+    top: calc(100% - 15rem);
     width: 100%;
   }
 }
@@ -4476,7 +4476,10 @@ div.contact-form__form-wrapper div.form-item.is-align-top p.contact-form__form-i
     font-size: 1.6rem;
     line-height: 1.5;
   }
-}/*# sourceMappingURL=style.css.map */}
+}/*# sourceMappingURL=style.css.map */*/ font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
 
 .wpcf7 form.sent .wpcf7-response-output {
   border: none;
