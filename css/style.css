@@ -3246,13 +3246,13 @@ blockquote.wp-block-quote {
   left: 0;
 }
 
-.blog_details .blog__img {
+.blog_details .blog__img img {
   position: relative;
   width: 20rem;
-  aspect-ratio: 260/183;
+  aspect-ratio: 200/140;
 }
 @media (max-width: 767px) {
-  .blog_details .blog__img {
+  .blog_details .blog__img img {
     width: 16rem;
   }
 }
