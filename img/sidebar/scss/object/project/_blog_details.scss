@@ -494,16 +494,6 @@ blockquote.wp-block-quote {
     }
 }
 
-
-img.attachment-medium.size-medium.wp-post-image {
-    aspect-ratio: 200 / 140;
-    object-fit: cover;
-
-    @include sp {
-        aspect-ratio: 335 / 200;
-    }
-}
-
 .sidebar__recommend-title {
     flex: 1;
     display: -webkit-box;

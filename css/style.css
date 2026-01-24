@@ -3461,17 +3461,6 @@ blockquote.wp-block-quote {
   }
 }
 
-img.attachment-medium.size-medium.wp-post-image {
-  aspect-ratio: 200/140;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 767px) {
-  img.attachment-medium.size-medium.wp-post-image {
-    aspect-ratio: 335/200;
-  }
-}
-
 .sidebar__recommend-title {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -4476,7 +4465,19 @@ div.contact-form__form-wrapper div.form-item.is-align-top p.contact-form__form-i
     font-size: 1.6rem;
     line-height: 1.5;
   }
-}/*# sourceMappingURL=style.css.map */ {
+}/*# sourceMappingURL=style.css.map */ font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  border: none;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #CB0000;
+}
+@media (max-width: 767px) {
+  .wpcf7 form.sent .wpcf7-response-output {
     font-size: 1.6rem;
     line-height: 1.5;
   }
