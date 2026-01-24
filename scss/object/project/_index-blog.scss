@@ -80,18 +80,6 @@
     }
 }
 
-.top__img-wrapper img {
-    aspect-ratio: 260 / 200;
-    object-fit: cover;
-    max-width: 26rem;
-    height: auto;
-
-    @include sp {
-        aspect-ratio: 335 / 200;
-        max-width: 100%;
-    }
-}
-
 data {
     font-size: 1.7rem;
     line-height: calc(30 / 17);
