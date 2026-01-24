@@ -304,13 +304,17 @@ blockquote.wp-block-quote {
     }
 }
 
-.blog_details .blog__img img{
+.blog_details .blog__img {
     position: relative;
     width: 20rem;
-    aspect-ratio: 200 / 140;
 
-    @include sp {
+@include sp {
         width: 16rem;
+    }
+
+    img {
+        object-fit: cover;
+        aspect-ratio: 200 / 140;
     }
 }
 

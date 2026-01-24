@@ -2831,11 +2831,17 @@ data {
 .result-details .related__img {
   position: relative;
   width: 26rem;
-  aspect-ratio: 260/183;
 }
 @media (max-width: 767px) {
   .result-details .related__img {
     width: 16rem;
+  }
+}
+.result-details .related__img img {
+  aspect-ratio: 260/183;
+}
+@media (max-width: 767px) {
+  .result-details .related__img img {
     aspect-ratio: 160/113;
   }
 }
@@ -3246,15 +3252,19 @@ blockquote.wp-block-quote {
   left: 0;
 }
 
-.blog_details .blog__img img {
+.blog_details .blog__img {
   position: relative;
   width: 20rem;
-  aspect-ratio: 200/140;
 }
 @media (max-width: 767px) {
-  .blog_details .blog__img img {
+  .blog_details .blog__img {
     width: 16rem;
   }
+}
+.blog_details .blog__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 200/140;
 }
 
 .blog__text-wrapper {

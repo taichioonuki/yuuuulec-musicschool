@@ -74,7 +74,7 @@
 
 .right-cell {
     background-color: $white;
-} 
+}
 
 .result-details__table {
     border-collapse: collapse;
@@ -87,6 +87,7 @@
             border: 0.7px solid #707070;
             padding: 0.8rem;
         }
+
         &:first-child {
             font-weight: 700;
             width: 14rem;
@@ -150,19 +151,26 @@
     }
 }
 
-.result-details .related__img  {
+.result-details .related__img {
     position: relative;
     width: 26rem;
-    aspect-ratio: 260 / 183;
 
     @include sp {
         width: 16rem;
-        aspect-ratio: 160 / 113;
+    }
+
+    img {
+        aspect-ratio: 260 / 183;
+
+        @include sp {
+            aspect-ratio: 160 / 113;
+        }
     }
 }
 
 .related__text {
     flex: 1;
+
     time {
         display: block;
         margin-top: 1.5rem;
@@ -174,7 +182,7 @@
 }
 
 .result-details__prev-next {
-    gap: 19.8rem; 
+    gap: 19.8rem;
     margin-top: 6.5rem;
 
     @include sp {
