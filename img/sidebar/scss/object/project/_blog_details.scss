@@ -149,14 +149,6 @@ img.attachment-large.size-large.wp-post-image {
         }
     }
 
-    figure {
-        width: 33.5rem;
-        margin-top: 1.5rem;
-
-        @include sp {
-            margin-top: 6rem;
-            width: 100%;
-        }
 
         img {
             aspect-ratio: 600 / 350;
@@ -168,6 +160,23 @@ img.attachment-large.size-large.wp-post-image {
                 aspect-ratio: 335 / 200;
             }
         }
+    }
+    .blog-details__text figure{
+        width: 33.5rem;
+        margin-top: 1.5rem;
+
+        @include sp {
+            margin-top: 6rem;
+            width: 100%;
+        }
+    }
+
+    .wp-block-image img {
+        box-sizing: border-box;
+        height: auto;
+        max-width: 100%;
+        aspect-ratio: 335 / 200;
+        vertical-align: bottom;
     }
 
     hr.wp-block-separator.has-alpha-channel-opacity,

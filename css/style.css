@@ -2442,6 +2442,19 @@ promotion
   }
 }
 
+.c-blog__item .top__img-wrapper img {
+  aspect-ratio: 260/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .c-blog__item .top__img-wrapper img {
+    aspect-ratio: 335/200;
+  }
+}
+
 data {
   font-size: 1.7rem;
   line-height: 1.7647058824;
@@ -2828,13 +2841,14 @@ data {
   }
 }
 
-.related__img {
+.blog-details__related .related__img {
   position: relative;
   width: 26rem;
+  height: auto;
   aspect-ratio: 260/183;
 }
 @media (max-width: 767px) {
-  .related__img {
+  .blog-details__related .related__img {
     width: 16rem;
     aspect-ratio: 160/113;
   }
@@ -2953,17 +2967,6 @@ data {
 @media (max-width: 767px) {
   .blog_details {
     padding: 5rem 0 19.7rem;
-  }
-}
-
-.blog-details__img img {
-  aspect-ratio: 600/350;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 767px) {
-  .blog-details__img img {
-    aspect-ratio: 335/200;
   }
 }
 
@@ -3094,13 +3097,24 @@ data {
 }
 .blog-details__text figure {
   width: 33.5rem;
-  height: auto;
   margin-top: 1.5rem;
 }
 @media (max-width: 767px) {
   .blog-details__text figure {
     margin-top: 6rem;
     width: 100%;
+  }
+}
+.blog-details__text figure img {
+  aspect-ratio: 600/350;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .blog-details__text figure img {
+    aspect-ratio: 335/200;
   }
 }
 .blog-details__text hr.wp-block-separator.has-alpha-channel-opacity,
@@ -4455,19 +4469,6 @@ div.contact-form__form-wrapper div.form-item.is-align-top p.contact-form__form-i
 }
 @media (max-width: 767px) {
   .wpcf7 form.sent .wpcf7-response-output {
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
-}/*# sourceMappingURL=style.css.map */ont-size: 1.8rem;
-  text-align: center;
-  color: #CB0000;
-}
-@media (max-width: 767px) {
-  .wpcf7 form.sent .wpcf7-response-output {
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
-}/*# sourceMappingURL=style.css.map */m.sent .wpcf7-response-output {
     font-size: 1.6rem;
     line-height: 1.5;
   }
