@@ -243,6 +243,11 @@
     }
 }
 
+.wp-block-image img {
+    aspect-ratio: 335 / 200;
+    object-fit: cover;
+}
+
 p.blog-details__link-btn {
     margin-top: 3rem;
 }
