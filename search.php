@@ -53,7 +53,7 @@
                 <div class="search-result__empty">
                     <p class="search-result__empty-text">検索されたキーワードにマッチする記事はありませんでした。</p>
                     <div class="search-result__btn-wrapper">
-                        <a href="<?php echo esc_url(home_url('/blog')); ?>" class="c-btn-red c-to-home">ブログ一覧へ戻る</a>
+                        <a href="javascript:history.back();" class="c-btn-red c-to-home">戻る</a>
                     </div>
                 </div>
                 <?php endif; ?>
