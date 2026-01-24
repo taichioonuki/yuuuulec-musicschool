@@ -39,7 +39,7 @@
                                     <?php the_time('Y.m.d'); ?>
                                 </time>
                                 <p class="c-blog__text">
-                                    <?php echo wp_trim_words(get_the_content(), 80, '...'); ?> </p>
+                                    <?php echo wp_trim_words(get_the_content(), 100, '...'); ?> </p>
                             </div>
                         </a>
                     </li>

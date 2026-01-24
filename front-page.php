@@ -295,8 +295,8 @@ $voice_query = new WP_Query($args);
                 $blog_args = array(
                     'post_type'      => 'blog',
                     'posts_per_page' => 3,
-                    'orderby' => 'menu_order',
-                    'order'   => 'ASC',
+                    'orderby' => 'date',
+                    'order'   => 'desc',
                     'tax_query'     => array(
                         array(
                             'taxonomy'     => 'blog_recommend',

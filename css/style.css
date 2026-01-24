@@ -399,7 +399,6 @@ a:hover {
 
 main {
   margin-top: 8rem;
-  min-height: 60vh;
   display: block;
   position: relative;
 }
@@ -762,7 +761,7 @@ main {
 
 .c-floating-btns {
   position: sticky;
-  top: calc(100% - 16.1rem);
+  top: calc(100% - 17.5rem);
   right: 0;
   z-index: 10;
   pointer-events: none;
@@ -787,7 +786,7 @@ main {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    top: calc(100% - 14.1rem);
+    top: calc(100% - 15rem);
     width: 100%;
   }
 }
@@ -1082,7 +1081,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 7.8rem;
+  gap: 20rem;
 }
 @media (max-width: 767px) {
   .c-prev-next {
@@ -1093,6 +1092,11 @@ main {
   .c-prev-next {
     gap: 2.2rem;
   }
+}
+
+/* 「p-blog-nav」の中にある「c-prev-next」だけに gap を適用する */
+.p-blog-nav .c-prev-next {
+  gap: 8rem;
 }
 
 .c-prev,
@@ -1409,7 +1413,8 @@ data {
   clear: both;
   margin: 0;
 }
-.c-pagination .wp-pagenavi a, .c-pagination .wp-pagenavi span {
+.c-pagination .wp-pagenavi a,
+.c-pagination .wp-pagenavi span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1421,7 +1426,6 @@ data {
           justify-content: center;
   width: 5rem;
   height: 5rem;
-  line-height: 1;
   margin-right: 1rem;
   font-weight: 700;
   background-color: #FFFFFF;
@@ -1432,16 +1436,18 @@ data {
   text-decoration: none;
 }
 @media (max-width: 767px) {
-  .c-pagination .wp-pagenavi a, .c-pagination .wp-pagenavi span {
+  .c-pagination .wp-pagenavi a,
+  .c-pagination .wp-pagenavi span {
     width: 4.2rem;
     height: 4.2rem;
     font-size: 1.6rem;
     margin-right: 0.4rem;
   }
 }
-.c-pagination .wp-pagenavi a:hover, .c-pagination .wp-pagenavi span:hover {
+.c-pagination .wp-pagenavi a:hover {
   color: #FFFFFF;
   background-color: #000000;
+  opacity: 1;
 }
 .c-pagination .wp-pagenavi span.current {
   cursor: default;
@@ -1458,8 +1464,22 @@ data {
   border: none;
   width: 4rem;
   background-color: transparent;
+  padding-bottom: 1rem;
 }
-.c-pagination .wp-pagenavi a:last-child, .c-pagination .wp-pagenavi span:last-child {
+@media (max-width: 767px) {
+  .c-pagination .wp-pagenavi span.extend {
+    width: auto;
+    font-size: 1.6rem;
+    margin-right: 0.4rem;
+  }
+}
+.c-pagination .wp-pagenavi span.extend:hover {
+  opacity: 1;
+  background-color: transparent;
+  color: #000000;
+}
+.c-pagination .wp-pagenavi a:last-child,
+.c-pagination .wp-pagenavi span:last-child {
   margin-right: 0;
 }
 
@@ -2421,16 +2441,18 @@ promotion
     width: 100%;
   }
 }
+
 .top__img-wrapper img {
   aspect-ratio: 260/200;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: 100%;
+  max-width: 26rem;
+  height: auto;
 }
 @media (max-width: 767px) {
   .top__img-wrapper img {
     aspect-ratio: 335/200;
+    max-width: 100%;
   }
 }
 
@@ -2590,7 +2612,7 @@ data {
   margin-top: 1rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 
@@ -2672,11 +2694,11 @@ data {
 }
 
 .result-details__wrapper {
-  margin-bottom: 10rem;
+  margin-bottom: 9rem;
 }
 @media (max-width: 767px) {
   .result-details__wrapper {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -2948,6 +2970,17 @@ data {
   }
 }
 
+.blog-details__img img {
+  aspect-ratio: 600/350;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .blog-details__img img {
+    aspect-ratio: 335/200;
+  }
+}
+
 .blog-details__sns-icon.facebook {
   width: 10.5rem;
 }
@@ -2979,11 +3012,18 @@ data {
 }
 
 .blog-details__inner {
-  margin-bottom: 9rem;
+  margin-bottom: 10rem;
 }
 @media (max-width: 767px) {
   .blog-details__inner {
-    margin-bottom: 6.4rem;
+    margin-bottom: 9rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-details__img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -3043,7 +3083,7 @@ data {
   .blog-details__text {
     font-size: 1.6rem;
     line-height: 1.875;
-    margin: 2.6rem 0 4.5rem;
+    margin: 2.6rem 0 5.5rem;
   }
 }
 .blog-details__text h2 {
@@ -3063,7 +3103,7 @@ data {
 }
 @media (max-width: 767px) {
   .blog-details__text p {
-    margin-top: 1.8rem;
+    margin-top: 2.5rem;
   }
 }
 .blog-details__text figure {
@@ -3072,20 +3112,8 @@ data {
 }
 @media (max-width: 767px) {
   .blog-details__text figure {
-    margin-top: 6.8rem;
+    margin-top: 6rem;
     width: 100%;
-  }
-}
-.blog-details__text figure img {
-  aspect-ratio: 600/350;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (max-width: 767px) {
-  .blog-details__text figure img {
-    aspect-ratio: 335/200;
   }
 }
 .blog-details__text hr.wp-block-separator.has-alpha-channel-opacity,
@@ -3093,7 +3121,7 @@ data {
   border: none;
   height: 0.5px;
   background-color: #000000;
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   width: 100%;
 }
 @media (max-width: 767px) {
@@ -3175,6 +3203,10 @@ data {
   }
 }
 
+p.blog-details__link-btn {
+  margin-top: 3rem;
+}
+
 blockquote.wp-block-quote {
   border-left: none;
   border: none;
@@ -3230,20 +3262,11 @@ blockquote.wp-block-quote {
 .blog__img {
   position: relative;
   width: 20rem;
+  aspect-ratio: 260/183;
 }
 @media (max-width: 767px) {
   .blog__img {
     width: 16rem;
-  }
-}
-.blog__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  aspect-ratio: 200/140;
-}
-@media (max-width: 767px) {
-  .blog__img img {
-    aspect-ratio: 160/110;
   }
 }
 
@@ -3441,6 +3464,17 @@ blockquote.wp-block-quote {
   .sidebar__recommend-img {
     width: 16rem;
     aspect-ratio: 160/110;
+  }
+}
+
+img.attachment-medium.size-medium.wp-post-image {
+  aspect-ratio: 200/140;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  img.attachment-medium.size-medium.wp-post-image {
+    aspect-ratio: 335/200;
   }
 }
 
@@ -4024,12 +4058,10 @@ tbody tr__note {
 .contact-send {
   padding: 6.7rem 0 9rem;
   text-align: center;
-  min-height: 55vh;
 }
 @media (max-width: 767px) {
   .contact-send {
     padding: 4.7rem 0 10.8rem;
-    min-height: 50vh;
   }
 }
 
@@ -4237,6 +4269,11 @@ textarea {
           flex-direction: column;
   gap: 2rem;
 }
+@media (max-width: 767px) {
+  .checkbox-group {
+    margin-top: 1rem;
+  }
+}
 .checkbox-group .wpcf7-list-item {
   display: block;
   margin-bottom: 2rem;
@@ -4346,7 +4383,7 @@ textarea {
   letter-spacing: 0.5rem;
   text-align: center;
   margin: 0 auto;
-  margin-top: 5.2rem;
+  margin-top: 4.2rem;
   cursor: pointer;
   padding: 0.9rem 0;
   border: 1px solid #CB0000;
