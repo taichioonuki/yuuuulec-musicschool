@@ -2441,6 +2441,16 @@ promotion
     width: 100%;
   }
 }
+.top__img-wrapper img {
+  aspect-ratio: 260/200;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .top__img-wrapper img {
+    aspect-ratio: 335/200;
+  }
+}
 
 data {
   font-size: 1.7rem;

@@ -78,6 +78,15 @@
     @include sp {
         width: 100%;
     }
+
+    img {
+        aspect-ratio: 260 / 200;
+        object-fit: cover;
+
+        @include sp {
+            aspect-ratio: 335 / 200;
+        }
+    }
 }
 
 data {
