@@ -323,6 +323,10 @@
 /* 「p-blog-nav」の中にある「c-prev-next」だけに gap を適用する */
 .p-blog-nav .c-prev-next {
     gap: 8rem;
+
+    @include sp {
+        gap: 2rem;
+    }
 }
 
 .c-prev,
