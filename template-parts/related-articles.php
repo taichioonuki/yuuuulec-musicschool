@@ -28,7 +28,7 @@ if (!empty($terms) && !is_wp_error($terms)):
         <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
         <li class="c-blog__item c-blog__item--related">
             <a href="<?php the_permalink(); ?>">
-                <div class="blog__img">
+                <div class="blog__img related__img">
                     <?php if (has_post_thumbnail()): ?>
                     <?php the_post_thumbnail('medium'); ?>
                     <?php else: ?>
