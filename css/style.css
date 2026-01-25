@@ -1469,7 +1469,7 @@ data {
   border: none;
   width: 4rem;
   background-color: transparent;
-  padding-bottom: 1rem;
+  padding-bottom: 1.4rem;
 }
 @media (max-width: 767px) {
   .c-pagination .wp-pagenavi span.extend {
