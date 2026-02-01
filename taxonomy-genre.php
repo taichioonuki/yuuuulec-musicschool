@@ -4,12 +4,14 @@
     <section id="fv" class="fv">
         <div>
             <picture>
-                <source media="(max-width: 767px)" srcset="./img/result_list/result-sp.jpg">
-                <img src="<?php echo get_template_directory_uri(); ?>/
+                <source media="(max-width: 767px)"
+                    srcset="<?php echo get_template_directory_uri(); ?>/img/result_list/result-sp.jpg">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/result_list/result.jpg" width="1080"
+                    height="200" alt="ピアノ">
             </picture>
         </div>
         <div class=" c-fv__title-wrapper">
-                <h1 class="c-fv__title">卒業実績</h1>
+            <h1 class="c-fv__title">卒業実績</h1>
         </div>
     </section>
 
