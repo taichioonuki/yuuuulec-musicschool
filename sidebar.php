@@ -32,7 +32,7 @@
             おすすめの記事
         </p>
         <ul class="sidebar__recommend-list">
-            <?php
+            <?php 
             $args = array(
                 'post_type' => 'blog',
                 'posts_per_page' => 3,
@@ -45,10 +45,10 @@
                     )
                 )
             );
-                $recommend_query = new WP_Query($args);
-                if ($recommend_query->have_posts()) :
-                    while ($recommend_query->have_posts()) : $recommend_query->the_post();
-                        ?>
+            $recommend_query = new WP_Query($args);
+            if ($recommend_query->have_posts()) : 
+                while ($recommend_query->have_posts()) : $recommend_query->the_post();
+            ?>
             <li class="sidebar__recommend-item">
                 <a href="<?php the_permalink(); ?>" class="sidebar__recommend-link">
                     <div class="sidebar__recommend-img">
@@ -64,10 +64,10 @@
                     </p>
                 </a>
             </li>
-            <?php
-                    endwhile;
-                wp_reset_postdata();
-                else: ?>
+            <?php 
+            endwhile; 
+            wp_reset_postdata();
+            else: ?>
             <p>おすすめ記事がありません</p>
             <?php endif; ?>
         </ul>
@@ -78,27 +78,23 @@
             カテゴリー
         </p>
         <ul class="sidebar__category-list">
-            <?php
-                $terms = get_terms(array(
-                    'taxonomy' => 'genre',
-                    'hide_empty' => true,
-                ));
-                if (!empty($terms) && !is_wp_error($terms)):
-                    foreach ($terms as $term):
-                        $term_link = get_term_link($term);
-                        if (!is_wp_error($term_link)):
-                            ?>
+            <?php 
+            $terms = get_terms(array(
+                'taxonomy' => 'blog_cate',
+                'hide_empty' => true,
+            ));
+            if (!empty($terms) && !is_wp_error($terms)):
+                foreach ($terms as $term): 
+                    $term_link = get_term_link($term);?>
             <li class="sidebar__category-item">
                 <a href="<?php echo esc_url($term_link); ?>">
                     <?php echo esc_html($term->name); ?>
                 </a>
             </li>
-            <?php endif;
-                    endforeach;
-                else: ?>
+            <?php endforeach; 
+            else: ?>
             <p>カテゴリーがありません</p>
-            <?php
-                endif; ?>
+            <?php endif; ?>
         </ul>
     </div>
 </aside>
