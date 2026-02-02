@@ -52,4 +52,7 @@ if (!empty($terms) && !is_wp_error($terms)):
         <?php endwhile;
     wp_reset_postdata(); ?>
     </ul>
-</aside> <?php endif;?> <?php endif;?>
+</aside>
+<?php else:?>
+<p class="c-blog__no-post">関連記事はありません。</p>
+<?php endif;?> <?php endif;?>

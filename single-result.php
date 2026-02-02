@@ -64,7 +64,9 @@
             <aside class="related result-details__list">
                 <?php get_template_part('template-parts/related-articles'); ?>
             </aside>
-            <?php endwhile; endif; ?>
+            <?php endwhile; ?><?php else : ?>
+            <p class="c-blog__no-post">指定された記事は見つかりませんでした。</p>
+            <?php endif; ?>
         </div>
     </section>
 

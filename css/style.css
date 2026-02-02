@@ -1106,9 +1106,6 @@ main {
 
 .c-prev,
 .c-next {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   min-width: 0;
 }
 
@@ -1502,6 +1499,12 @@ data {
     font-size: 1.7rem;
     line-height: 1.6470588235;
   }
+}
+
+.c-blog__no-post {
+  text-align: center;
+  padding: 4rem 0;
+  margin-inline: auto;
 }
 
 .footer {
