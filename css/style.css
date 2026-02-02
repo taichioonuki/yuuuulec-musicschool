@@ -1107,6 +1107,7 @@ main {
 .c-prev,
 .c-next {
   min-width: 0;
+  max-width: 34rem;
 }
 
 .c-prev-text {

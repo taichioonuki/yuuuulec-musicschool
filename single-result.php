@@ -65,7 +65,7 @@
                 <?php get_template_part('template-parts/related-articles'); ?>
             </aside>
             <?php endwhile; ?><?php else : ?>
-            <p class="c-blog__no-post">指定された記事は見つかりませんでした。</p>
+            <p class="c-blog__no-post">記事が見つかりませんでした。</p>
             <?php endif; ?>
         </div>
     </section>
