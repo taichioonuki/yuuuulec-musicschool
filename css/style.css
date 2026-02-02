@@ -3315,6 +3315,11 @@ blockquote.wp-block-quote {
   }
 }
 
+.p-blog-nav .c-prev,
+.p-blog-nav .c-next {
+  width: 26rem;
+}
+
 /* ===========================
    sidebar
    =========================== */
