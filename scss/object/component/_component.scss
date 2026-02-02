@@ -331,7 +331,6 @@
 
 .c-prev,
 .c-next {
-    flex: 1;
     min-width: 0;
 }
 
@@ -688,4 +687,11 @@ data {
         font-size: 1.7rem;
         line-height: calc(28 / 17);
     }
+}
+
+//記事がない場合の表示メッセージ
+.c-blog__no-post {
+    text-align: center;
+    padding: 4rem 0;    
+    margin-inline: auto;    
 }

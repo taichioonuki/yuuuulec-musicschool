@@ -68,7 +68,7 @@
             endwhile; 
             wp_reset_postdata();
             else: ?>
-            <p>おすすめ記事がありません</p>
+            <p class="c-blog__no-post">おすすめ記事がありません</p>
             <?php endif; ?>
         </ul>
     </div>
@@ -93,7 +93,7 @@
             </li>
             <?php endforeach; 
             else: ?>
-            <p>カテゴリーがありません</p>
+            <p class="c-blog__no-post">カテゴリーがありません</p>
             <?php endif; ?>
         </ul>
     </div>

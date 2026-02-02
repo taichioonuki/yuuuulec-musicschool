@@ -45,6 +45,7 @@
                     </li>
                     <?php endwhile; ?>
                 </ul>
+
                 <nav class="c-pagination">
                     <?php wp_pagenavi(); ?>
                 </nav>
