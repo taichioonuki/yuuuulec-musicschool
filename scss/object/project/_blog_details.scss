@@ -513,6 +513,8 @@ blockquote.wp-block-quote {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    line-height: 1.4; 
+    max-height: 2.8em;
 }
 
 .sidebar__category-item {
