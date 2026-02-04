@@ -332,7 +332,8 @@ div.contact-form__form-wrapper div.form-item.is-align-top {
     font-size: 1.2rem;
     color: $red;
     position: absolute;
-    margin-top: 0.3rem;
+    top: calc(100% + 0.3rem);
+    left: 0;
     display: block;
     white-space: nowrap;
   }
