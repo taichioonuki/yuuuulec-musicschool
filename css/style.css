@@ -4487,8 +4487,8 @@ div.contact-form__form-wrapper div.form-item.is-align-top p.contact-form__form-i
   font-size: 1.2rem;
   color: #CB0000;
   position: absolute;
-  top: calc(100% + 0.3rem);
   left: 0;
+  margin-top: 0.3rem;
   display: block;
   white-space: nowrap;
 }
