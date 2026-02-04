@@ -160,14 +160,14 @@ textarea {
     gap: 2rem;
 
     @include sp {
-        margin-top: 1rem;    
+        margin-top: 1rem;
     }
 
     .wpcf7-list-item {
-        display: block; 
-        margin-bottom: 2rem;  
-        margin-left: 0; 
-        
+        display: block;
+        margin-bottom: 2rem;
+        margin-left: 0;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -293,24 +293,26 @@ textarea {
         padding-top: 0;
     }
 }
+
 div.contact-form__form-wrapper div.form-item.is-align-top {
+
     // 目的（チェックボックス）の親
     &.form-item--checkbox {
-        display: grid; 
+        display: grid;
         align-items: flex-start;
     }
 
     // 内容（textarea）の親
     .form-group {
-        display: grid; 
+        display: grid;
         align-items: flex-start;
     }
 
     // 「目的」ラベルのpタグ：余白を完全にリセット
     p.contact-form__form-item--label--checkbox {
-        margin: 0; 
-        line-height: 1.5;     
-        padding-top: 0.5rem;   
+        margin: 0;
+        line-height: 1.5;
+        padding-top: 0.5rem;
 
         @include sp {
             padding-top: 0;
@@ -334,26 +336,32 @@ div.contact-form__form-wrapper div.form-item.is-align-top {
     position: absolute;
     left: 0;
     margin-top: 0.3rem;
-    display: block;
+    display: none;
     white-space: nowrap;
-  }
+}
 
-  .wpcf7 form.invalid .wpcf7-response-output {
+.wpcf7-form.invalid .wpcf7-not-valid-tip {
+    display: block !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
     border: none;
     text-align: center;
     color: $red;
+
     @include sp {
-      line-height: 1.5;
+        line-height: 1.5;
     }
-  }
-  
-  .wpcf7 form.sent .wpcf7-response-output {
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
     border: none;
     font-size: 1.8rem;
     text-align: center;
     color: $red;
+
     @include sp {
-      font-size: 1.6rem;
-      line-height: 1.5;
+        font-size: 1.6rem;
+        line-height: 1.5;
     }
-  }
+}
