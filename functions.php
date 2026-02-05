@@ -153,4 +153,10 @@ function my_custom_mime_types($mimes) {
     $mimes['png'] = 'image/png';
     return $mimes;
 }
-add_filter('upload_mimes', 'my_custom_mime_types');
+
+add_filter('upload_mimes', 'my_custom_mime_types');add_action( 'wp_enqueue_scripts', function() {
+    // お問い合わせページ以外では reCAPTCHA を読み込まない
+    if ( ! is_page( 'contact' ) ) {
+        wp_dequeue_script( 'google-recaptcha' );
+    }
+}, 100 );
