@@ -18,7 +18,7 @@ add_action('after_setup_theme', 'custom_theme_setup');
 
 
 // --------------------------------------------------
-// ファイルの読み込み（CSS / JavaScript / reCAPTCHA制御）
+// ファイルの読み込み（CSS / JavaScript）
 // --------------------------------------------------
 function my_theme_enqueue_files()
 {
@@ -36,13 +36,23 @@ function my_theme_enqueue_files()
     wp_enqueue_script('simplebar-script', 'https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js', array('jquery'), null, true);
     wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array('jquery'), null, true);
     wp_enqueue_script('main-script', get_theme_file_uri('/js/main.js'), array('jquery', 'simplebar-script', 'swiper-script'), $now, true);
-
-    // --- 【修正ポイント】reCAPTCHAを「contact」ページ以外で読み込まない ---
-    if ( ! is_page( 'contact' ) ) {
-        wp_dequeue_script( 'google-recaptcha' );
-    }
-}
+} // ← ここが閉じられていなかったので修正しました
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_files');
+
+
+// --------------------------------------------------
+// reCAPTCHAの読み込みを制限（お問い合わせページのみ許可）
+// --------------------------------------------------
+add_action('wp_enqueue_scripts', function() {
+    // スラッグ「contact」でも、ファイル名「page-contact.php」でもない場合
+    if ( !is_page('contact') && !is_page_template('page-contact.php') ) {
+        
+        // reCAPTCHAとContact Form 7の動作を停止
+        wp_deregister_script( 'google-recaptcha' );
+        wp_dequeue_script( 'contact-form-7' );
+        wp_dequeue_style( 'contact-form-7' );
+    }
+}, 100);
 
 
 // --------------------------------------------------
@@ -77,7 +87,7 @@ function my_posts_search_custom( $search, $wp_query ) {
             (EXISTS (
                 SELECT 1 FROM {$wpdb->term_relationships} 
                 INNER JOIN {$wpdb->term_taxonomy} ON {$wpdb->term_relationships}.term_taxonomy_id = {$wpdb->term_taxonomy}.term_taxonomy_id 
-                INNER JOIN {$wpdb->terms} ON {$wpdb->term_taxonomy}.term_id = {$wpdb->terms}.term_id 
+                INNER JOIN {$wpdb->terms} ON {$wpdb->term_taxonomy}.term_id = {$wpdb->terms}.id 
                 WHERE {$wpdb->term_relationships}.object_id = {$wpdb->posts}.ID 
                 AND {$wpdb->terms}.name LIKE '%{$search_term}%'
             ))
@@ -96,7 +106,7 @@ add_filter( 'excerpt_mblen', function( $length ) { return 300; }, 999 );
 
 
 // --------------------------------------------------
-// SVG/PNGアップロード制限解除（重複を整理）
+// SVG/PNGアップロード制限解除
 // --------------------------------------------------
 define('ALLOW_UNFILTERED_UPLOADS', true);
 
