@@ -130,32 +130,30 @@
     }
 
     h2 {
-        margin-top: 3.3rem;
-        font-size: 2rem;
+        margin-block: 3.3rem 1.5rem;        font-size: 2rem;
         font-weight: 700;
         line-height: calc(40 / 20);
 
         @include sp {
-            margin-top: 3.9rem;
+            margin-block: 3.9rem 1.5rem;
             line-height: calc(30 / 20);
         }
     }
 
     p {
-        margin-top: 1.5rem;
+        margin-block: 1.5rem;
 
         @include sp {
-            margin-top: 2.5rem;
+            margin-block: 2.5rem;
         }
     }
 
     figure {
         width: 33.5rem;
         height: auto;
-        margin-top: 1.5rem;
-
+        margin-block: 1.7rem;
         @include sp {
-            margin-top: 6rem;
+            margin-block: 6rem 1.7rem;
             width: 100%;
         }
     }
@@ -179,7 +177,7 @@
         position: relative;
         padding-left: 0.9rem;
         line-height: 1.5;
-        margin-top: 5rem;
+        margin-block: 5rem 1.7rem;
 
         @include sp {
             line-height: calc(30 / 20);
@@ -206,7 +204,7 @@
         padding: 1.8rem 3rem 1rem 6.7rem;
         position: relative;
         line-height: calc(30 / 18);
-        margin-top: 2.2rem;
+        margin-block: 2.2rem 1.7rem;
         max-width: 60rem;
 
         @include sp {
@@ -214,7 +212,7 @@
             font-size: 1.6rem;
             line-height: calc(30 / 16);
             padding: 1.8rem 2rem 1rem 7rem;
-            margin-top: 2rem;
+            margin-block: 2rem 1.7rem;
         }
 
         @media screen and (max-width: 374px) {
@@ -259,7 +257,7 @@ blockquote.wp-block-quote {
 
 
 .wp-block-list {
-    margin-top: 2.8rem;
+    margin-block: 2.8rem;
     line-height: calc(30 / 18);
     padding-left: 1.8rem;
 

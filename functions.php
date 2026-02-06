@@ -36,7 +36,7 @@ function my_theme_enqueue_files()
     wp_enqueue_script('simplebar-script', 'https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js', array('jquery'), null, true);
     wp_enqueue_script('swiper-script', 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js', array('jquery'), null, true);
     wp_enqueue_script('main-script', get_theme_file_uri('/js/main.js'), array('jquery', 'simplebar-script', 'swiper-script'), $now, true);
-} // ← ここが閉じられていなかったので修正しました
+} 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_files');
 
 
