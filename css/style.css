@@ -1082,6 +1082,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .c-prev-next {

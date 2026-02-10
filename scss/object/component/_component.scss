@@ -310,6 +310,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20rem;
+    width: 100%;
 
     @include sp {
         gap: 5%;
