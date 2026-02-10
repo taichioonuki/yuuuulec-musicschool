@@ -1081,6 +1081,17 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 20rem;
+}
+@media (max-width: 767px) {
+  .c-prev-next {
+    gap: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .c-prev-next {
+    gap: 2.2rem;
+  }
 }
 
 /* 「p-blog-nav」の中にある「c-prev-next」だけに gap を適用する */
@@ -1095,7 +1106,6 @@ main {
 
 .c-prev,
 .c-next {
-  max-width: 34rem;
   width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
