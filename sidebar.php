@@ -55,8 +55,8 @@
                         <?php if (has_post_thumbnail()): ?>
                         <?php the_post_thumbnail('medium', array('alt' => get_the_title(), 'loading' => 'lazy')); ?>
                         <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/recommend.jpg" width="95"
-                            height="75" alt="default">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimage.jpg" alt="no image"
+                            width="95" height="75" alt="default">
                         <?php endif; ?>
                     </div>
                     <p class="sidebar__recommend-title">
