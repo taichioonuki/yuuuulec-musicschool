@@ -17,6 +17,7 @@
         <div class="sidebar__search--inner">
             <form class="sidebar__search-form" action="<?php echo esc_url(home_url('/')); ?>" method="get">
                 <input type="search" name="s" value="<?php echo get_search_query(); ?>">
+                <input type="hidden" name="post_type" value="blog">
                 <button type="submit">
                     <span class="sidebar__search-icon">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/sidebar/search.svg" width="40"
