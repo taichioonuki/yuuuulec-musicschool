@@ -72,13 +72,34 @@ add_action('pre_get_posts', 'my_page_conditions');
 // --------------------------------------------------
 // 検索対象をカスタム投稿「blog」だけに限定する
 // --------------------------------------------------
-function my_search_filter($query) {
-    if (!is_admin() && $query->is_main_query() && $query->is_search()) {
-        // 検索対象を「blog」のみに設定
-        $query->set('post_type', 'blog');
-    }
+// --------------------------------------------------
+// 検索対象を「blog」に絞り、かつカテゴリー名も検索対象に含める
+// --------------------------------------------------
+function my_posts_search_with_tax( $search, $wp_query ) {
+    global $wpdb;
+    if ( is_admin() || ! $wp_query->is_main_query() || ! $wp_query->is_search() ) return $search;
+
+    $s = $wp_query->query_vars['s'];
+    if ( empty( $s ) ) return $search;
+
+    $search_term = $wpdb->esc_like( $s );
+    
+    // タイトル、本文、またはタクソノミー（カテゴリー名）にマッチするか確認
+    $search = " AND (
+        ({$wpdb->posts}.post_title LIKE '%{$search_term}%') OR 
+        ({$wpdb->posts}.post_content LIKE '%{$search_term}%') OR 
+        (EXISTS (
+            SELECT 1 FROM {$wpdb->term_relationships} 
+            INNER JOIN {$wpdb->term_taxonomy} ON {$wpdb->term_relationships}.term_taxonomy_id = {$wpdb->term_taxonomy}.term_taxonomy_id 
+            INNER JOIN {$wpdb->terms} ON {$wpdb->term_taxonomy}.term_id = {$wpdb->terms}.term_id 
+            WHERE {$wpdb->term_relationships}.object_id = {$wpdb->posts}.ID 
+            AND {$wpdb->terms}.name LIKE '%{$search_term}%'
+        ))
+    ) AND ({$wpdb->posts}.post_type = 'blog') AND ({$wpdb->posts}.post_status = 'publish')";
+
+    return $search;
 }
-add_action('pre_get_posts', 'my_search_filter');
+add_filter( 'posts_search', 'my_posts_search_with_tax', 10, 2 );
 
 // --------------------------------------------------
 // 抜粋の文字数を300文字に変更
