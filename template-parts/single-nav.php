@@ -14,7 +14,6 @@
 
 
     <div class="c-prev">
-
         <?php if (! empty($prev_post)) : $prev_id = $prev_post->ID;
             ?>
         <a href="<?php echo get_permalink($prev_id); ?>">
