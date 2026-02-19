@@ -39,12 +39,13 @@
                                     <?php the_time('Y.m.d'); ?>
                                 </time>
                                 <p class="c-blog__text">
-                                    <?php echo wp_trim_words(get_the_content(), 80, '...'); ?> </p>
+                                    <?php echo wp_trim_words(get_the_content(), 100, '...'); ?> </p>
                             </div>
                         </a>
                     </li>
                     <?php endwhile; ?>
                 </ul>
+
                 <nav class="c-pagination">
                     <?php wp_pagenavi(); ?>
                 </nav>
@@ -53,7 +54,7 @@
                 <div class="search-result__empty">
                     <p class="search-result__empty-text">検索されたキーワードにマッチする記事はありませんでした。</p>
                     <div class="search-result__btn-wrapper">
-                        <a href="<?php echo esc_url(home_url('/blog')); ?>" class="c-btn-red c-to-home">ブログ一覧へ戻る</a>
+                        <a href="javascript:history.back();" class="c-btn-red c-to-home">戻る</a>
                     </div>
                 </div>
                 <?php endif; ?>

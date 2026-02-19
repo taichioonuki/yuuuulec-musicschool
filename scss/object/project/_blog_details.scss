@@ -9,6 +9,15 @@
     }
 }
 
+.blog-details__img img {
+    aspect-ratio: 600 / 350;
+    object-fit: cover;
+
+    @include sp {
+        aspect-ratio: 335 / 200;
+    }
+}
+
 .blog-details__sns-icon {
 
     &.facebook {
@@ -54,10 +63,18 @@
 }
 
 .blog-details__inner {
-    margin-bottom: 9rem;
+    margin-bottom: 10rem;
 
     @include sp {
-        margin-bottom: 6.4rem;
+        margin-bottom: 8rem;
+    }
+}
+
+.blog-details__img {
+
+    @include sp {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -109,47 +126,35 @@
     @include sp {
         font-size: 1.6rem;
         line-height: calc(30 / 16);
-        margin: 2.6rem 0 4.5rem;
+        margin: 2.6rem 0 5.5rem;
     }
 
     h2 {
-        margin-top: 3.3rem;
-        font-size: 2rem;
+        margin-block: 3.3rem 1.5rem;        font-size: 2rem;
         font-weight: 700;
         line-height: calc(40 / 20);
 
         @include sp {
-            margin-top: 3.9rem;
+            margin-block: 3.9rem 1.5rem;
             line-height: calc(30 / 20);
         }
     }
 
     p {
-        margin-top: 1.5rem;
+        margin-block: 1.5rem;
 
         @include sp {
-            margin-top: 1.8rem;
+            margin-block: 2.5rem;
         }
     }
 
     figure {
         width: 33.5rem;
-        margin-top: 1.5rem;
-
+        height: auto;
+        margin-block: 1.7rem;
         @include sp {
-            margin-top: 6.8rem;
+            margin-block: 6rem 1.7rem;
             width: 100%;
-        }
-
-        img {
-            aspect-ratio: 600 / 350;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-
-            @include sp {
-                aspect-ratio: 335 / 200;
-            }
         }
     }
 
@@ -158,7 +163,7 @@
         border: none;
         height: 0.5px;
         background-color: $black;
-        margin-top: 4rem;
+        margin-top: 4.5rem;
         width: 100%;
 
         @include sp {
@@ -172,7 +177,7 @@
         position: relative;
         padding-left: 0.9rem;
         line-height: 1.5;
-        margin-top: 5rem;
+        margin-block: 5rem 1.7rem;
 
         @include sp {
             line-height: calc(30 / 20);
@@ -199,7 +204,7 @@
         padding: 1.8rem 3rem 1rem 6.7rem;
         position: relative;
         line-height: calc(30 / 18);
-        margin-top: 2.2rem;
+        margin-block: 2.2rem 1.7rem;
         max-width: 60rem;
 
         @include sp {
@@ -207,7 +212,7 @@
             font-size: 1.6rem;
             line-height: calc(30 / 16);
             padding: 1.8rem 2rem 1rem 7rem;
-            margin-top: 2rem;
+            margin-block: 2rem 1.7rem;
         }
 
         @media screen and (max-width: 374px) {
@@ -236,6 +241,15 @@
     }
 }
 
+.wp-block-image img {
+    aspect-ratio: 335 / 200;
+    object-fit: cover;
+}
+
+p.blog-details__link-btn {
+    margin-top: 3rem;
+}
+
 blockquote.wp-block-quote {
     border-left: none;
     border: none;
@@ -243,7 +257,7 @@ blockquote.wp-block-quote {
 
 
 .wp-block-list {
-    margin-top: 2.8rem;
+    margin-block: 2.8rem;
     line-height: calc(30 / 18);
     padding-left: 1.8rem;
 
@@ -293,21 +307,17 @@ blockquote.wp-block-quote {
     }
 }
 
-.blog__img {
+.blog_details .blog__img {
     position: relative;
     width: 20rem;
 
-    @include sp {
+@include sp {
         width: 16rem;
     }
 
     img {
         object-fit: cover;
         aspect-ratio: 200 / 140;
-
-        @include sp {
-            aspect-ratio: 160 / 110;
-        }
     }
 }
 
@@ -330,6 +340,14 @@ blockquote.wp-block-quote {
         }
     }
 }
+
+.p-blog-nav {
+    .c-prev,
+    .c-next {
+        width: 26rem; 
+}
+}
+
 
 /* ===========================
    sidebar
@@ -472,11 +490,18 @@ blockquote.wp-block-quote {
 
 .sidebar__recommend-img {
     width: 9.5rem;
-    aspect-ratio: 95 / 75;
 
     @include sp {
         width: 16rem;
-        aspect-ratio: 160 / 110;
+    }
+
+    img {
+        aspect-ratio: 95 / 75;
+        object-fit: cover;
+
+        @include sp {
+            aspect-ratio: 160 / 110;
+        }
     }
 }
 
@@ -486,6 +511,8 @@ blockquote.wp-block-quote {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    line-height: 1.4; 
+    max-height: 2.8em;
 }
 
 .sidebar__category-item {

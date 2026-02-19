@@ -123,17 +123,16 @@
     <section id="voice" class="voice">
         <h2 class="c-top-section-title">生徒さんたちの声</h2>
         <div class="voice__container inner">
-            <div class="swiper voice__inner">
-                <div class="swiper-wrapper ">
-                    <?php
+            <?php
                 $args = array(
                     'post_type'      => 'result',
                     'posts_per_page' => 6,
                 );
 $voice_query = new WP_Query($args);
 ?>
-
-                    <?php if ($voice_query->have_posts()) : ?>
+            <?php if ($voice_query->have_posts()) : ?>
+            <div class="swiper voice__inner">
+                <div class="swiper-wrapper ">
                     <?php while ($voice_query->have_posts()) : $voice_query->the_post(); ?>
                     <div class="swiper-slide voice__item">
                         <a href="<?php the_permalink(); ?>" class="voice__link">
@@ -165,17 +164,16 @@ $voice_query = new WP_Query($args);
                         </a>
                     </div>
                     <?php endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
-                    <?php else: ?>
-                    <p>現在、生徒さんの声は準備中です。</p>
-                    <?php endif; ?>
-
                 </div>
             </div>
-            <button class="voice__prev"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-l.svg"
+            <button class=" voice__prev"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-l.svg"
                     width="30" height="20" alt="左"></button>
             <button class="voice__next"><img src="<?php echo get_template_directory_uri(); ?>/img/arrow-r.svg"
                     width="30" height="20" alt="右"></button>
+            <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+            <p class="c-blog__no-post">現在、生徒さんの声は準備中です。</p>
+            <?php endif; ?>
         </div>
     </section>
 
@@ -295,8 +293,8 @@ $voice_query = new WP_Query($args);
                 $blog_args = array(
                     'post_type'      => 'blog',
                     'posts_per_page' => 3,
-                    'orderby' => 'menu_order',
-                    'order'   => 'ASC',
+                    'orderby' => 'date',
+                    'order'   => 'desc',
                     'tax_query'     => array(
                         array(
                             'taxonomy'     => 'blog_recommend',
@@ -334,10 +332,12 @@ $terms = get_the_terms(get_the_ID(), 'blog_cate');
                     </li>
                     <?php endwhile; ?>
                     <?php wp_reset_postdata(); ?>
+                    <?php else : ?>
+                    <p class="c-blog__no-post"> 現在、新しい記事を準備中です。</p>
                     <?php endif; ?>
                 </ul>
             </div>
-            <div class="more-link">
+            <div class=" more-link">
                 <a href="<?php echo esc_url(home_url('/blog')); ?>">ブログ一覧へ</a>
             </div>
         </div>

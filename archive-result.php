@@ -4,7 +4,8 @@
     <section id="fv" class="fv">
         <div>
             <picture>
-                <source media="(max-width: 767px)" srcset="./img/result_list/result-sp.jpg">
+                <source media="(max-width: 767px)"
+                    srcset="<?php echo get_template_directory_uri(); ?>/img/result_list/result-sp.jpg">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/result_list/result.jpg" width="1080"
                     height="200" alt="ピアノ">
             </picture>
@@ -19,8 +20,7 @@
     <section class="result">
         <div class="inner">
             <h2 class="c-section-title">卒業実績一覧</h2>
-            <ul class="result__list">
-                <?php
+            <?php
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args = array(
     'post_type'      => 'result', 
@@ -29,8 +29,8 @@ $args = array(
 );
 $result_query = new WP_Query($args);
 ?>
-
-                <?php if ($result_query->have_posts()) : ?>
+            <?php if ($result_query->have_posts()) : ?>
+            <ul class="result__list">
                 <?php while ($result_query->have_posts()) : $result_query->the_post(); ?>
                 <li class="result__item c-blog__item">
                     <a href="<?php the_permalink(); ?>">
@@ -56,9 +56,11 @@ $result_query = new WP_Query($args);
                     </a>
                 </li>
                 <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-                <?php endif; ?>
             </ul>
+            <?php wp_reset_postdata(); ?>
+            <?php else: ?>
+            <p class="c-blog__no-post">現在、卒業実績の投稿はありません。</p>
+            <?php endif; ?>
 
             <nav class="c-pagination">
                 <?php wp_pagenavi(); ?>

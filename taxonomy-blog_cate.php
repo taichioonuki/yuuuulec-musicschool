@@ -60,9 +60,12 @@ $term_name = isset($term->name) ? $term->name : 'カテゴリー名不明';
                         </div>
                     </a>
                 </li>
-                <?php endwhile; endif; ?>
+                <?php endwhile;?>
             </ul>
-            <nav class="c-pagination">
+            <?php else: ?>
+            <p class="c-blog__no-post">現在、このカテゴリーに投稿された記事はありません。</p>
+            <?php endif; ?>
+            <nav class=" c-pagination">
                 <?php wp_pagenavi(); ?>
             </nav>
         </div>

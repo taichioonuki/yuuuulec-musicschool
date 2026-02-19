@@ -6,16 +6,22 @@
         <div class="inner">
             <div class="blog-details__container">
                 <article class="blog-details__main">
+
+                    <?php if (have_posts()): while (have_posts()): the_post(); ?>
                     <div class="blog-details__inner">
-                        <?php if (have_posts()): while (have_posts()): the_post(); ?>
                         <div class="blog-details__header">
                             <div class="blog-details__img">
                                 <?php if (has_post_thumbnail()): ?>
                                 <?php the_post_thumbnail('large'); ?>
+                                <?php else: ?>
+                                <img src="<?php echo get_template_directory_uri(); ?>/img/common/noimage.jpg"
+                                    alt="no image">
                                 <?php endif; ?>
                                 <span class="c-blog__label">
-                                    <?php $terms = get_the_terms(get_the_ID(), 'blog_cate');
-                            echo $terms ? esc_html($terms[0]->name) : ''; ?>
+                                    <?php 
+                                        $terms = get_the_terms(get_the_ID(), 'blog_cate');
+                                        echo $terms ? esc_html($terms[0]->name) : ''; 
+                                        ?>
                                 </span>
                             </div>
                             <h1 class="blog-details__title">
@@ -23,9 +29,12 @@
                             </h1>
                             <time datetime="<?php the_time('Y-m-d'); ?>"
                                 class="blog-details__date"><?php the_time('Y.m.d'); ?></time>
+
                             <ul class="blog-details__sns-list">
-                                <?php $url = urlencode(get_permalink());
-                            $title = urlencode(get_the_title()); ?>
+                                <?php 
+                                    $url = urlencode(get_permalink());
+                                    $title = urlencode(get_the_title()); 
+                                    ?>
                                 <li class="blog-details__sns-item">
                                     <a href="<?php echo esc_url('https://www.facebook.com/share.php?u=' . $url); ?>"
                                         target="_blank" rel="noopener noreferrer">
@@ -65,8 +74,8 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="blog-details__sns-item"> <a
-                                        href="<?php echo esc_url('https://line.me/R/msg/text/?' . $title . '%20' . $url); ?>"
+                                <li class="blog-details__sns-item">
+                                    <a href="<?php echo esc_url('https://line.me/R/msg/text/?' . $title . '%20' . $url); ?>"
                                         target="_blank" rel="noopener noreferrer">
                                         <div class="blog-details__sns-icon line">
                                             <picture>
@@ -78,8 +87,8 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="blog-details__sns-item"> <a
-                                        href="<?php echo esc_url('http://getpocket.com/edit?url=' . $url . '&title=' . $title); ?>"
+                                <li class="blog-details__sns-item">
+                                    <a href="<?php echo esc_url('http://getpocket.com/edit?url=' . $url . '&title=' . $title); ?>"
                                         target="_blank" rel="noopener noreferrer">
                                         <div class="blog-details__sns-icon pocket">
                                             <picture>
@@ -93,15 +102,23 @@
                                 </li>
                             </ul>
                         </div>
+
                         <div class="blog-details__text">
                             <?php the_content(); ?>
                         </div>
-                        <?php get_template_part('template-parts/single-nav'); ?>
-                        <?php endwhile; endif; ?>
-                    </div>
+
+                        <div class="p-blog-nav">
+                            <?php get_template_part('template-parts/single-nav'); ?>
+                        </div>
+                    </div><?php endwhile; ?>
+
+                    <?php else: ?>
+                    <p class="c-blog__no-post">指定された記事は見つかりませんでした。</p>
+                    <?php endif; ?>
 
                     <?php get_template_part('template-parts/related-articles'); ?>
                 </article>
+
                 <?php get_sidebar(); ?>
             </div>
         </div>

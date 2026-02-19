@@ -5,6 +5,8 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/img/to-top.svg" width="68" height="68" alt="top">
             </a>
         </div>
-        <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="c-contact__btn c-btn-red">お問い合わせ</a>
+        <?php if (!is_page('contact')) :?> <a href="<?php echo esc_url(home_url('/contact/')); ?>" class="c-contact__btn
+        c-btn-red">お問い合わせ</a>
+        <?php endif; ?>
     </div>
 </div>

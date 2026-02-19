@@ -7,15 +7,12 @@
     } else {
         $taxonomy = 'category';   // 標準の投稿用
     }
-    // 前の記事を取得
     $prev_post = get_previous_post(true, '', $taxonomy);
-    $next_post = get_next_post(true, '', $taxonomy);
-    ?>
-
+    $next_post = get_next_post(true, '', $taxonomy);?>
 
     <div class="c-prev">
-        <?php if (! empty($prev_post)) : $prev_id = $prev_post->ID;
-            ?>
+        <?php if (! empty($prev_post)) :
+            $prev_id = $prev_post->ID; ?>
         <a href="<?php echo get_permalink($prev_id); ?>">
             <p class="c-prev-text c-back-black">◀︎
                 前の記事</p>
@@ -36,10 +33,8 @@
     </div>
 
     <div class=" c-next">
-        <?php
-    if (! empty($next_post)) :
-        $next_id = $next_post->ID;
-        ?>
+        <?php if (! empty($next_post)) :
+            $next_id = $next_post->ID; ?>
         <a href="<?php echo get_permalink($next_id); ?>">
             <p class="c-prev-text c-prev--right c-back-black">
                 次の記事 ▶︎

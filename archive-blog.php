@@ -18,8 +18,9 @@
     <section class="c-blog--sub">
         <div class="inner">
             <h2 class="c-section-title">ブログ一覧</h2>
+            <?php if (have_posts()): ?>
             <ul class="c-blog__list c-blog__list--sub">
-                <?php if (have_posts()): while (have_posts()): the_post(); ?>
+                <?php while (have_posts()): the_post(); ?>
                 <li class="c-blog__item c-blog__item--sub">
                     <a href="<?php the_permalink(); ?>">
                         <div class="c-blog__img-wrapper">
@@ -56,8 +57,11 @@
                         </div>
                     </a>
                 </li>
-                <?php endwhile; endif; ?>
+                <?php endwhile; ?>
             </ul>
+            <?php else: ?>
+            <p class="c-blog__no-post">現在、投稿された記事はありません。</p>
+            <?php endif; ?>
 
             <nav class="c-pagination">
                 <?php wp_pagenavi(); ?>

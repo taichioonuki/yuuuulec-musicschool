@@ -27,7 +27,7 @@
             </div>
 
             <div class="contact-form__form-wrapper">
-                <?php echo do_shortcode('[contact-form-7 id="ee692fb" title="コンタクトフォーム 1"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="ee692fb" title="コンタクトフォーム 1"html_novalidate="true"]'); ?>
             </div>
         </div>
     </div>
